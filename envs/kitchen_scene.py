@@ -51,6 +51,7 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
         ),
     )
     
+    """ TODO: fix the actuator config wrt to IK       
     # Kinova robot on table - fixed actuators and positioning
     robot = KINOVA_GEN3_N7_CFG.replace(
         prim_path="/World/Robot",
@@ -93,8 +94,22 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
             ),
         },
     )
+    """
 
-
+    
+    # Kinova robot on table - fixed actuators and positioning for IK movements
+    robot = KINOVA_GEN3_N7_CFG.replace(
+        prim_path="/World/Robot",
+        spawn=sim_utils.UsdFileCfg(
+            #usd_path=f"{ISAAC_NUCLEUS_DIR}/Robots/Kinova/Gen3/gen3n7_instanceable.usd",
+            usd_path=f"{KITCHEN_ASSETS_DIR}/Kinova/kinova_gen3_robotiq_2f_85_working.usd"
+        ),
+        init_state=ArticulationCfg.InitialStateCfg(
+            pos=(2.4, 1.25, 0.8),  # On table surface
+            rot=(1.0, 0.0, 0.0, 0.0),  # Facing forward
+        )
+    )
+    
     
     # Insulated shelf - FIXED: Now properly positioned above ground
     insulated_shelf = ArticulationCfg(
