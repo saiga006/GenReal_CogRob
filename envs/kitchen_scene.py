@@ -13,7 +13,7 @@ import math
 
 
 # Import the pre-configured Kinova Gen3 configuration
-from isaaclab_assets import KINOVA_GEN3_N7_CFG
+from isaaclab_assets import KINOVA_GEN3_N7_CFG,KINOVA_GEN3_N7_HIGH_PD_CFG
 from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
 
 # Get the base path for assets
@@ -97,19 +97,48 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
     """
 
     
-    # Kinova robot on table - fixed actuators and positioning for IK movements
+    """# Kinova robot on table - fixed actuators and positioning for IK movements
     robot = KINOVA_GEN3_N7_CFG.replace(
         prim_path="/World/Robot",
         spawn=sim_utils.UsdFileCfg(
-            #usd_path=f"{ISAAC_NUCLEUS_DIR}/Robots/Kinova/Gen3/gen3n7_instanceable.usd",
-            usd_path=f"{KITCHEN_ASSETS_DIR}/Kinova/kinova_gen3_robotiq_2f_85_working.usd"
+            usd_path=f"{ISAAC_NUCLEUS_DIR}/Robots/Kinova/Gen3/gen3n7_instanceable.usd",
+            #usd_path=f"{KITCHEN_ASSETS_DIR}/Kinova/kinova_gen3_robotiq_2f_85_working.usd"
         ),
         init_state=ArticulationCfg.InitialStateCfg(
             pos=(2.4, 1.25, 0.8),  # On table surface
             rot=(1.0, 0.0, 0.0, 0.0),  # Facing forward
         )
-    )
+    )"""
     
+        
+    # Kinova robot on table - fixed actuators and positioning for IK movements
+    robot = KINOVA_GEN3_N7_HIGH_PD_CFG.replace(
+        prim_path="/World/Robot",
+            spawn=sim_utils.UsdFileCfg(
+            usd_path=f"{KITCHEN_ASSETS_DIR}/Kinova/kinova_gen3_robotiq_2f_85_working.usd",
+            rigid_props=sim_utils.RigidBodyPropertiesCfg(
+                disable_gravity=False,  # Disabled for high PD control
+                max_depenetration_velocity=5.0,
+            ),
+            articulation_props=sim_utils.ArticulationRootPropertiesCfg(
+                enabled_self_collisions=True, solver_position_iteration_count=8, solver_velocity_iteration_count=0
+            ),
+            activate_contact_sensors=False,
+        ),
+            init_state=ArticulationCfg.InitialStateCfg(
+            pos=(2.4, 1.25, 0.8),  # On table surface
+            rot=(1.0, 0.0, 0.0, 0.0),  # Facing forward
+            joint_pos={
+                "joint_1": 0.0,
+                "joint_2": 0.65,
+                "joint_3": 0.0,
+                "joint_4": 1.89,
+                "joint_5": 0.0,
+                "joint_6": 0.6,
+                "joint_7": -1.57,
+            },
+        )
+    )
     
     # Insulated shelf - FIXED: Now properly positioned above ground
     insulated_shelf = ArticulationCfg(
