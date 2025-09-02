@@ -1,0 +1,291 @@
+# Copyright (c) 2022-2025, The Isaac Lab Project Developers (https://github.com/isaac-sim/IsaacLab/blob/main/CONTRIBUTORS.md).
+# All rights reserved.
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+"""Configuration for the Kinova Robotics arms.
+
+The following configuration parameters are available:
+
+* :obj:`KINOVA_JACO2_N7S300_CFG`: The Kinova JACO2 (7-Dof) arm with a 3-finger gripper.
+* :obj:`KINOVA_JACO2_N6S300_CFG`: The Kinova JACO2 (6-Dof) arm with a 3-finger gripper.
+* :obj:`KINOVA_GEN3_N7_CFG`: The Kinova Gen3 (7-Dof) arm with no gripper.
+* :obj:`KINOVA_GEN3_N7_HIGH_PD_CFG`: The Kinova Gen3 (7-Dof) arm with high PD gains.
+
+Reference: https://github.com/Kinovarobotics/kinova-ros
+"""
+
+import isaaclab.sim as sim_utils
+from isaaclab.actuators import ImplicitActuatorCfg
+from isaaclab.assets.articulation import ArticulationCfg
+from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
+
+##
+# Configuration
+##
+
+KINOVA_JACO2_N7S300_CFG = ArticulationCfg(
+    spawn=sim_utils.UsdFileCfg(
+        usd_path=f"{ISAAC_NUCLEUS_DIR}/Robots/Kinova/Jaco2/J2N7S300/j2n7s300_instanceable.usd",
+        rigid_props=sim_utils.RigidBodyPropertiesCfg(
+            disable_gravity=False,
+            max_depenetration_velocity=5.0,
+        ),
+        articulation_props=sim_utils.ArticulationRootPropertiesCfg(
+            enabled_self_collisions=True, solver_position_iteration_count=8, solver_velocity_iteration_count=0
+        ),
+        activate_contact_sensors=False,
+    ),
+    init_state=ArticulationCfg.InitialStateCfg(
+        joint_pos={
+            "j2n7s300_joint_1": 0.0,
+            "j2n7s300_joint_2": 2.76,
+            "j2n7s300_joint_3": 0.0,
+            "j2n7s300_joint_4": 2.0,
+            "j2n7s300_joint_5": 2.0,
+            "j2n7s300_joint_6": 0.0,
+            "j2n7s300_joint_7": 0.0,
+            "j2n7s300_joint_finger_[1-3]": 0.2,  # close: 1.2, open: 0.2
+            "j2n7s300_joint_finger_tip_[1-3]": 0.2,  # close: 1.2, open: 0.2
+        },
+    ),
+    actuators={
+        "arm": ImplicitActuatorCfg(
+            joint_names_expr=[".*_joint_[1-7]"],
+            velocity_limit=100.0,
+            effort_limit={
+                ".*_joint_[1-2]": 80.0,
+                ".*_joint_[3-4]": 40.0,
+                ".*_joint_[5-7]": 20.0,
+            },
+            stiffness={
+                ".*_joint_[1-4]": 40.0,
+                ".*_joint_[5-7]": 15.0,
+            },
+            damping={
+                ".*_joint_[1-4]": 1.0,
+                ".*_joint_[5-7]": 0.5,
+            },
+        ),
+        "gripper": ImplicitActuatorCfg(
+            joint_names_expr=[".*_finger_[1-3]", ".*_finger_tip_[1-3]"],
+            velocity_limit=100.0,
+            effort_limit=2.0,
+            stiffness=1.2,
+            damping=0.01,
+        ),
+    },
+)
+"""Configuration of Kinova JACO2 (7-Dof) arm with 3-finger gripper."""
+
+
+KINOVA_JACO2_N6S300_CFG = ArticulationCfg(
+    spawn=sim_utils.UsdFileCfg(
+        usd_path=f"{ISAAC_NUCLEUS_DIR}/Robots/Kinova/Jaco2/J2N6S300/j2n6s300_instanceable.usd",
+        rigid_props=sim_utils.RigidBodyPropertiesCfg(
+            disable_gravity=False,
+            max_depenetration_velocity=5.0,
+        ),
+        articulation_props=sim_utils.ArticulationRootPropertiesCfg(
+            enabled_self_collisions=True, solver_position_iteration_count=8, solver_velocity_iteration_count=0
+        ),
+        activate_contact_sensors=False,
+    ),
+    init_state=ArticulationCfg.InitialStateCfg(
+        joint_pos={
+            "j2n6s300_joint_1": 0.0,
+            "j2n6s300_joint_2": 2.76,
+            "j2n6s300_joint_3": 2.76,
+            "j2n6s300_joint_4": 2.5,
+            "j2n6s300_joint_5": 2.0,
+            "j2n6s300_joint_6": 0.0,
+            "j2n6s300_joint_finger_[1-3]": 0.2,  # close: 1.2, open: 0.2
+            "j2n6s300_joint_finger_tip_[1-3]": 0.2,  # close: 1.2, open: 0.2
+        },
+    ),
+    actuators={
+        "arm": ImplicitActuatorCfg(
+            joint_names_expr=[".*_joint_[1-6]"],
+            velocity_limit=100.0,
+            effort_limit={
+                ".*_joint_[1-2]": 80.0,
+                ".*_joint_3": 40.0,
+                ".*_joint_[4-6]": 20.0,
+            },
+            stiffness={
+                ".*_joint_[1-3]": 40.0,
+                ".*_joint_[4-6]": 15.0,
+            },
+            damping={
+                ".*_joint_[1-3]": 1.0,
+                ".*_joint_[4-6]": 0.5,
+            },
+        ),
+        "gripper": ImplicitActuatorCfg(
+            joint_names_expr=[".*_finger_[1-3]", ".*_finger_tip_[1-3]"],
+            velocity_limit=100.0,
+            effort_limit=2.0,
+            stiffness=1.2,
+            damping=0.01,
+        ),
+    },
+)
+"""Configuration of Kinova JACO2 (6-Dof) arm with 3-finger gripper."""
+
+
+KINOVA_GEN3_N7_CFG = ArticulationCfg(
+    spawn=sim_utils.UsdFileCfg(
+        usd_path=f"{ISAAC_NUCLEUS_DIR}/Robots/Kinova/Gen3/gen3n7_instanceable.usd",
+        rigid_props=sim_utils.RigidBodyPropertiesCfg(
+            disable_gravity=False,
+            max_depenetration_velocity=5.0,
+        ),
+        articulation_props=sim_utils.ArticulationRootPropertiesCfg(
+            enabled_self_collisions=True, solver_position_iteration_count=8, solver_velocity_iteration_count=0
+        ),
+        activate_contact_sensors=False,
+    ),
+    init_state=ArticulationCfg.InitialStateCfg(
+        joint_pos={
+            "joint_1": 0.0,
+            "joint_2": 0.65,
+            "joint_3": 0.0,
+            "joint_4": 1.89,
+            "joint_5": 0.0,
+            "joint_6": 0.6,
+            "joint_7": -1.57,
+        },
+    ),
+    actuators={
+        "arm": ImplicitActuatorCfg(
+            joint_names_expr=["joint_[1-7]"],
+            velocity_limit=100.0,
+            effort_limit={
+                "joint_[1-4]": 39.0,
+                "joint_[5-7]": 9.0,
+            },
+            stiffness={
+                "joint_[1-4]": 10000.0,
+                "joint_[5-7]": 5000.0,
+            },
+            damping={
+                "joint_[1-4]": 500.0,
+                "joint_[5-7]": 100.0,
+            },
+        ),
+    },
+)
+"""Configuration of Kinova Gen3 (7-Dof) arm with no gripper."""
+
+
+KINOVA_GEN3_N7_HIGH_PD_CFG = ArticulationCfg(
+    spawn=sim_utils.UsdFileCfg(
+        usd_path=f"{ISAAC_NUCLEUS_DIR}/Robots/Kinova/Gen3/gen3n7_instanceable.usd",
+        rigid_props=sim_utils.RigidBodyPropertiesCfg(
+            disable_gravity=False,  # Disabled for high PD control
+            max_depenetration_velocity=5.0,
+        ),
+        articulation_props=sim_utils.ArticulationRootPropertiesCfg(
+            enabled_self_collisions=True, 
+            solver_position_iteration_count=16,  # Increased from 8
+            solver_velocity_iteration_count=1    # Increased from 0
+        ),
+        activate_contact_sensors=False,
+    ),
+    init_state=ArticulationCfg.InitialStateCfg(
+        joint_pos={
+            "joint_1": 0.0,
+            "joint_2": 0.65,
+            "joint_3": 0.0,
+            "joint_4": 1.89,
+            "joint_5": 0.0,
+            "joint_6": 0.6,
+            "joint_7": -1.57,
+        },
+    ),
+    actuators={
+        "arm": ImplicitActuatorCfg(
+            joint_names_expr=["joint_[1-7]"],
+            velocity_limit=100.0,
+            effort_limit={
+                "joint_[1-4]": 39.0,
+                "joint_[5-7]": 9.0,
+            },
+            stiffness={
+                "joint_[1-4]": 10000.0,  # Increased from 40.0
+                "joint_[5-7]": 5000.0,  # Increased from 15.0
+            },
+            damping={
+                "joint_[1-4]": 500.0,  # Increased from 1.0
+                "joint_[5-7]": 100.0,  # Increased from 0.5
+            },
+            friction={
+                "joint_[1-2]": 0.0,  # Reduced from 100.0
+                "joint_[3-7]": 0.0,  # Reduced from 50.0
+            },
+        ),
+    },
+)
+
+"""Configuration of Kinova Gen3 (7-Dof) arm with Robotiq 2F-85 gripper."""
+
+# High PD version for better IK control
+KINOVA_GEN3_N7_ROBOTIQ_2F85_HIGH_PD_CFG = ArticulationCfg(
+    spawn=sim_utils.UsdFileCfg(
+        usd_path=f"{ISAAC_NUCLEUS_DIR}/Robots/Kinova/Gen3/kinova_gen3.usd",  # Will be overridden in environment config
+        articulation_props=sim_utils.ArticulationRootPropertiesCfg(
+            enabled_self_collisions=True, 
+            solver_position_iteration_count=16, 
+            solver_velocity_iteration_count=1
+        ),
+        activate_contact_sensors=False,
+    ),
+    init_state=ArticulationCfg.InitialStateCfg(
+        joint_pos={
+            "joint_1": 0.0,
+            "joint_2": 0.65,
+            "joint_3": 0.0,
+            "joint_4": 1.89,
+            "joint_5": 0.0,
+            "joint_6": 0.6,
+            "joint_7": -1.57,
+            "finger_joint": 0.0,  # Initial position for gripper (open)
+        },
+    ),
+    actuators={
+        # Arm joints - separate actuator config with high PD values
+        "arm": ImplicitActuatorCfg(
+            joint_names_expr=["joint_[1-7]"],
+            velocity_limit=100.0,
+            effort_limit={
+                "joint_[1-4]": 40.0,  # Increased effort limit for proximal joints
+                "joint_[5-7]": 10.0,  # Increased effort limit for distal joints
+            },
+            stiffness={
+                "joint_[1-4]": 5000.0, # Increased stiffness for holding power
+                "joint_[5-7]": 2500.0,
+            },
+            damping={
+                "joint_[1-4]": 1000.0,   # Significantly increased damping for stability
+                "joint_[5-7]": 500.0,
+            },
+            friction={
+                "joint_[1-2]": 0.5,  # Reduced from 100.0
+                "joint_[3-7]": 1.0,  # Reduced from 50.0
+            },# Uniform low friction
+        ),
+        # Gripper joints - separate actuator config
+        "gripper": ImplicitActuatorCfg(
+            joint_names_expr=["finger_joint"],
+            velocity_limit=50.0,    # Reduced from 100.0 for smoother control
+            effort_limit=10.0,      # Reduced from 15.0 for stability
+            stiffness=1000.0,       # Reduced from 3000.0 for stability
+            damping=50.0,          # Reduced from 100.0 for stability
+            friction=0.1,          # Minimal friction
+        ),
+    },
+)
+"""Configuration of Kinova Gen3 (7-Dof) arm with Robotiq 2F-85 gripper with high PD gains.
+
+This configuration is useful for task-space control using differential IK.
+"""
