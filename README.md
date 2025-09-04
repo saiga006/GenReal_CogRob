@@ -1,5 +1,7 @@
 # GenReal_CogRob
-Sample repository for Cognitive Robotics Project
+
+## Dataset
+[Please find the dataset here](https://app.box.com/s/zg53efxfykoptozaf4a7fax8njdi090a)
 
 ## Template for Isaac Lab Projects
 
