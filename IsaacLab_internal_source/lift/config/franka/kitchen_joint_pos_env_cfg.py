@@ -11,7 +11,7 @@ from copy import deepcopy
 import os
 import torch
 from isaaclab.assets import ArticulationCfg, AssetBaseCfg, RigidObjectCfg
-from isaaclab.sensors import CameraCfg, FrameTransformerCfg
+from isaaclab.sensors import TiledCameraCfg, FrameTransformerCfg
 from isaaclab.sensors.frame_transformer.frame_transformer_cfg import OffsetCfg
 from isaaclab.sim.schemas.schemas_cfg import RigidBodyPropertiesCfg
 from isaaclab.sim.spawners.from_files.from_files_cfg import UsdFileCfg
@@ -21,8 +21,14 @@ from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
 
 from isaaclab_tasks.manager_based.manipulation.lift import mdp
 from isaaclab_tasks.manager_based.manipulation.lift.lift_env_cfg import LiftEnvCfg
-from isaaclab.managers import TerminationTermCfg as DoneTerm
+from isaaclab.managers import ObservationGroupCfg as ObsGroup
+from isaaclab.managers import ObservationTermCfg, TerminationTermCfg as DoneTerm, EventTermCfg as EventTerm
 from isaaclab.utils.math import transform_points
+from isaaclab.managers import SceneEntityCfg
+from isaaclab.sensors import CameraCfg
+import isaaclab.sim as sim_utils
+import torch
+import os
 
 ##
 # Pre-defined configs
@@ -78,10 +84,61 @@ def object_in_microwave_and_hand_out(
 
 
 @configclass
+class ObservationsCfg:
+    """Observation specifications for the MDP."""
+
+    @configclass
+    class PolicyCfg(ObsGroup):
+        """Observations for policy group."""
+
+        # state observations
+        joint_pos = ObservationTermCfg(func=mdp.joint_pos_rel)
+        joint_vel = ObservationTermCfg(func=mdp.joint_vel_rel)
+        object = ObservationTermCfg(func=mdp.object_position_in_robot_root_frame, params={"object_cfg": SceneEntityCfg("object")})
+        actions = ObservationTermCfg(func=mdp.last_action)
+        wrist_cam = ObservationTermCfg(
+            func=mdp.image, params={"sensor_cfg": SceneEntityCfg("wrist_camera"), "data_type": "rgb", "normalize": False}
+        )
+       # wrist_cam_depth = ObservationTermCfg(
+       #     func=mdp.image, params={"sensor_cfg": SceneEntityCfg("wrist_camera"), "data_type": "distance_to_image_plane", "normalize": False}
+       # )
+        eef_pos = ObservationTermCfg(func=mdp.ee_frame_pos)
+        eef_quat = ObservationTermCfg(func=mdp.ee_frame_quat)
+        gripper_pos = ObservationTermCfg(func=mdp.gripper_pos)
+
+        def __post_init__(self):
+            """Post-initialization."""
+            self.enable_corruption = True
+            self.concatenate_terms = False
+
+    # observation groups
+    policy: PolicyCfg = PolicyCfg()
+
+
+@configclass
 class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
+    # The active observations for the environment
+    observations: ObservationsCfg = ObservationsCfg()
     def __post_init__(self):
         # post init of parent
         super().__post_init__()
+
+        # Add light intensity randomization on reset
+        self.events.randomize_light = EventTerm(
+            func=mdp.randomize_light_intensity, 
+            mode="reset",
+            params={
+                "light_path": "/World/light",
+                "intensity_range": (700.0, 2000.0)  # Randomize between 700-1300 (centered around 1000)
+            }
+        )
+
+        # List of image observations in policy observations
+        self.image_obs_list = ["wrist_cam", "wrist_cam_depth"]
+
+        # Set settings for camera rendering
+        self.rerender_on_reset = True
+        self.sim.render.antialiasing_mode = "OFF"  # disable dlss
 
         # Set kitchen scene with single environment
         self.scene = MinimalKitchenSceneCfg(num_envs=1, env_spacing=2.5)
@@ -89,7 +146,7 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
         # Set Franka as robot
         robot_cfg = deepcopy(FRANKA_PANDA_HIGH_PD_CFG)
         robot_cfg.prim_path = "{ENV_REGEX_NS}/Robot"
-        robot_cfg.init_state.pos = (2.15, 1.25, 0.8)
+        robot_cfg.init_state.pos = (1.9, 1.25, 0.8)
         robot_cfg.init_state.rot = (1.0, 0.0, 0.0, 0.0)
         # override the default initial state
         robot_cfg.init_state.joint_pos = {
@@ -107,6 +164,20 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
 
         # Set the object (using the CONTAINER_CFG from kitchen scene as the liftable object)
         self.scene.object = self.scene.CONTAINER_CFG
+
+        # Create a camera config for the wrist camera
+        wrist_camera_cfg = CameraCfg(
+            prim_path="{ENV_REGEX_NS}/Robot/panda_link7/camera",
+            spawn=sim_utils.PinholeCameraCfg(
+                focal_length=24.0, focus_distance=400.0, horizontal_aperture=20.955, clipping_range=(0.1, 2.0)
+            ),
+            width=88, # Set desired policy input width
+            height=88, # Set desired policy input height
+            offset=CameraCfg.OffsetCfg(pos=(0.05639, -0.05639, -0.00305), rot=(0.0, 0.0, 0.0, -1.0), convention="ros"),
+            data_types=["rgb", "distance_to_image_plane"],  # Added depth information
+            update_period=0.0,  # Ensures camera updates every frame
+        )
+        self.scene.wrist_camera = wrist_camera_cfg
 
         # Set actions for the specific robot type (franka)
         self.actions.arm_action = mdp.JointPositionActionCfg(
@@ -128,6 +199,7 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
             usd_path=f"{ISAAC_NUCLEUS_DIR}/Props/UIElements/frame_prim.usd", scale=(0.1, 0.1, 0.1)
         )
         marker_cfg.prim_path = "/Visuals/FrameTransformer"
+
         self.scene.ee_frame = FrameTransformerCfg(
             prim_path="{ENV_REGEX_NS}/Robot/panda_link0",
             debug_vis=False,
@@ -137,7 +209,21 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
                     prim_path="{ENV_REGEX_NS}/Robot/panda_hand",
                     name="end_effector",
                     offset=OffsetCfg(
-                        pos=(0.0, 0.0, 0.1034),
+                        pos=[0.0, 0.0, 0.1034],
+                    ),
+                ),
+                FrameTransformerCfg.FrameCfg(
+                    prim_path="{ENV_REGEX_NS}/Robot/panda_rightfinger",
+                    name="tool_rightfinger",
+                    offset=OffsetCfg(
+                        pos=(0.0, 0.0, 0.046),
+                    ),
+                ),
+                FrameTransformerCfg.FrameCfg(
+                    prim_path="{ENV_REGEX_NS}/Robot/panda_leftfinger",
+                    name="tool_leftfinger",
+                    offset=OffsetCfg(
+                        pos=(0.0, 0.0, 0.046),
                     ),
                 ),
             ],
@@ -148,7 +234,7 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
         self.commands.object_pose.debug_vis = False  # Hide visual markers
         # Fix target to a single position if desired
         self.commands.object_pose.ranges = mdp.UniformPoseCommandCfg.Ranges(
-            pos_x=(0.5, 0.5), pos_y=(0.0, 0.0), pos_z=(0.4, 0.4),
+            pos_x=(0.5, 0.5), pos_y=(0.0, 0.0), pos_z=(0.7, 0.7),
             roll=(0.0, 0.0), pitch=(0.0, 0.0), yaw=(0.0, 0.0)
         )
 
@@ -160,19 +246,35 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
         if hasattr(self.scene, "fridge"):
             self.scene.fridge.init_state.joint_pos = {"fridge_door_joint": 1.57}
 
-        # Add a camera to the wrist
-        self.scene.wrist_camera = CameraCfg(
-            prim_path="{ENV_REGEX_NS}/Robot/panda_hand/camera",
-            spawn=sim_utils.PinholeCameraCfg(
-                focal_length=24.0, focus_distance=400.0, horizontal_aperture=20.955, clipping_range=(0.1, 20.0)
+        # Define success condition for recording demonstrations
+        self.terminations.success = DoneTerm(
+            func=object_in_microwave_and_hand_out,
+            params={
+                "object_name": "object",
+                "microwave_name": "microwave",
+                "hand_body_name": "panda_hand",
+                # These dimensions define the "inside" of the microwave.
+                # You may need to tune these values for your specific microwave asset.
+                "microwave_box_dims": (0.3, 0.3, 0.25),
+            },
+        )
+
+        # Add a visual marker for the microwave bounding box
+        # This adds a translucent green box that represents the success area.
+        self.scene.microwave_bbox_marker = AssetBaseCfg(
+            prim_path="{ENV_REGEX_NS}/SuccessBBox",
+            spawn=sim_utils.CuboidCfg(
+                size=(0.3, 0.3, 0.25),
+                visual_material=sim_utils.PreviewSurfaceCfg(
+                    diffuse_color=(0.0, 1.0, 0.0),
+                    opacity=0.3,
+                    metallic=0.0,
+                    roughness=1.0
+                ),
             ),
-            width=640,
-            height=480,
-            offset=CameraCfg.OffsetCfg(pos=(0.0, 0.0, 0.0), rot=(0.0, 0.0, 0.0, 1.0)),
-            data_types=["rgb", "distance_to_image_plane"],
-            colorize_semantic_segmentation=True,
-            colorize_instance_id_segmentation=True,
-            colorize_instance_segmentation=True,
+            init_state=AssetBaseCfg.InitialStateCfg(
+                pos=(2.3, 0.5, 1.25), # Position it inside the microwave cavity
+            )
         )
 
 

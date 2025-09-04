@@ -26,8 +26,9 @@ class FrankaKitchenLiftEnvCfg(kitchen_joint_pos_env_cfg.FrankaKitchenLiftEnvCfg)
 
         # -- 1. Disable random command generation for teleoperation
         # Set a very long resampling time to prevent the target from changing.
+
         self.commands.object_pose.resampling_time_range = (1.0e9, 1.0e9)
-        # Hide the distracting command visualization.
+            # Hide the distracting command visualization.
         self.commands.object_pose.debug_vis = False
         self.commands.object_pose.body_name = "panda_hand"
 
@@ -38,7 +39,7 @@ class FrankaKitchenLiftEnvCfg(kitchen_joint_pos_env_cfg.FrankaKitchenLiftEnvCfg)
             body_name="panda_hand",
             # Use relative mode for intuitive control relative to the robot's base.
             controller=DifferentialIKControllerCfg(command_type="pose", use_relative_mode=True, ik_method="dls"),
-            scale=1.0,
+            scale=0.55,
             body_offset=DifferentialInverseKinematicsActionCfg.OffsetCfg(pos=[0.0, 0.0, 0.107]),
         )
 

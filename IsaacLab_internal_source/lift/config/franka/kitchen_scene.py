@@ -44,7 +44,7 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
             visual_material=sim_utils.PreviewSurfaceCfg(diffuse_color=(0.4, 0.2, 0.1)),
         ),
         init_state=RigidObjectCfg.InitialStateCfg(
-            pos=(2.75, 1.75, 0.4),  # Height/2 for proper grounding
+            pos=(2.5, 1.75, 0.4),  # Height/2 for proper grounding
             rot=(1.0, 0.0, 0.0, 0.0),
         ),
     )
@@ -53,7 +53,7 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
     robot = FRANKA_PANDA_HIGH_PD_CFG.replace(
         prim_path="{ENV_REGEX_NS}/Robot",
         init_state=ArticulationCfg.InitialStateCfg(
-            pos=(2.15, 1.25, 0.8),  # On table surface
+            pos=(1.8, 1.25, 0.8),  # On table surface
             rot=(1.0, 0.0, 0.0, 0.0),  # Facing forward
             joint_pos={
                 "panda_joint1": 0.0,
@@ -69,7 +69,7 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
         )
     )
     
-    # Insulated shelf - positioned above ground
+    # Insulated shelf - optimized for performance
     insulated_shelf = ArticulationCfg(
         prim_path="/World/InsulatedShelf",
         spawn=sim_utils.UsdFileCfg(
@@ -77,22 +77,27 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
             rigid_props=sim_utils.RigidBodyPropertiesCfg(
                 disable_gravity=False,
                 max_depenetration_velocity=5.0,
+                solver_position_iteration_count=2,  # Reduced from default
+                solver_velocity_iteration_count=0,
             ),
             articulation_props=sim_utils.ArticulationRootPropertiesCfg(
                 enabled_self_collisions=False,
+                solver_position_iteration_count=2,  # Reduced from default
+                solver_velocity_iteration_count=0,
             ),
         ),
         init_state=ArticulationCfg.InitialStateCfg(
-            pos=(2.5, 0.5, 0.5),  # Z=0.5 to properly sit above ground
-            rot=(1.0, 0.0, 0.0, 0.0),  # No rotation
+            pos=(2.5, 0.5, 0.5),
+            rot=(1.0, 0.0, 0.0, 0.0),
         ),
+        # Make doors extremely stiff so they don't move (but keep actuators)
         actuators={
             "shelf_joints": ImplicitActuatorCfg(
                 joint_names_expr=[".*"],
-                effort_limit=50.0,
-                velocity_limit=0.5,
-                stiffness=1000.0,
-                damping=100.0,
+                effort_limit_sim=1000.0,  # Updated parameter name
+                velocity_limit_sim=0.01,   # Updated parameter name
+                stiffness=10000.0,         # Very stiff
+                damping=1000.0,            # High damping
             ),
         },
     )
@@ -112,7 +117,7 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
         ),
         init_state=ArticulationCfg.InitialStateCfg(
             # Center microwave above the insulated_shelf
-            pos=(2.3, 0.5, 0.5 + MICROWAVE_HEIGHT_OFFSET),
+            pos=(2.3, 0.6, 0.5 + MICROWAVE_HEIGHT_OFFSET),
             rot=(0.0, 0.0, 0.0, 1.0),
         ),
         actuators={
@@ -126,6 +131,24 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
         },
     )
     
+    # Fridge Base
+    fridge_base = RigidObjectCfg(
+        prim_path="/World/FridgeBase",
+        spawn=sim_utils.CuboidCfg(
+            size=(0.8, 0.8, 0.2),  # A bit larger than a typical fridge base
+            rigid_props=sim_utils.RigidBodyPropertiesCfg(
+                disable_gravity=False,
+            ),
+            mass_props=sim_utils.MassPropertiesCfg(mass=20.0),
+            collision_props=sim_utils.CollisionPropertiesCfg(),
+            visual_material=sim_utils.PreviewSurfaceCfg(diffuse_color=(0.3, 0.3, 0.3)),
+        ),
+        init_state=RigidObjectCfg.InitialStateCfg(
+            pos=(1.4, 0.75, 0.1),  # Centered under the fridge, on the ground
+            rot=(1.0, 0.0, 0.0, 0.0),
+        ),
+    )
+
     # Fridge - BESIDE SHELF
     fridge = ArticulationCfg(
         prim_path="/World/Fridge",
@@ -140,7 +163,7 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
             ),
         ),
         init_state=ArticulationCfg.InitialStateCfg(
-            pos=(1.5, 0.75, 0.9),
+            pos=(1.4, 0.75, 1.1),
             rot=(0.0, 0.0, 0.0, 1.0),
         ),
         actuators={
@@ -160,14 +183,14 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
             usd_path=f"{KITCHEN_ASSETS_DIR}/Lightwheel_tomato_soup_can/tomato_soup_can.usd",
             rigid_props=sim_utils.RigidBodyPropertiesCfg(
                 disable_gravity=False,
-                solver_position_iteration_count=4,
-                solver_velocity_iteration_count=0,
+                solver_position_iteration_count=4, # Kept at 4 for stable grasping
+                solver_velocity_iteration_count=1, # Use 1 for better stability
             ),
             collision_props=sim_utils.CollisionPropertiesCfg(),
             mass_props=sim_utils.MassPropertiesCfg(mass=0.1),
         ),
         init_state=RigidObjectCfg.InitialStateCfg(
-            pos=(1.6534, 0.85, 1.4814),
+            pos=(1.5534, 0.85, 1.6814),
             rot=(1.0, 0.0, 0.0, 0.0),
         ),
     )
@@ -175,5 +198,6 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
     # Enhanced lighting
     light = AssetBaseCfg(
         prim_path="/World/light",
-        spawn=sim_utils.DomeLightCfg(intensity=3000.0, color=(0.9, 0.9, 0.9)),
+        spawn=sim_utils.DomeLightCfg(intensity=1000.0, color=(0.9, 0.9, 0.9)
+                                )  
     )

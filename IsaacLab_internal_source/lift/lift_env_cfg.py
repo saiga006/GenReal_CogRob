@@ -126,7 +126,7 @@ class EventCfg:
         params={
             "pose_range": {"x": (-0.05, 0.05), "y": (0.0, 0.0), "z": (0.0, 0.0)},  # Only small X randomization
             "velocity_range": {},
-            "asset_cfg": SceneEntityCfg("object", body_names="Object"),
+            "asset_cfg": SceneEntityCfg("object", body_names="tomato_soup_can"),
         },
     )
 
@@ -216,7 +216,9 @@ class LiftEnvCfg(ManagerBasedRLEnvCfg):
         self.sim.render_interval = self.decimation
 
         self.sim.physx.bounce_threshold_velocity = 0.2
-        self.sim.physx.bounce_threshold_velocity = 0.01
-        self.sim.physx.gpu_found_lost_aggregate_pairs_capacity = 1024 * 1024 * 4
-        self.sim.physx.gpu_total_aggregate_pairs_capacity = 16 * 1024
+        self.sim.physx.friction_offset_threshold = 0.04
+        # set friction correlation distance to 0.00625 for more stable friction
         self.sim.physx.friction_correlation_distance = 0.00625
+        # reduce the aggregate pairs capacity to save memory
+        self.sim.physx.gpu_found_lost_aggregate_pairs_capacity = 1024 * 1024
+        self.sim.physx.gpu_total_aggregate_pairs_capacity = 1024 * 8
