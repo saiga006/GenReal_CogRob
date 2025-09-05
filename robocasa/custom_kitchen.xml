@@ -1,0 +1,264 @@
+
+    <mujoco model="simple_kitchen_layout">
+        <compiler angle="radian" meshdir="/home/saloni/mujoco_menagerie/kinova_gen3/assets"/>
+        
+        <option timestep="0.002" integrator="RK4" gravity="0 0 0"/>
+        
+        <default>
+            <default class="visual">
+                <geom type="mesh" contype="0" conaffinity="0" group="2" rgba="0.75294 0.75294 0.75294 1"/>
+            </default>
+            <default class="collision">
+                <geom type="mesh" group="3"/>
+            </default>
+            
+            <!-- Gripper defaults -->
+            <default class="gripper">
+                <joint damping="1000.0" stiffness="1000.0" frictionloss="100.0"/>
+                <default class="gripper_visual">
+                    <geom type="mesh" contype="0" conaffinity="0" group="2" material="gripper_black"/>
+                </default>
+                <default class="gripper_collision">
+                    <geom type="mesh" group="3"/>
+                </default>
+            </default>
+            
+            <joint damping="1000.0" stiffness="1000.0" frictionloss="100.0"/>
+            <site size="0.005" rgba="1 0 0 0.5"/>
+        </default>
+        
+        <visual>
+            <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+            <rgba haze="0.15 0.25 0.35 1"/>
+            <global azimuth="120" elevation="-20"/>
+        </visual>
+        
+        <asset>
+            <!-- Kinova Gen3 meshes from Mujoco Menagerie -->
+            <mesh name="base_link" file="base_link.stl"/>
+            <mesh name="shoulder_link" file="shoulder_link.stl"/>
+            <mesh name="half_arm_1_link" file="half_arm_1_link.stl"/>
+            <mesh name="half_arm_2_link" file="half_arm_2_link.stl"/>
+            <mesh name="forearm_link" file="forearm_link.stl"/>
+            <mesh name="spherical_wrist_1_link" file="spherical_wrist_1_link.stl"/>
+            <mesh name="spherical_wrist_2_link" file="spherical_wrist_2_link.stl"/>
+            <mesh name="bracelet_with_vision_link" file="bracelet_with_vision_link.stl"/>
+            
+            <!-- Gripper uses geometric shapes, no meshes needed -->
+            
+            <!-- Materials -->
+            <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+            <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3"
+                markrgb="0.8 0.8 0.8" width="300" height="300"/>
+            <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+            
+            <!-- Kitchen materials -->
+            <texture type="2d" name="wood_texture" builtin="flat" mark="cross" width="127" height="127"
+                rgb1="0.6 0.4 0.2" rgb2="0.5 0.3 0.1" markrgb="0.8 0.6 0.4" random="0.01"/>
+            <material name="wood_mat" texture="wood_texture" specular="0.3" shininess="0.1"/>
+            
+            <texture type="2d" name="white_texture" builtin="flat" width="127" height="127"
+                rgb1="0.95 0.95 0.95" rgb2="0.9 0.9 0.9"/>
+            <material name="white_mat" texture="white_texture" specular="0.4" shininess="0.2"/>
+            
+            <material name="black_mat" rgba="0.1 0.1 0.1 1" specular="0.2" shininess="0.1"/>
+            <material name="metal_mat" rgba="0.8 0.8 0.9 1" specular="0.8" shininess="0.3" reflectance="0.1"/>
+            <material name="red_mat" rgba="0.8 0.2 0.2 1" specular="0.3" shininess="0.3"/>
+            
+            <!-- Gripper materials -->
+            <material name="gripper_metal" rgba="0.58 0.58 0.58 1"/>
+            <material name="gripper_silicone" rgba="0.1882 0.1882 0.1882 1"/>
+            <material name="gripper_black" rgba="0.149 0.149 0.149 1"/>
+        </asset>
+        
+        <worldbody>
+            <!-- Lighting -->
+            <light pos="0 0 3" directional="true" diffuse="0.8 0.8 0.8"/>
+            <light pos="1 1 2" directional="false" diffuse="0.5 0.5 0.5"/>
+            
+            <!-- Ground -->
+            <geom name="floor" size="0 0 0.01" type="plane" material="groundplane"/>
+            
+            <!-- Robot Table (Center) -->
+            <body name="robot_table" pos="0 0 0">
+                <!-- Table surface -->
+                <geom name="robot_table_top" type="box" size="0.5 0.4 0.05" pos="0 0 0.9" material="wood_mat"/>
+                <!-- Table legs -->
+                <geom name="robot_leg1" type="cylinder" size="0.03 0.425" pos="0.45 0.35 0.425" material="black_mat"/>
+                <geom name="robot_leg2" type="cylinder" size="0.03 0.425" pos="0.45 -0.35 0.425" material="black_mat"/>
+                <geom name="robot_leg3" type="cylinder" size="0.03 0.425" pos="-0.45 0.35 0.425" material="black_mat"/>
+                <geom name="robot_leg4" type="cylinder" size="0.03 0.425" pos="-0.45 -0.35 0.425" material="black_mat"/>
+            </body>
+            
+            <!-- Kitchen Platform (Center, smaller to avoid appliance overlap) -->
+            <body name="kitchen_platform" pos="0 -1.0 0">
+                <!-- Main counter surface - smaller width to avoid fridge overlap -->
+                <geom name="counter_top" type="box" size="0.35 0.4 0.05" pos="0 0 0.9" material="wood_mat"/>
+                <!-- Counter legs -->
+                <geom name="counter_leg1" type="cylinder" size="0.03 0.425" pos="0.3 0.35 0.425" material="black_mat"/>
+                <geom name="counter_leg2" type="cylinder" size="0.03 0.425" pos="0.3 -0.35 0.425" material="black_mat"/>
+                <geom name="counter_leg3" type="cylinder" size="0.03 0.425" pos="-0.3 0.35 0.425" material="black_mat"/>
+                <geom name="counter_leg4" type="cylinder" size="0.03 0.425" pos="-0.3 -0.35 0.425" material="black_mat"/>
+            </body>
+            
+            <!-- Microwave on kitchen platform (Directly in front of Robot) -->
+            <body name="microwave" pos="0 -1.0 0.95">
+                <!-- Main microwave body -->
+                <geom name="microwave_body" type="box" size="0.25 0.25 0.15" pos="0 0 0.15" material="white_mat"/>
+                
+                <!-- Microwave door (hinged) - Now facing the robot -->
+                <body name="microwave_door" pos="0 0.25 0.15">
+                    <!-- Door joint removed - door is now fixed -->
+                    <geom name="microwave_door_geom" type="box" size="0.23 0.02 0.13" pos="0 0 0" material="white_mat"/>
+                    <!-- Door handle -->
+                    <geom name="microwave_handle" type="cylinder" size="0.01 0.06" pos="-0.12 0.03 0" 
+                          quat="0.707 0.707 0 0" material="black_mat"/>
+                    <!-- Door window -->
+                    <geom name="microwave_window" type="box" size="0.18 0.005 0.1" pos="0 -0.01 0" 
+                          rgba="0.1 0.1 0.1 0.7"/>
+                </body>
+                
+                <!-- Microwave interior -->
+                <geom name="microwave_interior" type="box" size="0.23 0.23 0.13" pos="0 0 0.15" 
+                      rgba="0.9 0.9 0.9 1" contype="0" conaffinity="0" group="1"/>
+                
+                <!-- Control panel -->
+                <geom name="microwave_controls" type="box" size="0.08 0.04 0.02" pos="0.15 -0.15 0.25" 
+                      material="black_mat"/>
+                
+                <!-- Interior target zone -->
+                <site name="microwave_target" pos="0 0 0.08" size="0.08" rgba="0.8 0.8 0.2 0.3"/>
+            </body>
+            
+            <!-- Refrigerator (Front Left of Robot, opposite side of microwave) -->
+            <body name="refrigerator" pos="-0.8 -1.0 0">
+                <!-- Main fridge body -->
+                <geom name="fridge_body" type="box" size="0.3 0.3 0.85" pos="0 0 0.85" material="white_mat"/>
+                
+                <!-- Fridge door (hinged) - Now facing toward robot -->
+                <body name="fridge_door" pos="0 0.3 0.85">
+                    <!-- Door joint removed - door is now fixed -->
+                    <geom name="fridge_door_geom" type="box" size="0.28 0.03 0.83" pos="0 0 0" material="white_mat"/>
+                    <!-- Door handle - positioned on left side for left-to-right opening -->
+                    <geom name="fridge_handle" type="box" size="0.03 0.02 0.15" pos="0.2 0.05 0.3" material="metal_mat"/>
+                </body>
+                
+                <!-- Fridge interior shelves -->
+                <geom name="fridge_shelf1" type="box" size="0.28 0.28 0.01" pos="0 0 0.5" material="white_mat"/>
+                <geom name="fridge_shelf2" type="box" size="0.28 0.28 0.01" pos="0 0 1.0" material="white_mat"/>
+                <geom name="fridge_shelf3" type="box" size="0.28 0.28 0.01" pos="0 0 1.4" material="white_mat"/>
+                
+                <!-- Fridge target zones -->
+                <site name="fridge_target" pos="0 0 0.55" size="0.15" rgba="0.2 0.8 0.2 0.3"/>
+            </body>
+            
+            <!-- Box inside fridge (free body at world level) -->
+            <body name="box_in_fridge" pos="-0.8 -0.9 0.55">
+                <!-- Box is now fixed in place -->
+                <geom name="box_geom" type="box" size="0.04 0.04 0.04" material="red_mat" mass="0.1"/>
+                <site name="box_center" pos="0 0 0" size="0.02" rgba="1 0 0 0.5"/>
+            </body>
+            
+            <!-- Kinova Gen3 Robot (on center table) - With joints and actuators -->
+            <body name="robot_base" pos="0 0 0.95">
+                <body name="base_link">
+                    <inertial pos="-0.000648 -0.000166 0.084487" quat="0.999294 0.00139618 -0.0118387 0.035636" mass="1.697"
+                        diaginertia="0.00462407 0.00449437 0.00207755"/>
+                    <geom class="visual" mesh="base_link"/>
+                    <geom class="collision" mesh="base_link"/>
+                    <body name="shoulder_link" pos="0 0 0.15643" quat="0 1 0 0">
+                        <inertial pos="-2.3e-05 -0.010364 -0.07336" quat="0.707051 0.0451246 -0.0453544 0.704263" mass="1.3773"
+                            diaginertia="0.00488868 0.00457 0.00135132"/>
+                        <joint name="j_shoulder_pan" type="hinge" axis="0 0 1" range="-2.967 2.967" damping="1" armature="0.01"/>
+                        <geom class="visual" mesh="shoulder_link"/>
+                        <geom class="collision" mesh="shoulder_link"/>
+                        <body name="half_arm_1_link" pos="0 0.005375 -0.12838" quat="1 1 0 0">
+                            <inertial pos="-4.4e-05 -0.09958 -0.013278" quat="0.482348 0.516286 -0.516862 0.483366" mass="1.1636"
+                                diaginertia="0.0113017 0.011088 0.00102532"/>
+                            <joint name="j_shoulder_lift" type="hinge" axis="0 1 0" range="-2.270 2.270" damping="1" armature="0.01"/>
+                            <geom class="visual" mesh="half_arm_1_link"/>
+                            <geom class="collision" mesh="half_arm_1_link"/>
+                            <body name="half_arm_2_link" pos="0 -0.21038 -0.006375" quat="1 -1 0 0">
+                                <inertial pos="-4.4e-05 -0.006641 -0.117892" quat="0.706144 0.0213722 -0.0209128 0.707437" mass="1.1636"
+                                    diaginertia="0.0111633 0.010932 0.00100671"/>
+                                <joint name="j_arm_half_1" type="hinge" axis="0 0 1" range="-2.967 2.967" damping="1" armature="0.01"/>
+                                <geom class="visual" mesh="half_arm_2_link"/>
+                                <geom class="collision" mesh="half_arm_2_link"/>
+                                <body name="forearm_link" pos="0 0.006375 -0.21038" quat="1 1 0 0">
+                                    <inertial pos="-1.8e-05 -0.075478 -0.015006" quat="0.483678 0.515961 -0.515859 0.483455" mass="0.9302"
+                                        diaginertia="0.00834839 0.008147 0.000598606"/>
+                                    <joint name="j_elbow" type="hinge" axis="0 1 0" range="-2.423 2.423" damping="1" armature="0.01"/>
+                                    <geom class="visual" mesh="forearm_link"/>
+                                    <geom class="collision" mesh="forearm_link"/>
+                                    <body name="spherical_wrist_1_link" pos="0 -0.20843 -0.006375" quat="1 -1 0 0">
+                                        <inertial pos="1e-06 -0.009432 -0.063883" quat="0.703558 0.0707492 -0.0707492 0.703558" mass="0.6781"
+                                            diaginertia="0.00165901 0.001596 0.000346988"/>
+                                        <joint name="j_arm_half_2" type="hinge" axis="0 0 1" range="-2.967 2.967" damping="1" armature="0.01"/>
+                                        <geom class="visual" mesh="spherical_wrist_1_link"/>
+                                        <geom class="collision" mesh="spherical_wrist_1_link"/>
+                                        <body name="spherical_wrist_2_link" pos="0 0.00017505 -0.10593" quat="1 1 0 0">
+                                            <inertial pos="1e-06 -0.045483 -0.00965" quat="0.44426 0.550121 -0.550121 0.44426" mass="0.6781"
+                                                diaginertia="0.00170087 0.001641 0.00035013"/>
+                                            <joint name="j_wrist_spherical_1" type="hinge" axis="0 1 0" range="-2.094 2.094" damping="1" armature="0.01"/>
+                                            <geom class="visual" mesh="spherical_wrist_2_link"/>
+                                            <geom class="collision" mesh="spherical_wrist_2_link"/>
+                                            <body name="bracelet_link" pos="0 -0.10593 -0.00017505" quat="1 -1 0 0">
+                                                <inertial pos="0.000281 0.011402 -0.029798" quat="0.394358 0.596779 -0.577293 0.393789" mass="0.5"
+                                                    diaginertia="0.000657336 0.000587019 0.000320645"/>
+                                                <joint name="j_wrist_spherical_2" type="hinge" axis="0 0 1" range="-2.967 2.967" damping="1" armature="0.01"/>
+                                                <geom class="visual" mesh="bracelet_with_vision_link"/>
+                                                <geom class="collision" mesh="bracelet_with_vision_link"/>
+                                                <camera name="wrist" pos="0 -0.05639 -0.058475" quat="0 0 0 1" fovy="41.83792730009236"
+                                                    resolution="640 480"/>
+                                                <site name="pinch_site" pos="0 0 -0.061525" quat="0 1 0 0"/>
+                                                
+                                                <!-- Simple Two-Finger Gripper -->
+                                                <body name="gripper" pos="0 0 -0.08">
+                                                    <inertial mass="0.2" pos="0 0 -0.03" diaginertia="0.001 0.001 0.001"/>
+                                                    
+                                                    <!-- Gripper base/palm -->
+                                                    <geom name="gripper_palm" type="box" size="0.025 0.02 0.02" pos="0 0 -0.01" rgba="0.3 0.3 0.3 1"/>
+                                                    
+                                                    <!-- Left finger -->
+                                                    <geom name="left_finger" type="box" size="0.008 0.015 0.04" pos="-0.02 0 -0.05" rgba="0.6 0.6 0.6 1"/>
+                                                    
+                                                    <!-- Right finger -->
+                                                    <geom name="right_finger" type="box" size="0.008 0.015 0.04" pos="0.02 0 -0.05" rgba="0.6 0.6 0.6 1"/>
+                                                    
+                                                    <!-- Finger tips -->
+                                                    <geom name="left_tip" type="box" size="0.005 0.012 0.01" pos="-0.015 0 -0.09" rgba="0.1 0.1 0.1 1"/>
+                                                    <geom name="right_tip" type="box" size="0.005 0.012 0.01" pos="0.015 0 -0.09" rgba="0.1 0.1 0.1 1"/>
+                                                    
+                                                    <!-- End effector site -->
+                                                    <site name="gripper_site" pos="0 0 -0.1" size="0.008" rgba="0 1 0 1"/>
+                                                </body>
+                                            </body>
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+            
+            <!-- Camera positions optimized for new layout -->
+            <camera name="frontview" pos="0 -2.5 1.5" xyaxes="1 0 0 0 0.5 1"/>
+            <camera name="topview" pos="0 0 3" xyaxes="1 0 0 0 1 0"/>
+            <camera name="sideview" pos="2.5 0 1.5" xyaxes="0 1 0 0 0.5 1"/>
+            <camera name="robot_view" pos="0 -1.5 1.2" xyaxes="1 0 0 0 0.7 1"/>
+        </worldbody>
+        
+        <!-- Actuators for Kinova Gen3 7-DOF arm -->
+        <actuator>
+            <!-- Position actuators with stable control parameters -->
+            <position name="j_shoulder_pan" joint="j_shoulder_pan" kp="200" ctrlrange="-3.14 3.14" forcerange="-50 50"/>
+            <position name="j_shoulder_lift" joint="j_shoulder_lift" kp="200" ctrlrange="-3.14 3.14" forcerange="-50 50"/>
+            <position name="j_arm_half_1" joint="j_arm_half_1" kp="200" ctrlrange="-3.14 3.14" forcerange="-50 50"/>
+            <position name="j_elbow" joint="j_elbow" kp="200" ctrlrange="-3.14 3.14" forcerange="-50 50"/>
+            <position name="j_arm_half_2" joint="j_arm_half_2" kp="200" ctrlrange="-3.14 3.14" forcerange="-20 20"/>
+            <position name="j_wrist_spherical_1" joint="j_wrist_spherical_1" kp="200" ctrlrange="-3.14 3.14" forcerange="-20 20"/>
+            <position name="j_wrist_spherical_2" joint="j_wrist_spherical_2" kp="200" ctrlrange="-3.14 3.14" forcerange="-20 20"/>
+        </actuator>
+    </mujoco>
+    
