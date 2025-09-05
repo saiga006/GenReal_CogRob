@@ -7,6 +7,8 @@ import gymnasium as gym
 
 from . import agents
 
+from .cognitive_robotics_genreal_env_cfg import CognitiveRoboticsGenrealEnvCfg, CognitiveRoboticsGenrealEnvCfg_PLAY
+
 ##
 # Register Gym environments.
 ##

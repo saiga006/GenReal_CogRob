@@ -83,6 +83,24 @@ def object_in_microwave_and_hand_out(
     return success.unsqueeze(1)
 
 
+from cognitive_robotics_genreal.tasks.manager_based.cognitive_robotics_genreal.mdp import rewards as cognitive_rewards
+from isaaclab.managers import RewardTermCfg as RewTerm
+
+@configclass
+class RewardsCfg:
+    """Reward terms for the MDP."""
+    
+    # Task-specific rewards
+    reaching_fridge = RewTerm(func=cognitive_rewards.ee_fridge_distance, weight=1.0, params={"std": 0.1})
+    grasping_object = RewTerm(func=cognitive_rewards.object_grasped, weight=2.0)
+    reaching_microwave = RewTerm(func=cognitive_rewards.ee_microwave_distance, weight=1.0, params={"std": 0.1})
+    placing_in_microwave = RewTerm(func=cognitive_rewards.object_in_microwave, weight=5.0)
+
+    # Penalties
+    action_rate = RewTerm(func=mdp.action_rate_l2, weight=-0.01)
+    joint_vel = RewTerm(func=mdp.joint_vel_l2, weight=-0.0001)
+
+
 @configclass
 class ObservationsCfg:
     """Observation specifications for the MDP."""
@@ -94,22 +112,18 @@ class ObservationsCfg:
         # state observations
         joint_pos = ObservationTermCfg(func=mdp.joint_pos_rel)
         joint_vel = ObservationTermCfg(func=mdp.joint_vel_rel)
-        object = ObservationTermCfg(func=mdp.object_position_in_robot_root_frame, params={"object_cfg": SceneEntityCfg("object")})
-        actions = ObservationTermCfg(func=mdp.last_action)
-        wrist_cam = ObservationTermCfg(
-            func=mdp.image, params={"sensor_cfg": SceneEntityCfg("wrist_camera"), "data_type": "rgb", "normalize": False}
-        )
-       # wrist_cam_depth = ObservationTermCfg(
-       #     func=mdp.image, params={"sensor_cfg": SceneEntityCfg("wrist_camera"), "data_type": "distance_to_image_plane", "normalize": False}
-       # )
+        object_pos = ObservationTermCfg(func=mdp.object_position_in_robot_root_frame, params={"object_cfg": SceneEntityCfg("object")})
+        fridge_pos = ObservationTermCfg(func=mdp.object_position_in_robot_root_frame, params={"object_cfg": SceneEntityCfg("fridge_base")})
+        microwave_pos = ObservationTermCfg(func=mdp.object_position_in_robot_root_frame, params={"object_cfg": SceneEntityCfg("microwave")})
         eef_pos = ObservationTermCfg(func=mdp.ee_frame_pos)
         eef_quat = ObservationTermCfg(func=mdp.ee_frame_quat)
         gripper_pos = ObservationTermCfg(func=mdp.gripper_pos)
+        actions = ObservationTermCfg(func=mdp.last_action)
 
         def __post_init__(self):
             """Post-initialization."""
-            self.enable_corruption = True
-            self.concatenate_terms = False
+            self.enable_corruption = False
+            self.concatenate_terms = True
 
     # observation groups
     policy: PolicyCfg = PolicyCfg()
@@ -119,6 +133,9 @@ class ObservationsCfg:
 class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
     # The active observations for the environment
     observations: ObservationsCfg = ObservationsCfg()
+    # The active rewards for the environment
+    rewards: RewardsCfg = RewardsCfg()
+
     def __post_init__(self):
         # post init of parent
         super().__post_init__()
@@ -134,7 +151,7 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
         )
 
         # List of image observations in policy observations
-        self.image_obs_list = ["wrist_cam", "wrist_cam_depth"]
+        self.image_obs_list = []
 
         # Set settings for camera rendering
         self.rerender_on_reset = True
@@ -163,7 +180,19 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
         self.scene.robot = robot_cfg
 
         # Set the object (using the CONTAINER_CFG from kitchen scene as the liftable object)
-        self.scene.object = self.scene.CONTAINER_CFG
+        self.scene.object = RigidObjectCfg(
+        prim_path="{ENV_REGEX_NS}/Object",
+        spawn=sim_utils.UsdFileCfg(
+            usd_path=f"{KITCHEN_ASSETS_DIR}/Lightwheel_potted_meat_can/Lightwheel_potted_meat_can.usd",
+            scale=(1.2, 1.2, 1.2),
+            rigid_props=sim_utils.RigidBodyPropertiesCfg(
+                solver_position_iteration_count=16,
+                solver_velocity_iteration_count=1,
+                max_depenetration_velocity=5.0,
+            ),
+        ),
+        init_state=RigidObjectCfg.InitialStateCfg(pos=(2.0, 0.75, 0.2)),
+    )
 
         # Create a camera config for the wrist camera
         wrist_camera_cfg = CameraCfg(
@@ -174,7 +203,7 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
             width=88, # Set desired policy input width
             height=88, # Set desired policy input height
             offset=CameraCfg.OffsetCfg(pos=(0.05639, -0.05639, -0.00305), rot=(0.0, 0.0, 0.0, -1.0), convention="ros"),
-            data_types=["rgb", "distance_to_image_plane"],  # Added depth information
+            data_types=[],  # No image data
             update_period=0.0,  # Ensures camera updates every frame
         )
         self.scene.wrist_camera = wrist_camera_cfg
@@ -247,17 +276,8 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
             self.scene.fridge.init_state.joint_pos = {"fridge_door_joint": 1.57}
 
         # Define success condition for recording demonstrations
-        self.terminations.success = DoneTerm(
-            func=object_in_microwave_and_hand_out,
-            params={
-                "object_name": "object",
-                "microwave_name": "microwave",
-                "hand_body_name": "panda_hand",
-                # These dimensions define the "inside" of the microwave.
-                # You may need to tune these values for your specific microwave asset.
-                "microwave_box_dims": (0.3, 0.3, 0.25),
-            },
-        )
+        self.terminations.success = DoneTerm(func=cognitive_rewards.object_in_microwave)
+        self.terminations.time_out = DoneTerm(func=mdp.time_out, time_out=True)
 
         # Add a visual marker for the microwave bounding box
         # This adds a translucent green box that represents the success area.
