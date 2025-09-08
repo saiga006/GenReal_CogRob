@@ -1,7 +1,7 @@
 {
     "algo_name": "bc",
     "experiment": {
-        "name": "bc_rnn_image_franka_kitchen_lift_ultrafast",
+        "name": "bc_rnn_image_franka_kitchen_lift",
         "validate": true,
         "logging": {
             "terminal_output_to_txt": true,
@@ -12,18 +12,18 @@
         "save": {
             "enabled": true,
             "every_n_seconds": null,
-            "every_n_epochs": 20,
+            "every_n_epochs": 100,
             "epochs": [],
-            "on_best_validation": false,
+            "on_best_validation": true,
             "on_best_rollout_return": false,
             "on_best_rollout_success_rate": true
         },
-        "epoch_every_n_steps": 1500,
+        "epoch_every_n_steps": 500,
         "validation_epoch_every_n_steps": 10,
         "env": null,
         "additional_envs": null,
         "render": false,
-        "render_video": true,
+        "render_video": false,
         "keep_all_videos": false,
         "video_skip": 5,
         "rollout": {
@@ -37,7 +37,7 @@
     },
     "train": {
         "data": "./datasets/generated_dataset_sample_300.hdf5",
-        "output_dir": "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-UltraFast-v0",
+        "output_dir": "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-v0",
         "num_data_workers": 16,
         "hdf5_cache_mode": "low_dim",
         "hdf5_use_swmr": true,
@@ -45,18 +45,19 @@
         "hdf5_normalize_obs": false,
         "hdf5_filter_key": "train",
         "hdf5_validation_filter_key": "valid",
-        "seq_length": 1,
+        "seq_length": 10,
         "pad_seq_length": true,
         "frame_stack": 1,
         "pad_frame_stack": true,
         "dataset_keys": [
             "actions",
-            "dones"
+            "dones",
+            "datagen_info"
         ],
         "goal_mode": null,
         "cuda": true,
-        "batch_size": 16,
-        "num_epochs": 150,
+        "batch_size": 32,
+        "num_epochs": 600,
         "seed": 101
     },
     "algo": {
@@ -64,16 +65,16 @@
             "policy": {
                 "optimizer_type": "adam",
                 "learning_rate": {
-                    "initial": 0.001,
-                    "decay_factor": 0.5,
+                    "initial": 0.0001,
+                    "decay_factor": 0.1,
                     "epoch_schedule": [
-                        75,
-                        125
+                        200,
+                        400
                     ],
                     "scheduler_type": "multistep"
                 },
                 "regularization": {
-                    "L2": 0.0
+                    "L2": 0.01
                 }
             }
         },
@@ -82,10 +83,7 @@
             "l1_weight": 0.0,
             "cos_weight": 0.0
         },
-        "actor_layer_dims": [
-            1024,
-            1024
-        ],
+        "actor_layer_dims": [],
         "gaussian": {
             "enabled": false,
             "fixed_std": false,
@@ -96,7 +94,7 @@
         },
         "gmm": {
             "enabled": true,
-            "num_modes": 3,
+            "num_modes": 8,
             "min_std": 0.0001,
             "std_activation": "softplus",
             "low_noise_eval": true
@@ -124,24 +122,19 @@
                 "categorical_min_temp": 0.3
             },
             "encoder_layer_dims": [
-                300,
                 400
             ],
             "decoder_layer_dims": [
-                300,
                 400
             ],
-            "prior_layer_dims": [
-                300,
-                400
-            ]
+            "prior_layer_dims": []
         },
         "rnn": {
             "enabled": true,
-            "horizon": 2,
-            "hidden_dim": 32,
+            "horizon": 10,
+            "hidden_dim": 1000,
             "rnn_type": "LSTM",
-            "num_layers": 1,
+            "num_layers": 3,
             "open_loop": false,
             "kwargs": {
                 "bidirectional": false
@@ -197,31 +190,79 @@
             "rgb": {
                 "core_class": "VisualCore",
                 "core_kwargs": {
-                    "feature_dimension": 512,
-                    "backbone_class": "R3MConv",
+                    "feature_dimension": 64,
+                    "flatten": true,
+                    "backbone_class": "ResNet18Conv",
                     "backbone_kwargs": {
-                        "pretrained": true,
-                        "input_coord_conv": false,
-                        "r3m_model_class": "resnet18",
-                        "freeze": false
+                        "pretrained": false,
+                        "input_coord_conv": false
                     },
-                    "pool_class": null
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 32,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    }
                 },
-                "obs_randomizer_class": "CropRandomizer",
-                "obs_randomizer_kwargs": {
-                    "resize_height": 224,
-                    "resize_width": 224
-                }
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
             },
             "depth": {
                 "core_class": "VisualCore",
-                "core_kwargs": {},
+                "core_kwargs": {
+                    "feature_dimension": 64,
+                    "flatten": true,
+                    "backbone_class": "ResNet18Conv",
+                    "backbone_kwargs": {
+                        "pretrained": false,
+                        "input_coord_conv": false
+                    },
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 32,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    }
+                },
                 "obs_randomizer_class": null,
                 "obs_randomizer_kwargs": {}
             },
             "scan": {
                 "core_class": "ScanCore",
-                "core_kwargs": {},
+                "core_kwargs": {
+                    "feature_dimension": 64,
+                    "flatten": true,
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 32,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    },
+                    "conv_activation": "relu",
+                    "conv_kwargs": {
+                        "out_channels": [
+                            32,
+                            64,
+                            64
+                        ],
+                        "kernel_size": [
+                            8,
+                            4,
+                            2
+                        ],
+                        "stride": [
+                            4,
+                            2,
+                            1
+                        ]
+                    }
+                },
                 "obs_randomizer_class": null,
                 "obs_randomizer_kwargs": {}
             }
