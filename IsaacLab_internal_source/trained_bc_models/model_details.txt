@@ -1,0 +1,177 @@
+saiga@sai-Ideapad:~/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic$ ls
+Isaac-Lift-Kitchen-Franka-IK-Rel-Fast-v0  Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-Fast-v0       Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-v0
+Isaac-Lift-Kitchen-Franka-IK-Rel-v0       Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-UltraFast-v0
+saiga@sai-Ideapad:~/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic$ ls -l
+total 20
+drwxrwxr-x 3 saiga saiga 4096 Sep  7 20:56 Isaac-Lift-Kitchen-Franka-IK-Rel-Fast-v0
+drwxrwxr-x 3 saiga saiga 4096 Sep  7 21:52 Isaac-Lift-Kitchen-Franka-IK-Rel-v0
+drwxrwxr-x 3 saiga saiga 4096 Sep  7 05:33 Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-Fast-v0
+drwxrwxr-x 3 saiga saiga 4096 Sep  7 04:52 Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-UltraFast-v0
+drwxrwxr-x 3 saiga saiga 4096 Sep  7 19:47 Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-v0
+saiga@sai-Ideapad:~/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic$ tree
+.
+├── Isaac-Lift-Kitchen-Franka-IK-Rel-Fast-v0
+│   └── bc_rnn_low_dim_franka_kitchen_lift_fast
+│       └── 20250907205615
+│           ├── config.json
+│           ├── logs
+│           │   ├── log.txt
+│           │   └── tb
+│           │       └── events.out.tfevents.1757271400.sai-Ideapad
+│           ├── models
+│           │   ├── model_epoch_100.pth
+│           │   ├── model_epoch_10.pth
+│           │   ├── model_epoch_11_best_validation_340821.646875.pth
+│           │   ├── model_epoch_13_best_validation_328671.5171875.pth
+│           │   ├── model_epoch_14_best_validation_309878.19375.pth
+│           │   ├── model_epoch_19_best_validation_305078.6453125.pth
+│           │   ├── model_epoch_1_best_validation_939501.30625.pth
+│           │   ├── model_epoch_20.pth
+│           │   ├── model_epoch_23_best_validation_303366.478125.pth
+│           │   ├── model_epoch_24_best_validation_298171.234375.pth
+│           │   ├── model_epoch_25_best_validation_297534.4640625.pth
+│           │   ├── model_epoch_26_best_validation_282972.8125.pth
+│           │   ├── model_epoch_2_best_validation_467786.296875.pth
+│           │   ├── model_epoch_30_best_validation_261133.803125.pth
+│           │   ├── model_epoch_31_best_validation_254772.8234375.pth
+│           │   ├── model_epoch_32_best_validation_251312.934375.pth
+│           │   ├── model_epoch_33_best_validation_246820.5234375.pth
+│           │   ├── model_epoch_35_best_validation_234220.4671875.pth
+│           │   ├── model_epoch_3_best_validation_435301.346875.pth
+│           │   ├── model_epoch_40.pth
+│           │   ├── model_epoch_43_best_validation_232524.3265625.pth
+│           │   ├── model_epoch_46_best_validation_226518.771875.pth
+│           │   ├── model_epoch_4_best_validation_377211.4875.pth
+│           │   ├── model_epoch_50.pth
+│           │   ├── model_epoch_53_best_validation_226326.940625.pth
+│           │   ├── model_epoch_60_best_validation_217612.7046875.pth
+│           │   ├── model_epoch_64_best_validation_216200.1890625.pth
+│           │   ├── model_epoch_65_best_validation_212744.2375.pth
+│           │   ├── model_epoch_70.pth
+│           │   ├── model_epoch_72_best_validation_210057.41875.pth
+│           │   ├── model_epoch_75_best_validation_199577.3265625.pth
+│           │   ├── model_epoch_7_best_validation_342819.065625.pth
+│           │   ├── model_epoch_80.pth
+│           │   └── model_epoch_90.pth
+│           └── videos
+├── Isaac-Lift-Kitchen-Franka-IK-Rel-v0
+│   └── bc_rnn_low_dim_franka_kitchen_lift
+│       └── 20250907215215
+│           ├── config.json
+│           ├── logs
+│           │   ├── log.txt
+│           │   └── tb
+│           │       └── events.out.tfevents.1757274739.sai-Ideapad
+│           ├── models
+│           │   ├── model_epoch_1000.pth
+│           │   ├── model_epoch_100.pth
+│           │   ├── model_epoch_1050.pth
+│           │   ├── model_epoch_107_best_validation_1033942.8640625.pth
+│           │   ├── model_epoch_1100.pth
+│           │   ├── model_epoch_1150.pth
+│           │   ├── model_epoch_1200.pth
+│           │   ├── model_epoch_12_best_validation_1993172.396875.pth
+│           │   ├── model_epoch_143_best_validation_962371.0.pth
+│           │   ├── model_epoch_150.pth
+│           │   ├── model_epoch_187_best_validation_904282.7703125.pth
+│           │   ├── model_epoch_196_best_validation_871163.503125.pth
+│           │   ├── model_epoch_1_best_validation_2993233.60625.pth
+│           │   ├── model_epoch_200.pth
+│           │   ├── model_epoch_20_best_validation_1684239.325.pth
+│           │   ├── model_epoch_216_best_validation_849980.5203125.pth
+│           │   ├── model_epoch_249_best_validation_810110.6796875.pth
+│           │   ├── model_epoch_250.pth
+│           │   ├── model_epoch_280_best_validation_773419.2390625.pth
+│           │   ├── model_epoch_2_best_validation_2058460.384375.pth
+│           │   ├── model_epoch_300.pth
+│           │   ├── model_epoch_32_best_validation_1669290.165625.pth
+│           │   ├── model_epoch_350.pth
+│           │   ├── model_epoch_400.pth
+│           │   ├── model_epoch_432_best_validation_758911.628125.pth
+│           │   ├── model_epoch_450.pth
+│           │   ├── model_epoch_467_best_validation_665481.71875.pth
+│           │   ├── model_epoch_48_best_validation_1663363.4734375.pth
+│           │   ├── model_epoch_500.pth
+│           │   ├── model_epoch_50.pth
+│           │   ├── model_epoch_53_best_validation_1451802.7.pth
+│           │   ├── model_epoch_550.pth
+│           │   ├── model_epoch_578_best_validation_656800.6703125.pth
+│           │   ├── model_epoch_586_best_validation_635459.18125.pth
+│           │   ├── model_epoch_600.pth
+│           │   ├── model_epoch_60_best_validation_1336902.9953125.pth
+│           │   ├── model_epoch_650.pth
+│           │   ├── model_epoch_700.pth
+│           │   ├── model_epoch_750.pth
+│           │   ├── model_epoch_79_best_validation_1332909.5265625.pth
+│           │   ├── model_epoch_800.pth
+│           │   ├── model_epoch_850.pth
+│           │   ├── model_epoch_858_best_validation_602055.42890625.pth
+│           │   ├── model_epoch_88_best_validation_1254439.396875.pth
+│           │   ├── model_epoch_900.pth
+│           │   ├── model_epoch_91_best_validation_1141476.675.pth
+│           │   └── model_epoch_950.pth
+│           └── videos
+├── Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-Fast-v0
+│   └── bc_rnn_image_franka_kitchen_lift_fast
+│       └── 20250907053339
+│           ├── config.json
+│           ├── logs
+│           │   ├── log.txt
+│           │   └── tb
+│           │       └── events.out.tfevents.1757216033.sai-Ideapad
+│           ├── models
+│           │   ├── model_epoch_100.pth
+│           │   ├── model_epoch_10_best_validation_349987.9203125.pth
+│           │   ├── model_epoch_110.pth
+│           │   ├── model_epoch_120.pth
+│           │   ├── model_epoch_130.pth
+│           │   ├── model_epoch_140.pth
+│           │   ├── model_epoch_150.pth
+│           │   ├── model_epoch_1_best_validation_1444353.871875.pth
+│           │   ├── model_epoch_20.pth
+│           │   ├── model_epoch_21_best_validation_338037.6234375.pth
+│           │   ├── model_epoch_25_best_validation_300430.7140625.pth
+│           │   ├── model_epoch_2_best_validation_1119529.784375.pth
+│           │   ├── model_epoch_30.pth
+│           │   ├── model_epoch_34_best_validation_293265.8484375.pth
+│           │   ├── model_epoch_35_best_validation_245576.1015625.pth
+│           │   ├── model_epoch_3_best_validation_473746.009375.pth
+│           │   ├── model_epoch_40.pth
+│           │   ├── model_epoch_43_best_validation_213103.565625.pth
+│           │   ├── model_epoch_50.pth
+│           │   ├── model_epoch_5_best_validation_458705.4390625.pth
+│           │   ├── model_epoch_60.pth
+│           │   ├── model_epoch_68_best_validation_208845.6625.pth
+│           │   ├── model_epoch_6_best_validation_425080.7828125.pth
+│           │   ├── model_epoch_70.pth
+│           │   ├── model_epoch_78_best_validation_198896.4625.pth
+│           │   ├── model_epoch_7_best_validation_369450.215625.pth
+│           │   ├── model_epoch_80.pth
+│           │   └── model_epoch_90.pth
+│           └── videos
+├── Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-UltraFast-v0
+│   └── bc_rnn_image_franka_kitchen_lift_ultrafast
+│       └── 20250907045204
+│           ├── config.json
+│           ├── logs
+│           │   ├── log.txt
+│           │   └── tb
+│           │       └── events.out.tfevents.1757213527.sai-Ideapad
+│           ├── models
+│           └── videos
+└── Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-v0
+    └── bc_rnn_image_franka_kitchen_lift
+        └── 20250907194743
+            ├── config.json
+            ├── logs
+            │   ├── log.txt
+            │   └── tb
+            │       └── events.out.tfevents.1757267279.sai-Ideapad
+            ├── models
+            │   ├── model_epoch_1_best_validation_-11.963659477233886.pth
+            │   ├── model_epoch_2_best_validation_-14.083378982543945.pth
+            │   ├── model_epoch_3_best_validation_-14.855889797210693.pth
+            │   └── model_epoch_4_best_validation_-15.150777339935303.pth
+            └── videos
+
+35 directories, 128 files
