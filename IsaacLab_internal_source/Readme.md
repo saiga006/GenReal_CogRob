@@ -185,7 +185,10 @@ See the config files in `isaaclab_tasks/manager_based/manipulation/lift/config/f
 6. Run robomimic training scripts (configs available in `agents/` and `trained_bc_models/*/config.json`).
 7. Evaluate with `robomimic/play.py` using the selected checkpoint.
 
+
 ## Dataset
+
+[Please find the dataset here](https://app.box.com/s/zg53efxfykoptozaf4a7fax8njdi090a)
 
 The dataset consists of annotated demonstrations for the kitchen pick-and-place task, generated using teleoperation and expanded via the mimic environment. Key files:
 
