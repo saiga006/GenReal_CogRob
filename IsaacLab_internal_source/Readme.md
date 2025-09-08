@@ -116,22 +116,8 @@ Primary files & commands
   - trained_bc_models/ — trained BC artifacts and zipped bundles; contains configs, logs, models and videos
   - log_dir/ — logs produced during dataset generation and training pipelines
 
-## Important files
-
-- lift/lift_env_cfg.py — base environment config with scene setup, MDP settings (commands, actions, observations, events, rewards, terminations)
-- lift/mdp/custom_events.py — light intensity randomization for scene variation
-- lift/mdp/observations.py — custom observation functions: object_position_in_robot_root_frame(), ee_frame_pos(), ee_frame_quat(), gripper_pos()
-- lift/mdp/rewards.py, lift/mdp/terminations.py — reward and termination functions
-- lift/config/franka/kitchen_scene.py — defines MinimalKitchenSceneCfg with Franka robot spawn, table, shelf, microwave, fridge, and tomato soup can; reuses Kinova assets
-- lift/config/franka/kitchen_joint_pos_env_cfg.py — joint-position kitchen env with camera config (wrist camera 88x88), EE frame, action config, and custom success detection object_in_microwave_and_hand_out()
-- lift/config/franka/kitchen_ik_rel_env_cfg.py — relative IK env for teleop/eval with differential IK controller
-- lift/config/franka/kitchen_teleop_env_cfg.py — teleoperation env with tweaks for demo collection
-- lift/config/franka/__init__.py — Gym registrations for Franka kitchen environments
-- isaaclab_mimic/envs/franka_kitchen_lift_visuomotor_mimic_env_cfg.py — visuomotor mimic env config with subtask breakdown (move to fridge, grasp, move to microwave, place)
-- isaaclab_mimic/envs/franka_kitchen_lift_visuomotor_mimic_env.py — environment wrapper for IK-relative control with pose/action conversion methods
-- isaaclab_mimic/envs/__init__.py — Gym registration for mimic environments
-- imitation_learning/isaaclab_mimic/generate_dataset.py — main generator for expanding annotated trials into full dataset
-- trained_bc_models/ — final checkpoints and logs for BC experiments
+## Video Output of the BC (state & visuomotor) rollouts:
+[Please find the model results here](https://app.box.com/s/dp3khsxa8kkebke9anjs2aj4w1eoqn5v)
 
 ## Behavior Cloning: Key Configurations & Parameters
 
