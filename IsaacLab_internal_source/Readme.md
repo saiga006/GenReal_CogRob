@@ -4,6 +4,9 @@ Overview
 --------
 - This repository contains the implementation, data-generation pipelines, and trained behavior-cloning models for a kitchen pick-and-place task using IsaacLab.
 - Task: a Franka Emika manipulator picks a tomato soup can (container) from inside a fridge and places it inside the microwave cavity.
+- We reused the IsaacLab sample Franka Lift Cube task and adapted to our kitchen task by modifying the internal source code of IsaacLab.
+- To reuse the code, please clone [IsaacLab 2.1.1 release](https://github.com/isaac-sim/IsaacLab/releases/tag/v2.1.1) and use IsaacSim 4.5 version and replace existing source code with the files and folders given under IsaacLab_internal_source.
+- The other folders outside the IsaacLab_internal_source are meant to create the similar kitchen scene with kinova gen3 7DOF arm as an external project in IsaacLab, primarily meant for RL PPO implementation(not implemented currently).
 
 Highlights
 ----------
@@ -185,7 +188,7 @@ The dataset consists of annotated demonstrations for the kitchen pick-and-place 
 Each dataset contains:
 - Low-dimensional observations (eef pose, joint positions, object pose, actions)
 - Camera images (if enabled)
-- Subtask signals for segmentation (move to fridge, grasp, move to microwave, place it inside microwave)
+- Subtask signals for task segmentation (move to fridge, grasp, move to microwave, place it inside microwave) used by isaac mimic to generate new datasets from 10 trials.
 
 See the scripts in `imitation_learning/isaaclab_mimic/` for annotation and generation details.
 
