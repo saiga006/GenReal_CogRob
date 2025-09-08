@@ -49,16 +49,16 @@ class ObjectTableSceneCfg(InteractiveSceneCfg):
         spawn=UsdFileCfg(usd_path=f"{ISAAC_NUCLEUS_DIR}/Props/Mounts/SeattleLabTable/table_instanceable.usd"),
     )
 
-    # plane
+    # plane - GLOBAL (shared across all environments)
     plane = AssetBaseCfg(
-        prim_path="/World/GroundPlane",
+        prim_path="/World/GroundPlane",  # Global ground plane
         init_state=AssetBaseCfg.InitialStateCfg(pos=[0, 0, -1.05]),
-        spawn=GroundPlaneCfg(),
+        spawn=GroundPlaneCfg(size=(200.0, 200.0)),  # Larger size for multi-environment support
     )
 
-    # lights
+    # lights - GLOBAL (shared across all environments for efficiency)
     light = AssetBaseCfg(
-        prim_path="/World/light",
+        prim_path="/World/light",  # Global light path, not per-environment
         spawn=sim_utils.DomeLightCfg(color=(0.75, 0.75, 0.75), intensity=3000.0),
     )
 
@@ -194,8 +194,8 @@ class CurriculumCfg:
 class LiftEnvCfg(ManagerBasedRLEnvCfg):
     """Configuration for the lifting environment."""
 
-    # Scene settings
-    scene: ObjectTableSceneCfg = ObjectTableSceneCfg(num_envs=4096, env_spacing=2.5)
+    # Scene settings - conservative default for initial testing, can be overridden
+    scene: ObjectTableSceneCfg = ObjectTableSceneCfg(num_envs=64, env_spacing=4.0)  # Reduced from 4096 for stability
     # Basic settings
     observations: ObservationsCfg = ObservationsCfg()
     actions: ActionsCfg = ActionsCfg()
@@ -208,8 +208,8 @@ class LiftEnvCfg(ManagerBasedRLEnvCfg):
 
     def __post_init__(self):
         """Post initialization."""
-        # general settings
-        self.decimation = 2
+        # general settings - conservative for stability
+        self.decimation = 2  # Keep original value for stability
         self.episode_length_s = 5.0
         # simulation settings
         self.sim.dt = 0.01  # 100Hz
@@ -219,6 +219,12 @@ class LiftEnvCfg(ManagerBasedRLEnvCfg):
         self.sim.physx.friction_offset_threshold = 0.04
         # set friction correlation distance to 0.00625 for more stable friction
         self.sim.physx.friction_correlation_distance = 0.00625
-        # reduce the aggregate pairs capacity to save memory
+        
+        # Physics settings - conservative values for multi-environment stability
         self.sim.physx.gpu_found_lost_aggregate_pairs_capacity = 1024 * 1024
-        self.sim.physx.gpu_total_aggregate_pairs_capacity = 1024 * 8
+        self.sim.physx.gpu_total_aggregate_pairs_capacity = 1024 * 8  # Original value
+        # Note: Removed advanced GPU settings that may not be available in all Isaac Lab versions
+        #self.sim.physx.gpu_total_aggregate_pairs_capacity = 1024 * 16  # Increased for multi-env
+        #self.sim.physx.gpu_max_rigid_contact_count = 1024 * 1024      # Added for stability
+        #self.sim.physx.gpu_max_rigid_patch_count = 1024 * 80          # Added for stability
+        #self.sim.physx.gpu_collision_stack_size = 1024 * 1024 * 8    # Added for collision handling

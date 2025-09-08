@@ -29,6 +29,8 @@ from isaaclab.sensors import CameraCfg
 import isaaclab.sim as sim_utils
 import torch
 import os
+from isaaclab.envs import SubTaskConfig
+from isaaclab.utils.math import quat_inv, quat_apply
 
 ##
 # Pre-defined configs
@@ -41,45 +43,127 @@ KITCHEN_ASSETS_DIR = os.path.join(os.path.dirname(__file__), "..", "kinova", "as
 
 
 def object_in_microwave_and_hand_out(
-    env, object_name: str, microwave_name: str, hand_body_name: str, microwave_box_dims: tuple[float, float, float]
+    env, object_name: str, microwave_name: str, hand_body_name: str, microwave_box_dims: tuple[float, float, float],
+    finger_joint_names: list[str]
 ):
     """
-    Checks if the object is inside the microwave's bounding box and the robot's hand is outside.
+    Checks if the object is inside the microwave's bounding box, the robot's hand is outside,
+    and the object is not in the gripper.
+    
+    This success function is crucial for both annotation and dataset generation.
+    It verifies the completion of the task by ensuring:
+    1. The tomato can is properly placed inside the microwave cavity
+    2. The robot's hand has been removed from the microwave
+    3. The object is not being held by the gripper
+    
+    Parameters:
+        env: The simulation environment
+        object_name: Name of the object to place (tomato can)
+        microwave_name: Name of the microwave asset
+        hand_body_name: Name of the robot hand body
+        microwave_box_dims: Dimensions of the box representing microwave interior
+        finger_joint_names: List of finger joint names to check gripper state
+    
+    Returns:
+        Boolean tensor indicating success (True) or failure (False)
     """
     # Get assets from the scene
     obj = env.scene[object_name]
     microwave = env.scene[microwave_name]
     robot = env.scene["robot"]
 
-    # Get the world poses
-    microwave_pos_w, microwave_quat_w = microwave.data.root_pos_w, microwave.data.root_quat_w
-    obj_pos_w = obj.data.root_pos_w
+    # Get the world poses and convert to environment frame
+    microwave_pos_w = microwave.data.root_pos_w - env.scene.env_origins
+    microwave_quat_w = microwave.data.root_quat_w
+    obj_pos_w = obj.data.root_pos_w - env.scene.env_origins
     
-    # Get robot hand position
+    # Get robot hand position in environment frame
     hand_link_idx = robot.body_names.index(hand_body_name)
-    hand_pos_w = robot.data.body_pos_w[:, hand_link_idx]
-    
-    # Transform object position to microwave's local frame
-    obj_pos_local = transform_points(obj_pos_w.unsqueeze(1), microwave_pos_w, microwave_quat_w).squeeze(1)
-    hand_pos_local = transform_points(hand_pos_w.unsqueeze(1), microwave_pos_w, microwave_quat_w).squeeze(1)
-    
-    # Define the microwave's interior bounding box (centered at origin in local frame)
-    box_min = torch.tensor([-microwave_box_dims[0] / 2, -microwave_box_dims[1] / 2, 0.0], device=env.device)
-    box_max = torch.tensor([microwave_box_dims[0] / 2, microwave_box_dims[1] / 2, microwave_box_dims[2]], device=env.device)
-    
-    # Check if object is inside the box
-    is_obj_in = torch.all(
-        (obj_pos_local >= box_min) & (obj_pos_local <= box_max), dim=1
-    )
-    
-    # Check if hand is outside the box
-    is_hand_in = torch.all(
-        (hand_pos_local >= box_min) & (hand_pos_local <= box_max), dim=1
-    )
+    hand_pos_w = robot.data.body_pos_w[:, hand_link_idx] - env.scene.env_origins
+
+    # Ensure obj_pos_w has a batch dimension
+    if obj_pos_w.ndim == 1:
+        obj_pos_w = obj_pos_w.unsqueeze(0)
+
+    # Define the microwave's interior bounding box in world frame
+    box_dims_tensor = torch.tensor(microwave_box_dims, device=env.device)
+    box_min = -box_dims_tensor / 2
+    box_max = box_dims_tensor / 2
+
+    box_min_world = microwave_pos_w + quat_apply(microwave_quat_w, box_min)
+    box_max_world = microwave_pos_w + quat_apply(microwave_quat_w, box_max)
+
+    # Ensure box_min_world and box_max_world have a batch dimension
+    if box_min_world.ndim == 1:
+        box_min_world = box_min_world.unsqueeze(0)
+    if box_max_world.ndim == 1:
+        box_max_world = box_max_world.unsqueeze(0)
+
+    # Compute axis-aligned min/max in world frame. quat_apply may flip signs per axis
+    # (depending on microwave orientation) so take elementwise min/max to get the true
+    # AABB for simple inside/outside checks.
+    box_low_world = torch.minimum(box_min_world, box_max_world)
+    box_high_world = torch.maximum(box_min_world, box_max_world)
+
+    # Ensure hand_pos_w has a batch dimension
+    if hand_pos_w.ndim == 1:
+        hand_pos_w = hand_pos_w.unsqueeze(0)
+
+    # Small tolerance to account for numerical precision and tiny pose offsets
+    tol = 5e-3
+
+    # Check if object is inside the box in world frame (with tolerance)
+    obj_x_in_world = (obj_pos_w[:, 0] >= (box_low_world[:, 0] - tol)) & (obj_pos_w[:, 0] <= (box_high_world[:, 0] + tol))
+    obj_y_in_world = (obj_pos_w[:, 1] >= (box_low_world[:, 1] - tol)) & (obj_pos_w[:, 1] <= (box_high_world[:, 1] + tol))
+    obj_z_in_world = (obj_pos_w[:, 2] >= (box_low_world[:, 2] - tol)) & (obj_pos_w[:, 2] <= (box_high_world[:, 2] + tol))
+    is_obj_in_world = obj_x_in_world & obj_y_in_world & obj_z_in_world
+
+    # Check if hand is outside the box - ANY coordinate can be outside bounds
+    hand_x_in = (hand_pos_w[:, 0] >= (box_low_world[:, 0] - tol)) & (hand_pos_w[:, 0] <= (box_high_world[:, 0] + tol))
+    hand_y_in = (hand_pos_w[:, 1] >= (box_low_world[:, 1] - tol)) & (hand_pos_w[:, 1] <= (box_high_world[:, 1] + tol))
+    hand_z_in = (hand_pos_w[:, 2] >= (box_low_world[:, 2] - tol)) & (hand_pos_w[:, 2] <= (box_high_world[:, 2] + tol))
+    is_hand_in = hand_x_in & hand_y_in & hand_z_in
     is_hand_out = ~is_hand_in
 
-    # Combine the conditions: success = object is in AND hand is out
-    success = is_obj_in & is_hand_out
+    # ADDITIONAL SAFETY CHECK: Object should also be close to microwave in world coordinates
+    # This prevents false positives when object is far from microwave but somehow passes local checks
+    obj_to_microwave_dist = torch.norm(obj_pos_w - microwave_pos_w, dim=1)
+    is_obj_near_microwave = obj_to_microwave_dist < 0.5  # Object must be within 50cm of microwave center
+
+    # Check if object is in the gripper with updated joint positions
+    gripper_open_joint_pos = 0.04  # Open state joint position
+    gripper_closed_joint_pos = 0.01  # Closed state joint position
+
+    finger_joint_indices = [robot.joint_names.index(name) for name in finger_joint_names]
+    gripper_joint_pos = robot.data.joint_pos[:, finger_joint_indices]
+    gripper_open = torch.all(torch.abs(gripper_joint_pos - gripper_open_joint_pos) < 0.005, dim=1)
+
+    object_in_gripper = ~gripper_open  # Simplified condition
+
+    # Combine the conditions: success = object is in AND hand is out AND object is not in gripper
+    success = is_obj_in_world & is_hand_out & ~object_in_gripper
+
+    # Debugging logs for all conditions: only print when success condition is met
+    for env_idx in range(len(success)):
+        if success[env_idx].item():
+            print(f"\n======= DEBUG LOG - Environment {env_idx} =======")
+            print(f"Object: {object_name}, Microwave: {microwave_name}, Hand: {hand_body_name}")
+            print(f"Microwave box dimensions: {microwave_box_dims}")
+            print(f"Microwave position (env frame): {microwave_pos_w[env_idx].cpu().numpy()}")
+            print(f"Object position (env frame): {obj_pos_w[env_idx].cpu().numpy()}")
+            print(f"Hand position (env frame): {hand_pos_w[env_idx].cpu().numpy()}")
+            print(f"Bounding box low (world): {box_low_world.cpu().numpy()}")
+            print(f"Bounding box high (world): {box_high_world.cpu().numpy()}")
+            print(f"Object in bounds - X: {obj_x_in_world[env_idx].item()}, Y: {obj_y_in_world[env_idx].item()}, Z: {obj_z_in_world[env_idx].item()}")
+            print(f"Hand in bounds - X: {hand_x_in[env_idx].item()}, Y: {hand_y_in[env_idx].item()}, Z: {hand_z_in[env_idx].item()}")
+            print(f"Gripper joint positions: {gripper_joint_pos}")
+            print(f"Gripper open status: {gripper_open[env_idx].item()}")
+            print(f"Is object fully in microwave (world frame)? {is_obj_in_world[env_idx].item()}")
+            print(f"Is hand completely out of microwave? {is_hand_out[env_idx].item()}")
+            print(f"Is object in gripper? {object_in_gripper[env_idx].item()}")
+            print(f"Success condition met? {success[env_idx].item()}")
+            print("=========================================")
+
     return success.unsqueeze(1)
 
 
@@ -134,14 +218,14 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
         )
 
         # List of image observations in policy observations
-        self.image_obs_list = ["wrist_cam", "wrist_cam_depth"]
+        self.image_obs_list = ["wrist_cam"]
 
         # Set settings for camera rendering
         self.rerender_on_reset = True
         self.sim.render.antialiasing_mode = "OFF"  # disable dlss
 
-        # Set kitchen scene with single environment
-        self.scene = MinimalKitchenSceneCfg(num_envs=1, env_spacing=2.5)
+        num_envs = getattr(self, 'num_envs', self.scene.num_envs if hasattr(self, 'scene') else 1)
+        self.scene = MinimalKitchenSceneCfg(num_envs=num_envs, env_spacing=5.0)
 
         # Set Franka as robot
         robot_cfg = deepcopy(FRANKA_PANDA_HIGH_PD_CFG)
@@ -174,7 +258,7 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
             width=88, # Set desired policy input width
             height=88, # Set desired policy input height
             offset=CameraCfg.OffsetCfg(pos=(0.05639, -0.05639, -0.00305), rot=(0.0, 0.0, 0.0, -1.0), convention="ros"),
-            data_types=["rgb", "distance_to_image_plane"],  # Added depth information
+            data_types=["rgb"],  # Added depth information
             update_period=0.0,  # Ensures camera updates every frame
         )
         self.scene.wrist_camera = wrist_camera_cfg
@@ -254,30 +338,142 @@ class FrankaKitchenLiftEnvCfg(LiftEnvCfg):
                 "microwave_name": "microwave",
                 "hand_body_name": "panda_hand",
                 # These dimensions define the "inside" of the microwave.
-                # You may need to tune these values for your specific microwave asset.
-                "microwave_box_dims": (0.3, 0.3, 0.25),
+                # Increased X and Y by 0.05 for slightly larger detection area
+                # Microwave interior is typically: width=35-40cm, depth=30-35cm, height=20-25cm
+                "microwave_box_dims": (0.27, 0.27, 0.18),  # Increased Y dimension to 0.27
+                "finger_joint_names": ["panda_finger_joint1", "panda_finger_joint2"],
             },
         )
 
-        # Add a visual marker for the microwave bounding box
-        # This adds a translucent green box that represents the success area.
-        self.scene.microwave_bbox_marker = AssetBaseCfg(
-            prim_path="{ENV_REGEX_NS}/SuccessBBox",
-            spawn=sim_utils.CuboidCfg(
-                size=(0.3, 0.3, 0.25),
-                visual_material=sim_utils.PreviewSurfaceCfg(
-                    diffuse_color=(0.0, 1.0, 0.0),
-                    opacity=0.3,
-                    metallic=0.0,
-                    roughness=1.0
+        # Visual markers for success zone debugging
+        success_zone_debug_vis = False  # Set to True to enable visual markers
+        
+        if success_zone_debug_vis:
+            # Add a visual marker for the microwave bounding box using simple sphere markers
+            # Create multiple spheres to outline the success box corners for maximum visibility
+            # These positions are relative to each environment's origin
+            # Adjust success zone markers to reflect the increased y-dimension
+            self.scene.success_marker_corner1 = AssetBaseCfg(
+                prim_path="{ENV_REGEX_NS}/SuccessCorner1",
+                spawn=sim_utils.SphereCfg(
+                    radius=0.02,  # Small spheres
+                    visual_material=sim_utils.PreviewSurfaceCfg(
+                        diffuse_color=(1.0, 0.0, 0.0),  # Bright red
+                        emissive_color=(2.0, 0.0, 0.0),  # Bright red glow
+                        opacity=1.0,
+                    ),
+                    collision_props=sim_utils.CollisionPropertiesCfg(collision_enabled=False),
                 ),
-            ),
-            init_state=AssetBaseCfg.InitialStateCfg(
-                pos=(2.3, 0.5, 1.25), # Position it inside the microwave cavity
+                init_state=AssetBaseCfg.InitialStateCfg(
+                    # Position relative to environment origin - bottom front-left corner
+                    pos=(2.20, 0.425, 1.10),  # Adjusted Y for new microwave dimensions
+                )
             )
-        )
+            
+            self.scene.success_marker_corner2 = AssetBaseCfg(
+                prim_path="{ENV_REGEX_NS}/SuccessCorner2", 
+                spawn=sim_utils.SphereCfg(
+                    radius=0.02,
+                    visual_material=sim_utils.PreviewSurfaceCfg(
+                        diffuse_color=(1.0, 0.0, 0.0),
+                        emissive_color=(2.0, 0.0, 0.0),
+                        opacity=1.0,
+                    ),
+                    collision_props=sim_utils.CollisionPropertiesCfg(collision_enabled=False),
+                ),
+                init_state=AssetBaseCfg.InitialStateCfg(
+                    # Position relative to environment origin - top back-right corner
+                    pos=(2.50, 0.695, 1.30),  # Adjusted Y for new microwave dimensions
+                )
+            )
+            
+            # Add corner 3 marker (bottom back-right corner)
+            self.scene.success_marker_corner3 = AssetBaseCfg(
+                prim_path="{ENV_REGEX_NS}/SuccessCorner3", 
+                spawn=sim_utils.SphereCfg(
+                    radius=0.02,
+                    visual_material=sim_utils.PreviewSurfaceCfg(
+                        diffuse_color=(1.0, 0.0, 0.0),
+                        emissive_color=(2.0, 0.0, 0.0),
+                        opacity=1.0,
+                    ),
+                    collision_props=sim_utils.CollisionPropertiesCfg(collision_enabled=False),
+                ),
+                init_state=AssetBaseCfg.InitialStateCfg(
+                    # Position relative to environment origin - bottom back-right corner
+                    pos=(2.50, 0.695, 1.10),  # Adjusted Y for new microwave dimensions
+                )
+            )
+            
+            # Add corner 4 marker (top front-left corner)
+            self.scene.success_marker_corner4 = AssetBaseCfg(
+                prim_path="{ENV_REGEX_NS}/SuccessCorner4", 
+                spawn=sim_utils.SphereCfg(
+                    radius=0.02,
+                    visual_material=sim_utils.PreviewSurfaceCfg(
+                        diffuse_color=(1.0, 0.0, 0.0),
+                        emissive_color=(2.0, 0.0, 0.0),
+                        opacity=1.0,
+                    ),
+                    collision_props=sim_utils.CollisionPropertiesCfg(collision_enabled=False),
+                ),
+                init_state=AssetBaseCfg.InitialStateCfg(
+                    # Position relative to environment origin - top front-left corner
+                    pos=(2.20, 0.425, 1.30),  # Adjusted Y for new microwave dimensions
+                )
+            )
+            
+            # Add center marker for better visualization
+            self.scene.success_marker_center = AssetBaseCfg(
+                prim_path="{ENV_REGEX_NS}/SuccessCenter",
+                spawn=sim_utils.SphereCfg(
+                    radius=0.03,  # Slightly larger center sphere
+                    visual_material=sim_utils.PreviewSurfaceCfg(
+                        diffuse_color=(0.0, 1.0, 0.0),  # Bright green
+                        emissive_color=(0.0, 2.0, 0.0),  # Bright green glow
+                        opacity=1.0,
+                    ),
+                    collision_props=sim_utils.CollisionPropertiesCfg(collision_enabled=False),
+                ),
+                init_state=AssetBaseCfg.InitialStateCfg(
+                    # Position at microwave center relative to environment origin
+                    pos=(2.35, 0.56, 1.20),  # Decreased X by 0.05: (2.40 - 0.05)
+                )
+            )
 
-
+        # Close the visual markers conditional
+        
+        # Define subtasks for the end effector
+        self.subtask_configs = {
+            "end_effector": [
+                SubTaskConfig(
+                    object_ref="object",
+                    subtask_term_signal="move_to_fridge"
+                ),
+                SubTaskConfig(
+                    object_ref="object",
+                    subtask_term_signal="grasp_tomato_can"
+                ),
+                SubTaskConfig(
+                    object_ref="object",
+                    subtask_term_signal="move_to_microwave"
+                ),
+                SubTaskConfig(
+                    object_ref="object",
+                    subtask_term_signal="place_in_microwave"
+                ),
+                SubTaskConfig(
+                    object_ref="object",
+                    subtask_term_signal="move_away_from_microwave"
+                ),
+                # This is the final success condition - don't remove this
+                SubTaskConfig(
+                    object_ref="object",
+                    subtask_term_signal="task_complete"
+                )
+            ]
+        }
+    
 @configclass
 class FrankaKitchenLiftEnvCfg_PLAY(FrankaKitchenLiftEnvCfg):
     def __post_init__(self):

@@ -35,7 +35,7 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
     
     # Robot table - properly grounded
     table = RigidObjectCfg(
-        prim_path="/World/Table",
+        prim_path="{ENV_REGEX_NS}/Table",
         spawn=sim_utils.CuboidCfg(
             size=(1.5, 1.2, 0.8),
             rigid_props=sim_utils.RigidBodyPropertiesCfg(
@@ -82,7 +82,7 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
     
     # Insulated shelf - FIXED: Now properly positioned above ground
     insulated_shelf = ArticulationCfg(
-        prim_path="/World/InsulatedShelf",
+        prim_path="{ENV_REGEX_NS}/InsulatedShelf",
         spawn=sim_utils.UsdFileCfg(
             usd_path=f"{KITCHEN_ASSETS_DIR}/Kitchen_InsularShelf/Kitchen_InsularShelf.usd",
             rigid_props=sim_utils.RigidBodyPropertiesCfg(
@@ -110,7 +110,7 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
     
     # Microwave - ON SHELF with 180° rotation
     microwave = ArticulationCfg(
-        prim_path="/World/Microwave",
+        prim_path="{ENV_REGEX_NS}/Microwave",
         spawn=sim_utils.UsdFileCfg(
             usd_path=f"{KITCHEN_ASSETS_DIR}/Microwave052/Microwave052.usd",
             rigid_props=sim_utils.RigidBodyPropertiesCfg(
@@ -142,7 +142,7 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
     
     # Fridge - BESIDE SHELF with 180° rotation
     fridge = ArticulationCfg(
-        prim_path="/World/Fridge",
+        prim_path="{ENV_REGEX_NS}/Fridge",
         spawn=sim_utils.UsdFileCfg(
             usd_path=f"{KITCHEN_ASSETS_DIR}/Refrigerator036/Refrigerator036.usd",
             rigid_props=sim_utils.RigidBodyPropertiesCfg(
@@ -171,7 +171,7 @@ class MinimalKitchenSceneCfg(InteractiveSceneCfg):
     )
 
     CONTAINER_CFG = RigidObjectCfg(
-        prim_path="/World/TomatoSoupCan",
+        prim_path="{ENV_REGEX_NS}/TomatoSoupCan",
         spawn=sim_utils.UsdFileCfg(
             usd_path=f"{KITCHEN_ASSETS_DIR}/Lightwheel_tomato_soup_can/tomato_soup_can.usd",
             rigid_props=sim_utils.RigidBodyPropertiesCfg(

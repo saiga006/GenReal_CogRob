@@ -17,49 +17,38 @@ def randomize_light_intensity(env, env_ids: torch.Tensor, light_path: str = "/Wo
     Args:
         env: The environment instance.
         env_ids: The environment indices to apply the randomization to.
-        light_path: The prim path to the light.
+        light_path: The prim path to the light (should be global for shared lighting).
         intensity_range: The range (min, max) of intensity values to sample from.
     """
-    # Get number of environments to randomize
-    num_envs_to_randomize = len(env_ids)
-    
-    # Generate random intensity values for the specified environments
+    # Generate a single random intensity value (since we're using global lighting)
     min_intensity, max_intensity = intensity_range
-    random_intensities = torch.rand(num_envs_to_randomize, device=env.device) * (max_intensity - min_intensity) + min_intensity
+    random_intensity = torch.rand(1, device=env.device) * (max_intensity - min_intensity) + min_intensity
     
     # Get stage
     stage = omni.usd.get_context().get_stage()
     
-    # For each environment that needs randomization
-    for i, env_idx in enumerate(env_ids):
-        env_idx = int(env_idx.item())  # Convert to int
+    # Use the light path directly (should be global like "/World/light")
+    light_prim = stage.GetPrimAtPath(light_path)
+    
+    if light_prim.IsValid():
+        # Try different possible attribute names for intensity
+        intensity_attr_names = ["inputs:intensity", "intensity", "inputs:exposure", "exposure"]
+        intensity_attr = None
         
-        # Get light path for this environment
-        env_light_path = light_path
-        if "{ENV_REGEX_NS}" in light_path:
-            env_light_path = light_path.replace("{ENV_REGEX_NS}", f"/World/envs/env_{env_idx}")
+        for attr_name in intensity_attr_names:
+            test_attr = light_prim.GetAttribute(attr_name)
+            if test_attr.IsValid():
+                intensity_attr = test_attr
+                break
         
-        # Get the light prim
-        light_prim = stage.GetPrimAtPath(env_light_path)
-        
-        if light_prim.IsValid():
-            # Try different possible attribute names for intensity
-            intensity_attr_names = ["inputs:intensity", "intensity", "inputs:exposure", "exposure"]
-            intensity_attr = None
-            
-            for attr_name in intensity_attr_names:
-                test_attr = light_prim.GetAttribute(attr_name)
-                if test_attr.IsValid():
-                    intensity_attr = test_attr
-                    break
-            
-            if intensity_attr and intensity_attr.IsValid():
-                new_intensity = float(random_intensities[i].item())
-                intensity_attr.Set(new_intensity)
-                print(f"Light intensity randomized to {new_intensity:.1f} for environment {env_idx}")
-            else:
-                print(f"Warning: Could not find intensity attribute for light at {env_light_path}")
+        if intensity_attr and intensity_attr.IsValid():
+            new_intensity = float(random_intensity.item())
+            intensity_attr.Set(new_intensity)
+            # Only print if debug is needed - commented out to reduce console spam
+            # print(f"Global light intensity randomized to {new_intensity:.1f}")
         else:
-            print(f"Warning: Light prim not found at path {env_light_path}")
+            print(f"Warning: Could not find intensity attribute for light at {light_path}")
+    else:
+        print(f"Warning: Light prim not found at path {light_path}")
     
     return torch.ones((len(env_ids), 1), dtype=torch.bool, device=env.device)

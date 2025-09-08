@@ -1,0 +1,1001 @@
+saiga@sai-Ideapad:~/Documents/Cognitive_Robotics/simulation_packages/IsaacLab$ ./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py   --task Isaac-Lift-Kitchen-Franka-IK-Rel-v0 --num_rollouts 50 --checkpoint /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-v0/bc_rnn_low_dim_franka_kitchen_lift/20250907151156/models/model_epoch_369_best_validation_-22.293708705902098.pth  --horizon 2500
+[INFO] Using python from: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/python.sh                                       
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/isaaclab.python.kit
+Loading user config located at: '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/isaacsim/kit/data/Kit/Isaac-Sim/4.5/user.config.json'
+[Info] [carb] Logging to file: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/isaacsim/kit/logs/Kit/Isaac-Sim/4.5/kit_20250907_202614.log
+2025-09-07 18:26:14 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2025-09-07 18:26:14 [3ms] [Warning] [omni.ext.plugin] [ext: extensions] Extensions config 'extension.toml' doesn't exist '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/source/extensions' or '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/source/extensions/config'
+2025-09-07 18:26:14 [3ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/rendering_modes' or '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/rendering_modes/config'
+[0.047s] [ext: omni.kit.async_engine-0.0.1] startup
+[0.276s] [ext: omni.metrics.core-0.0.1] startup
+[0.277s] [ext: omni.client.lib-1.0.0] startup
+[0.295s] [ext: omni.blobkey-1.1.2] startup
+[0.295s] [ext: omni.stats-1.0.1] startup
+[0.296s] [ext: omni.datastore-0.0.0] startup
+[0.300s] [ext: omni.client-1.2.2] startup
+[0.305s] [ext: omni.ujitso.default-1.0.0] startup
+[0.306s] [ext: omni.hsscclient-1.1.1] startup
+2025-09-07 18:26:14 [286ms] [Warning] [omni.datastore] OmniHub is inaccessible
+[0.312s] [ext: omni.gpu_foundation.shadercache.vulkan-1.0.0] startup
+[0.315s] [ext: omni.assets.plugins-0.0.0] startup
+[0.316s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.322s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.328s] [ext: omni.kit.renderer.init-0.0.0] startup
+2025-09-07 18:26:15 [606ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Arc(tm) Graphics (MTL)
+2025-09-07 18:26:15 [606ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Arc(tm) Graphics (MTL)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.124.06    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4050 Laptop.. | Yes: 0 |     | 6141    MB | 10de      | 0          |
+|     |                                  |        |     |            | 28e1      | 39f32146.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | Intel(R) Arc(tm) Graphics (MTL)  |        |     | 23775   MB | 8086      | 0          |
+|     |                                  |        |     |            | 7d55      | 8680557d.. |
+|     |                                  |        |     |            | 0         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-59-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) Ultra 9 185H
+| Bare Metal Cores: 16 | Bare Metal Logical Cores: 32
+| Available Cores:  22 
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31700 | Free Memory: 14184
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+[1.084s] [ext: omni.kit.pipapi-0.0.0] startup
+[1.085s] [ext: omni.kit.pip_archive-0.0.0] startup
+[1.086s] [ext: omni.pip.compute-1.4.5] startup
+[1.086s] [ext: omni.pip.cloud-1.1.7] startup
+[1.088s] [ext: omni.isaac.core_archive-2.3.3] startup
+[1.088s] [ext: omni.materialx.libs-1.0.6] startup
+[1.093s] [ext: omni.kit.loop-isaac-1.2.1] startup
+[1.094s] [ext: omni.kit.test-1.1.2] startup
+[1.128s] [ext: omni.isaac.ml_archive-2.1.2] startup
+[1.128s] [ext: omni.kit.telemetry-0.5.1] startup
+[1.148s] [ext: omni.usd.config-1.0.5] startup
+[1.151s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[1.151s] [ext: omni.usd.libs-1.0.1] startup
+[1.211s] [ext: omni.mdl-55.0.1] startup
+[1.226s] [ext: omni.iray.libs-0.0.0] startup
+[1.231s] [ext: omni.mdl.neuraylib-0.2.10] startup
+[1.232s] [ext: omni.kit.usd.mdl-1.0.7] startup
+[1.309s] [ext: omni.appwindow-1.1.9] startup
+[1.921s] [ext: omni.kit.renderer.core-1.0.2] startup
+[5.831s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[5.834s] [ext: omni.kit.renderer.imgui-1.0.2] startup
+[5.961s] [ext: omni.ui-2.26.5] startup
+[5.968s] [ext: omni.kit.mainwindow-1.0.3] startup
+[5.969s] [ext: carb.audio-0.1.0] startup
+[5.972s] [ext: omni.uiaudio-1.0.0] startup
+[5.973s] [ext: omni.kit.uiapp-0.0.0] startup
+[5.973s] [ext: omni.usd.schema.metrics.assembler-106.5.0] startup
+[5.980s] [ext: omni.usd.schema.anim-0.0.0] startup
+[5.997s] [ext: omni.usd.schema.physx-106.5.7] startup
+[6.021s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[6.023s] [ext: omni.usd.schema.omnigraph-1.0.0] startup
+[6.028s] [ext: omni.usd.schema.audio-0.0.0] startup
+[6.030s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[6.032s] [ext: omni.usd_resolver-1.0.0] startup
+[6.035s] [ext: usdrt.scenegraph-7.5.1] startup
+[6.064s] [ext: omni.kit.actions.core-1.0.0] startup
+[6.066s] [ext: omni.timeline-1.0.11] startup
+[6.067s] [ext: omni.usd.core-1.4.2] startup
+[6.069s] [ext: omni.resourcemonitor-107.0.0] startup
+[6.071s] [ext: omni.activity.core-1.0.1] startup
+[6.072s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[6.073s] [ext: omni.hydra.usdrt_delegate-7.5.1] startup
+[6.081s] [ext: omni.graph.exec-0.9.4] startup
+[6.081s] [ext: omni.kit.window.popup_dialog-2.0.24] startup
+[6.084s] [ext: omni.kit.exec.core-0.13.4] startup
+[6.086s] [ext: omni.kit.widget.nucleus_connector-1.1.10] startup
+[6.087s] [ext: omni.kit.usd_undo-0.1.8] startup
+[6.087s] [ext: omni.kit.commands-1.4.9] startup
+[6.090s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[6.093s] [ext: omni.usd-1.12.4] startup
+[6.129s] [ext: omni.kit.asset_converter-2.8.3] startup
+[6.138s] [ext: omni.usd.schema.forcefield-106.5.7] startup
+[6.142s] [ext: omni.usd.schema.omniscripting-1.0.0] startup
+[6.146s] [ext: isaacsim.robot.schema-3.1.2] startup
+[6.151s] [ext: omni.kit.widget.options_menu-1.1.6] startup
+[6.153s] [ext: omni.hydra.engine.stats-1.0.3] startup
+[6.155s] [ext: omni.inspect-1.0.1] startup
+[6.156s] [ext: omni.kit.widget.path_field-2.0.11] startup
+[6.157s] [ext: omni.kit.widget.filter-1.1.4] startup
+[6.158s] [ext: omni.kit.hotkeys.core-1.3.10] startup
+[6.160s] [ext: omni.kit.widget.searchable_combobox-1.0.6] startup
+[6.161s] [ext: omni.kit.clipboard-1.0.5] startup
+[6.161s] [ext: omni.kit.widget.browser_bar-2.0.10] startup
+[6.162s] [ext: omni.kit.notification_manager-1.0.9] startup
+[6.163s] [ext: omni.ujitso.processor.texture-1.0.0] startup
+[6.164s] [ext: omni.index.libs-380600.1777.0] startup
+[6.164s] [ext: omni.kit.helper.file_utils-0.1.9] startup
+[6.165s] [ext: omni.kit.menu.core-1.1.2] startup
+[6.166s] [ext: omni.ui.scene-1.11.2] startup
+[6.169s] [ext: omni.kit.widget.options_button-1.0.3] startup
+[6.169s] [ext: omni.kit.widget.filebrowser-2.10.52] startup
+[6.173s] [ext: omni.kit.widget.context_menu-1.2.4] startup
+[6.174s] [ext: omni.hydra.rtx.shadercache.vulkan-1.0.0] startup
+[6.174s] [ext: omni.kit.window.filepicker-2.11.7] startup
+[6.183s] [ext: omni.ujitso.client-0.0.0] startup
+[6.183s] [ext: omni.index-1.0.1] startup
+[6.184s] [ext: omni.kit.window.drop_support-1.0.4] startup
+[6.184s] [ext: omni.kit.window.file_exporter-1.0.31] startup
+[6.186s] [ext: omni.volume-0.5.0] startup
+[6.190s] [ext: omni.kit.stage_template.core-1.1.22] startup
+[6.190s] [ext: omni.hydra.rtx-1.0.0] startup
+2025-09-07 18:26:20 [6,175ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+[6.206s] [ext: omni.kit.menu.utils-1.7.7] startup
+[6.210s] [ext: omni.kit.usd.layers-2.2.0] startup
+[6.216s] [ext: omni.kit.window.file_importer-1.1.14] startup
+[6.216s] [ext: omni.kit.context_menu-1.8.3] startup
+[6.218s] [ext: omni.kit.window.file-1.3.57] startup
+[6.220s] [ext: omni.kit.window.content_browser_registry-0.0.6] startup
+[6.220s] [ext: omni.kit.raycast.query-1.0.5] startup
+[6.224s] [ext: omni.kit.material.library-1.5.15] startup
+[6.228s] [ext: omni.kit.window.content_browser-2.10.3] startup
+[6.239s] [ext: omni.kit.hydra_texture-1.4.0] startup
+[6.242s] [ext: omni.kit.widget.settings-1.2.2] startup
+[6.244s] [ext: omni.kit.viewport.scene_camera_model-1.0.5] startup
+[6.252s] [ext: omni.kit.viewport.registry-104.0.6] startup
+[6.252s] [ext: omni.kit.widget.searchfield-1.1.8] startup
+[6.253s] [ext: omni.kit.window.preferences-1.7.0] startup
+[6.257s] [ext: omni.kit.widget.viewport-107.0.7] startup
+[6.260s] [ext: omni.kit.viewport.legacy_gizmos-1.0.16] startup
+[6.262s] [ext: omni.kit.widget.stage-2.11.6] startup
+[6.270s] [ext: isaacsim.core.throttling-2.0.2] startup
+[6.271s] [ext: omni.kit.viewport.window-107.0.8] startup
+[6.283s] [ext: omni.graph.core-2.181.8] startup
+[6.285s] [ext: omni.kvdb-106.5.7] startup
+[6.286s] [ext: omni.kit.widget.highlight_label-1.0.3] startup
+[6.286s] [ext: omni.kit.viewport.utility-1.0.18] startup
+[6.287s] [ext: omni.kit.selection-0.1.5] startup
+[6.289s] [ext: isaacsim.core.deprecation_manager-0.2.2] startup
+[6.290s] [ext: omni.localcache-106.5.7] startup
+[6.292s] [ext: omni.convexdecomposition-106.5.7] startup
+[6.296s] [ext: omni.kit.window.property-1.11.5] startup
+[6.297s] [ext: omni.kit.menu.edit-1.1.25] startup
+[6.299s] [ext: isaacsim.core.version-2.0.2] startup
+[6.300s] [ext: omni.kit.property.adapter.core-1.0.2] startup
+[6.301s] [ext: omni.usdphysics-106.5.7] startup
+[6.304s] [ext: omni.physx.foundation-106.5.7] startup
+[6.305s] [ext: isaacsim.app.about-2.0.7] startup
+[6.309s] [ext: omni.kit.property.adapter.usd-1.0.2] startup
+[6.310s] [ext: omni.kit.property.adapter.fabric-1.0.3] startup
+[6.311s] [ext: omni.physx.cooking-106.5.7] startup
+[6.317s] [ext: omni.kit.property.usd-4.2.16] startup
+[6.323s] [ext: omni.physx-106.5.7] startup
+[6.333s] [ext: isaacsim.gui.property-1.0.4] startup
+[6.385s] [ext: omni.physx.stageupdate-106.5.7] startup
+[6.388s] [ext: omni.kit.numpy.common-0.1.2] startup
+[6.390s] [ext: omni.physics.tensors-106.5.7] startup
+[6.399s] [ext: omni.warp.core-1.5.0] startup
+[6.529s] [ext: omni.isaac.dynamic_control-1.3.15] startup
+2025-09-07 18:26:20 [6,512ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+[6.533s] [ext: isaacsim.storage.native-1.0.6] startup
+[6.534s] [ext: omni.physx.tensors-106.5.7] startup
+[6.540s] [ext: isaacsim.core.utils-2.2.8] startup
+[6.541s] [ext: semantics.schema.editor-0.3.10] startup
+[6.543s] [ext: isaacsim.core.simulation_manager-0.3.3] startup
+[7.565s] [ext: semantics.schema.property-1.0.5] startup
+[7.566s] [ext: isaacsim.core.cloner-1.3.4] startup
+[7.567s] [ext: omni.sensors.nv.common-2.5.0-coreapi] startup
+[7.579s] [ext: omni.graph.tools-1.79.1] startup
+[7.594s] [ext: omni.sensors.nv.materials-1.4.0-coreapi] startup
+[7.596s] [ext: omni.graph-1.140.2] startup
+[7.628s] [ext: omni.kit.manipulator.viewport-107.0.1] startup
+[7.629s] [ext: omni.sensors.nv.ids-1.4.0-coreapi] startup
+[7.633s] [ext: omni.sensors.nv.lidar-2.6.3-coreapi] startup
+[7.637s] [ext: omni.graph.visualization.nodes-2.1.1] startup
+[7.642s] [ext: omni.kit.widget.graph-1.12.17] startup
+[7.653s] [ext: omni.ui_query-1.1.7] startup
+[7.655s] [ext: omni.kit.widget.text_editor-1.0.2] startup
+[7.657s] [ext: omni.kit.graph.delegate.default-1.2.2] startup
+[7.659s] [ext: omni.kit.ui_test-1.3.3] startup
+[7.664s] [ext: omni.graph.scriptnode-1.40.1] startup
+[7.665s] [ext: omni.kit.graph.editor.core-1.5.3] startup
+[7.669s] [ext: omni.kit.graph.usd.commands-1.3.1] startup
+[7.672s] [ext: omni.kit.widget.material_preview-1.0.16] startup
+[7.678s] [ext: omni.graph.action_core-1.1.7] startup
+[7.682s] [ext: omni.graph.image.core-0.6.0] startup
+[7.683s] [ext: omni.kit.window.material_graph-1.8.19] startup
+[7.706s] [ext: omni.graph.action_nodes-1.40.1] startup
+[7.709s] [ext: omni.graph.image.nodes-1.3.0] startup
+[7.710s] [ext: omni.kit.viewport.menubar.core-107.1.2] startup
+[7.729s] [ext: omni.kit.primitive.mesh-1.0.17] startup
+[7.733s] [ext: omni.graph.action-1.120.0] startup
+[7.734s] [ext: omni.graph.nodes-1.162.1] startup
+[7.745s] [ext: omni.syntheticdata-0.6.10] startup
+[7.773s] [ext: omni.kit.stage_templates-1.2.6] startup
+[7.783s] [ext: isaacsim.core.prims-0.3.7] startup
+[7.810s] [ext: omni.warp-1.5.0] startup
+[7.815s] [ext: omni.kit.window.extensions-1.4.25] startup
+[7.825s] [ext: omni.sensors.nv.wpm-2.4.0-coreapi] startup
+[7.827s] [ext: isaacsim.core.api-4.2.16] startup
+[7.887s] [ext: omni.replicator.core-1.11.35] startup
+2025-09-07 18:26:22 [7,945ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+[7.969s] [ext: isaacsim.gui.components-1.0.9] startup
+[7.979s] [ext: omni.sensors.nv.radar-2.6.1-coreapi] startup
+[7.984s] [ext: omni.kit.widget.prompt-1.0.7] startup
+[7.988s] [ext: isaacsim.core.nodes-2.1.4] startup
+[7.996s] [ext: isaacsim.robot.surface_gripper-2.0.6] startup
+[8.002s] [ext: isaacsim.util.debug_draw-2.0.2] startup
+[8.012s] [ext: omni.sensors.tiled-0.0.6] startup
+[8.016s] [ext: omni.kit.tool.asset_importer-2.12.2] startup
+[8.046s] [ext: omni.kit.menu.create-1.0.17] startup
+[8.052s] [ext: isaacsim.robot.manipulators-3.0.4] startup
+[8.070s] [ext: isaacsim.sensors.physx-2.2.4] startup
+[8.082s] [ext: isaacsim.sensors.rtx-13.6.3] startup
+[8.108s] [ext: isaacsim.asset.importer.mjcf-2.3.3] startup
+[8.183s] [ext: omni.anim.curve.core-1.2.0] startup
+[8.197s] [ext: omni.kit.scripting-106.5.2] startup
+[8.211s] [ext: omni.graph.ui_nodes-1.40.1] startup
+[8.228s] [ext: omni.kit.manipulator.transform-106.0.1] startup
+[8.237s] [ext: omni.kit.widget.toolbar-1.7.3] startup
+[8.256s] [ext: omni.kit.manipulator.camera-106.0.3] startup
+[8.262s] [ext: isaacsim.replicator.behavior-1.0.8] startup
+[8.264s] [ext: isaacsim.simulation_app-2.4.2] startup
+[8.266s] [ext: omni.kit.manipulator.selector-1.1.1] startup
+[8.269s] [ext: omni.kit.manipulator.tool.snap-1.5.12] startup
+[8.277s] [ext: omni.kit.widget.stage_icons-1.0.6] startup
+[8.279s] [ext: omni.kit.menu.file-1.1.15] startup
+[8.280s] [ext: omni.physx.commands-106.5.7] startup
+[8.283s] [ext: omni.kit.widget.layers-1.8.2] startup
+[8.293s] [ext: omni.kit.viewport.manipulator.transform-107.0.4] startup
+[8.294s] [ext: omni.kit.window.stage-2.5.11] startup
+[8.298s] [ext: omni.fabric.commands-1.1.5] startup
+[8.301s] [ext: omni.kit.property.audio-1.0.16] startup
+[8.302s] [ext: omni.kit.usd.collect-2.2.22] startup
+[8.305s] [ext: omni.kit.stagerecorder.core-105.0.5] startup
+[8.309s] [ext: omni.kit.manipulator.prim.core-107.0.7] startup
+[8.314s] [ext: omni.kit.menu.stage-1.2.5] startup
+[8.316s] [ext: omni.kit.property.geometry-1.3.3] startup
+[8.320s] [ext: omni.kit.manipulator.prim.fabric-107.0.4] startup
+[8.321s] [ext: omni.kit.manipulator.prim.usd-107.0.3] startup
+[8.323s] [ext: omni.kit.property.render-1.1.3] startup
+[8.324s] [ext: omni.kit.widget.zoombar-1.0.5] startup
+[8.325s] [ext: omni.kit.viewport.actions-107.0.0] startup
+[8.329s] [ext: omni.hydra.scene_api-0.1.2] startup
+[8.333s] [ext: omni.debugdraw-0.1.3] startup
+[8.336s] [ext: omni.kit.manipulator.prim-107.0.0] startup
+[8.337s] [ext: omni.kit.manipulator.selection-106.0.1] startup
+[8.338s] [ext: omni.kit.browser.core-2.3.11] startup
+[8.341s] [ext: omni.kit.viewport.menubar.display-107.0.3] startup
+[8.342s] [ext: omni.kit.property.transform-1.5.10] startup
+[8.345s] [ext: omni.kit.property.material-1.10.17] startup
+[8.350s] [ext: omni.kit.property.light-1.0.11] startup
+[8.351s] [ext: omni.kit.property.camera-1.0.9] startup
+[8.353s] [ext: omni.kit.browser.folder.core-1.10.1] startup
+[8.357s] [ext: omni.usdphysics.ui-106.5.7] startup
+[8.379s] [ext: omni.kit.property.bundle-1.3.2] startup
+[8.380s] [ext: omni.kit.tool.collect-2.2.16] startup
+[8.382s] [ext: omni.kit.stagerecorder.ui-105.0.6] startup
+[8.385s] [ext: isaacsim.sensors.physics-0.3.5] startup
+[8.389s] [ext: isaacsim.examples.browser-0.1.8] startup
+[8.394s] [ext: omni.physx.ui-106.5.7] startup
+[8.420s] [ext: omni.kit.viewport.menubar.camera-107.0.2] startup
+[8.426s] [ext: omni.kit.stagerecorder.bundle-105.0.2] startup
+[8.427s] [ext: isaacsim.robot.policy.examples-4.0.3] startup
+[8.429s] [ext: isaacsim.asset.importer.urdf-2.3.10] startup
+[8.448s] [ext: omni.kit.viewport.menubar.lighting-106.0.2] startup
+[8.454s] [ext: omni.physx.demos-106.5.7] startup
+[8.475s] [ext: omni.kit.property.physx-106.5.7] startup
+[8.522s] [ext: omni.kit.viewport.menubar.render-107.0.8] startup
+[8.525s] [ext: omni.kit.window.toolbar-1.6.2] startup
+[8.529s] [ext: isaacsim.robot.wheeled_robots-4.0.3] startup
+[8.536s] [ext: omni.physx.vehicle-106.5.7] startup
+[8.559s] [ext: omni.physx.graph-106.5.7] startup
+[8.576s] [ext: omni.physx.supportui-106.5.7] startup
+[8.597s] [ext: omni.physx.telemetry-106.5.7] startup
+[8.607s] [ext: omni.physx.camera-106.5.7] startup
+[8.618s] [ext: omni.physx.cct-106.5.7] startup
+[8.632s] [ext: omni.rtx.window.settings-0.6.17] startup
+[8.639s] [ext: omni.usd.metrics.assembler-106.5.0] startup
+[8.659s] [ext: omni.kit.window.status_bar-0.1.7] startup
+[8.663s] [ext: omni.kit.viewport.menubar.settings-107.0.3] startup
+[8.667s] [ext: omni.physx.bundle-106.5.7] startup
+[8.667s] [ext: omni.replicator.replicator_yaml-2.0.10] startup
+[8.679s] [ext: omni.rtx.settings.core-0.6.3] startup
+[8.685s] [ext: omni.usd.metrics.assembler.ui-106.5.0] startup
+[8.690s] [ext: isaacsim.asset.browser-1.3.4] startup
+[8.742s] [ext: isaacsim.gui.menu-2.0.9] startup
+2025-09-07 18:26:23 [8,725ms] [Warning] [omni.kit.menu.utils.app_menu] add_menu_items: menu [<MenuItemDescription name:'New'>, <MenuItemDescription name:'Open'>, <MenuItemDescription name:'Re-open with New Edit Layer'>, <MenuItemDescription name:'Save'>, <MenuItemDescription name:'Save With Options'>, <MenuItemDescription name:'Save As...'>, <MenuItemDescription name:'Save Flattened As...'>, <MenuItemDescription name:'Add Reference'>, <MenuItemDescription name:'Add Payload'>, <MenuItemDescription name:'Exit'>] cannot change delegate
+[8.748s] [ext: omni.kit.ui.actions-1.0.2] startup
+[8.751s] [ext: omni.kit.window.console-0.2.14] startup
+[8.761s] [ext: isaacsim.sensors.camera-0.2.9] startup
+[8.769s] [ext: isaaclab-0.41.1] startup
+[8.914s] [ext: isaaclab_assets-0.2.2] startup
+[9.082s] [ext: isaaclab_tasks-0.10.36] startup
+[10.198s] [ext: omni.kit.menu.common-1.1.9] startup
+[10.200s] [ext: isaaclab_rl-0.1.8] startup
+[10.201s] [ext: isaaclab_mimic-1.0.7] startup
+[10.201s] [ext: isaaclab.python-2.1.0] startup
+[10.203s] Simulation App Starting
+2025-09-07 18:26:24 [10,586ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit buffer size 7508933632
+2025-09-07 18:26:24 [10,586ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit : valid false, within: false
+2025-09-07 18:26:24 [10,586ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit : decrement: 167690, decrement size: 7433845248
+2025-09-07 18:26:24 [10,586ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : New limit 9574251 (slope: 447, intercept: 13179904)
+2025-09-07 18:26:24 [10,586ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit buffer size 4287216384
+2025-09-07 18:26:24 [10,586ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit : valid true, within: true
+[10.719s] app ready
+2025-09-07 18:26:25 [10,734ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults-transient/meshlights/forceDisable'
+[13.130s] Simulation App Startup Complete
+ROBOMIMIC WARNING(
+    No private macro file found!
+    It is recommended to use a private macro file
+    To setup, run: python /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/robomimic/scripts/setup_macros.py
+)
+[INFO]: Parsing configuration from: isaaclab_tasks.manager_based.manipulation.lift.config.franka.kitchen_ik_rel_env_cfg:FrankaKitchenLiftEnvCfg
+2025-09-07 18:26:27 [13,190ms] [Warning] [isaaclab.envs.manager_based_env] Seed not set for the environment. The environment creation may not be deterministic.
+[13.269s] [ext: omni.physx.fabric-106.5.7] startup
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+2025-09-07 18:26:29 [15,344ms] [Warning] [isaaclab.sim.spawners.from_files.from_files] A prim already exists at prim path: '/World/envs/env_0/TomatoSoupCan'.
+[INFO]: Time taken for scene creation : 2.157816 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 5.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+2025-09-07 18:26:30 [15,737ms] [Warning] [omni.physx.tensors.plugin] Duplicate joint name 'RevoluteJoint' in articulation metatype
+2025-09-07 18:26:30 [15,737ms] [Warning] [omni.physx.tensors.plugin] Duplicate DOF name 'RevoluteJoint' in articulation metatype
+2025-09-07 18:26:30 [15,737ms] [Warning] [omni.physx.tensors.plugin] Duplicate joint name 'RevoluteJoint' in articulation metatype
+2025-09-07 18:26:30 [15,737ms] [Warning] [omni.physx.tensors.plugin] Duplicate DOF name 'RevoluteJoint' in articulation metatype
+2025-09-07 18:26:30 [15,742ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'effort_limit'. This parameter will be removed in the future. To set the effort limit, please use 'effort_limit_sim' instead.
+2025-09-07 18:26:30 [15,742ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'velocity_limit'. Previously, although this value was specified, it was not getting used by implicit actuators. Since this parameter affects the simulation behavior, we continue to not use it. This parameter will be removed in the future. To set the velocity limit, please use 'velocity_limit_sim' instead.
+2025-09-07 18:26:30 [15,747ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'effort_limit'. This parameter will be removed in the future. To set the effort limit, please use 'effort_limit_sim' instead.
+2025-09-07 18:26:30 [15,747ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'velocity_limit'. Previously, although this value was specified, it was not getting used by implicit actuators. Since this parameter affects the simulation behavior, we continue to not use it. This parameter will be removed in the future. To set the velocity limit, please use 'velocity_limit_sim' instead.
+2025-09-07 18:26:31 [17,584ms] [Warning] [omni.hydra.scene_delegate.plugin] Calling getBypassRenderSkelMeshProcessing for prim /World/envs/env_0/Robot/panda_leftfinger/visuals.proto_panda_leftfinger_id0 that has not been populated
+[INFO]: Time taken for simulation start : 2.335371 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------+
+|           Active Command Terms           |
++-------+-------------+--------------------+
+| Index | Name        |        Type        |
++-------+-------------+--------------------+
+|   0   | object_pose | UniformPoseCommand |
++-------+-------------+--------------------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++--------------------------------------+
+| Active Event Terms in Mode: 'reset'  |
++---------+----------------------------+
+|  Index  | Name                       |
++---------+----------------------------+
+|    0    | reset_all                  |
+|    1    | reset_object_position      |
+|    2    | randomize_light            |
++---------+----------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 7)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         6 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++--------------------------------------------+
+| Active Observation Terms in Group: 'policy' |
++-----------+--------------------+-----------+
+|   Index   | Name               |   Shape   |
++-----------+--------------------+-----------+
+|     0     | joint_pos          |    (9,)   |
+|     1     | joint_vel          |    (9,)   |
+|     2     | object             |    (3,)   |
+|     3     | actions            |    (7,)   |
+|     4     | eef_pos            |    (3,)   |
+|     5     | eef_quat           |    (4,)   |
+|     6     | gripper_pos        |    (2,)   |
++-----------+--------------------+-----------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++------------------------------------+
+|      Active Termination Terms      |
++-------+-----------------+----------+
+| Index | Name            | Time Out |
++-------+-----------------+----------+
+|   0   | object_dropping |  False   |
++-------+-----------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 6 active terms.
++-----------------------------------------------------+
+|                 Active Reward Terms                 |
++-------+-----------------------------------+---------+
+| Index | Name                              |  Weight |
++-------+-----------------------------------+---------+
+|   0   | reaching_object                   |     1.0 |
+|   1   | lifting_object                    |    15.0 |
+|   2   | object_goal_tracking              |    16.0 |
+|   3   | object_goal_tracking_fine_grained |     5.0 |
+|   4   | action_rate                       | -0.0001 |
+|   5   | joint_vel                         | -0.0001 |
++-------+-----------------------------------+---------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 2 active terms.
++--------------------------+
+| Active Curriculum Terms  |
++---------+----------------+
+|  Index  | Name           |
++---------+----------------+
+|    0    | action_rate    |
+|    1    | joint_vel      |
++---------+----------------+
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Setting seed: 101
+============= Loaded Config =============
+{
+    "algo_name": "bc",
+    "experiment": {
+        "name": "bc_rnn_low_dim_franka_kitchen_lift",
+        "validate": true,
+        "logging": {
+            "terminal_output_to_txt": true,
+            "log_tb": true,
+            "log_wandb": false,
+            "wandb_proj_name": "debug"
+        },
+        "save": {
+            "enabled": true,
+            "every_n_seconds": null,
+            "every_n_epochs": 50,
+            "epochs": [],
+            "on_best_validation": true,
+            "on_best_rollout_return": false,
+            "on_best_rollout_success_rate": true
+        },
+        "epoch_every_n_steps": 500,
+        "validation_epoch_every_n_steps": 20,
+        "env": null,
+        "additional_envs": null,
+        "render": false,
+        "render_video": false,
+        "keep_all_videos": false,
+        "video_skip": 5,
+        "rollout": {
+            "enabled": false,
+            "n": 50,
+            "horizon": 400,
+            "rate": 50,
+            "warmstart": 0,
+            "terminate_on_success": true
+        }
+    },
+    "train": {
+        "data": "./datasets/generated_dataset_sample_300.hdf5",
+        "output_dir": "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-v0",
+        "num_data_workers": 16,
+        "hdf5_cache_mode": "all",
+        "hdf5_use_swmr": true,
+        "hdf5_load_next_obs": false,
+        "hdf5_normalize_obs": false,
+        "hdf5_filter_key": "train",
+        "hdf5_validation_filter_key": "valid",
+        "seq_length": 10,
+        "pad_seq_length": true,
+        "frame_stack": 1,
+        "pad_frame_stack": true,
+        "dataset_keys": [
+            "actions",
+            "dones",
+            "datagen_info"
+        ],
+        "goal_mode": null,
+        "cuda": true,
+        "batch_size": 32,
+        "num_epochs": 600,
+        "seed": 101
+    },
+    "algo": {
+        "optim_params": {
+            "policy": {
+                "optimizer_type": "adamw",
+                "learning_rate": {
+                    "initial": 0.0001,
+                    "decay_factor": 0.1,
+                    "epoch_schedule": [
+                        100
+                    ],
+                    "scheduler_type": "linear"
+                },
+                "regularization": {
+                    "L2": 0.01
+                }
+            }
+        },
+        "loss": {
+            "l2_weight": 1.0,
+            "l1_weight": 0.0,
+            "cos_weight": 0.0
+        },
+        "actor_layer_dims": [
+            1024,
+            1024
+        ],
+        "gaussian": {
+            "enabled": false,
+            "fixed_std": false,
+            "init_std": 0.1,
+            "min_std": 0.01,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "gmm": {
+            "enabled": true,
+            "num_modes": 8,
+            "min_std": 0.0001,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "vae": {
+            "enabled": false,
+            "latent_dim": 14,
+            "latent_clip": null,
+            "kl_weight": 1.0,
+            "decoder": {
+                "is_conditioned": true,
+                "reconstruction_sum_across_elements": false
+            },
+            "prior": {
+                "learn": false,
+                "is_conditioned": false,
+                "use_gmm": false,
+                "gmm_num_modes": 10,
+                "gmm_learn_weights": false,
+                "use_categorical": false,
+                "categorical_dim": 10,
+                "categorical_gumbel_softmax_hard": false,
+                "categorical_init_temp": 1.0,
+                "categorical_temp_anneal_step": 0.001,
+                "categorical_min_temp": 0.3
+            },
+            "encoder_layer_dims": [
+                400
+            ],
+            "decoder_layer_dims": [
+                400
+            ],
+            "prior_layer_dims": []
+        },
+        "rnn": {
+            "enabled": false,
+            "horizon": 10,
+            "hidden_dim": 1000,
+            "rnn_type": "LSTM",
+            "num_layers": 2,
+            "open_loop": false,
+            "kwargs": {
+                "bidirectional": false
+            }
+        },
+        "transformer": {
+            "enabled": true,
+            "context_length": 10,
+            "embed_dim": 512,
+            "num_layers": 6,
+            "num_heads": 8,
+            "emb_dropout": 0.1,
+            "attn_dropout": 0.1,
+            "block_output_dropout": 0.1,
+            "sinusoidal_embedding": false,
+            "activation": "gelu",
+            "supervise_all_steps": false,
+            "nn_parameter_for_timesteps": true
+        }
+    },
+    "observation": {
+        "modalities": {
+            "obs": {
+                "low_dim": [
+                    "eef_pos",
+                    "eef_quat",
+                    "gripper_pos",
+                    "joint_pos",
+                    "object",
+                    "joint_vel",
+                    "actions"
+                ],
+                "rgb": [],
+                "depth": [],
+                "scan": []
+            },
+            "goal": {
+                "low_dim": [],
+                "rgb": [],
+                "depth": [],
+                "scan": []
+            }
+        },
+        "encoder": {
+            "low_dim": {
+                "core_class": null,
+                "core_kwargs": {},
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "rgb": {
+                "core_class": "VisualCore",
+                "core_kwargs": {
+                    "feature_dimension": 64,
+                    "flatten": true,
+                    "backbone_class": "ResNet18Conv",
+                    "backbone_kwargs": {
+                        "pretrained": false,
+                        "input_coord_conv": false
+                    },
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 32,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    }
+                },
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "depth": {
+                "core_class": "VisualCore",
+                "core_kwargs": {
+                    "feature_dimension": 64,
+                    "flatten": true,
+                    "backbone_class": "ResNet18Conv",
+                    "backbone_kwargs": {
+                        "pretrained": false,
+                        "input_coord_conv": false
+                    },
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 32,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    }
+                },
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "scan": {
+                "core_class": "ScanCore",
+                "core_kwargs": {
+                    "feature_dimension": 64,
+                    "flatten": true,
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 32,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    },
+                    "conv_activation": "relu",
+                    "conv_kwargs": {
+                        "out_channels": [
+                            32,
+                            64,
+                            64
+                        ],
+                        "kernel_size": [
+                            8,
+                            4,
+                            2
+                        ],
+                        "stride": [
+                            4,
+                            2,
+                            1
+                        ]
+                    }
+                },
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            }
+        }
+    },
+    "meta": {
+        "hp_base_config_file": null,
+        "hp_keys": [],
+        "hp_values": []
+    }
+}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['object', 'actions', 'gripper_pos', 'eef_pos', 'joint_vel', 'eef_quat', 'joint_pos']
+using obs modality: rgb with keys: []
+using obs modality: depth with keys: []
+using obs modality: scan with keys: []
+Created GPT_Backbone model with number of parameters: 18906112
+============= Loaded Policy =============
+ObservationKeyToModalityDict: mean not found, adding mean to mapping with assumed low_dim modality!
+ObservationKeyToModalityDict: scale not found, adding scale to mapping with assumed low_dim modality!
+ObservationKeyToModalityDict: logits not found, adding logits to mapping with assumed low_dim modality!
+BC_Transformer_GMM (
+  ModuleDict(
+    (policy): TransformerGMMActorNetwork(
+        action_dim=7, std_activation=softplus, low_noise_eval=True, num_nodes=8, min_std=0.0001
+  
+        encoder=ObservationGroupEncoder(
+            group=obs
+            ObservationEncoder(
+                Key(
+                    name=actions
+                    shape=[7]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=eef_pos
+                    shape=[3]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=eef_quat
+                    shape=[4]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=gripper_pos
+                    shape=[2]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=joint_pos
+                    shape=[9]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=joint_vel
+                    shape=[9]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=object
+                    shape=[3]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                output_shape=[37]
+            )
+        )
+  
+        transformer=GPT_Backbone(
+          (activation): GELU(approximate='none')
+          (nets): ModuleDict(
+            (transformer): Sequential(
+              (0): SelfAttentionBlock(
+                (nets): ModuleDict(
+                  (attention): CausalSelfAttention(
+                    (nets): ModuleDict(
+                      (qkv): Linear(in_features=512, out_features=1536, bias=False)
+                      (attn_dropout): Dropout(p=0.1, inplace=False)
+                      (output_dropout): Dropout(p=0.1, inplace=False)
+                      (output): Linear(in_features=512, out_features=512, bias=True)
+                    )
+                  )
+                  (mlp): Sequential(
+                    (0): Linear(in_features=512, out_features=2048, bias=True)
+                    (1): GELU(approximate='none')
+                    (2): Linear(in_features=2048, out_features=512, bias=True)
+                    (3): Dropout(p=0.1, inplace=False)
+                  )
+                  (ln1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+                  (ln2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+                )
+              )
+              (1): SelfAttentionBlock(
+                (nets): ModuleDict(
+                  (attention): CausalSelfAttention(
+                    (nets): ModuleDict(
+                      (qkv): Linear(in_features=512, out_features=1536, bias=False)
+                      (attn_dropout): Dropout(p=0.1, inplace=False)
+                      (output_dropout): Dropout(p=0.1, inplace=False)
+                      (output): Linear(in_features=512, out_features=512, bias=True)
+                    )
+                  )
+                  (mlp): Sequential(
+                    (0): Linear(in_features=512, out_features=2048, bias=True)
+                    (1): GELU(approximate='none')
+                    (2): Linear(in_features=2048, out_features=512, bias=True)
+                    (3): Dropout(p=0.1, inplace=False)
+                  )
+                  (ln1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+                  (ln2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+                )
+              )
+              (2): SelfAttentionBlock(
+                (nets): ModuleDict(
+                  (attention): CausalSelfAttention(
+                    (nets): ModuleDict(
+                      (qkv): Linear(in_features=512, out_features=1536, bias=False)
+                      (attn_dropout): Dropout(p=0.1, inplace=False)
+                      (output_dropout): Dropout(p=0.1, inplace=False)
+                      (output): Linear(in_features=512, out_features=512, bias=True)
+                    )
+                  )
+                  (mlp): Sequential(
+                    (0): Linear(in_features=512, out_features=2048, bias=True)
+                    (1): GELU(approximate='none')
+                    (2): Linear(in_features=2048, out_features=512, bias=True)
+                    (3): Dropout(p=0.1, inplace=False)
+                  )
+                  (ln1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+                  (ln2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+                )
+              )
+              (3): SelfAttentionBlock(
+                (nets): ModuleDict(
+                  (attention): CausalSelfAttention(
+                    (nets): ModuleDict(
+                      (qkv): Linear(in_features=512, out_features=1536, bias=False)
+                      (attn_dropout): Dropout(p=0.1, inplace=False)
+                      (output_dropout): Dropout(p=0.1, inplace=False)
+                      (output): Linear(in_features=512, out_features=512, bias=True)
+                    )
+                  )
+                  (mlp): Sequential(
+                    (0): Linear(in_features=512, out_features=2048, bias=True)
+                    (1): GELU(approximate='none')
+                    (2): Linear(in_features=2048, out_features=512, bias=True)
+                    (3): Dropout(p=0.1, inplace=False)
+                  )
+                  (ln1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+                  (ln2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+                )
+              )
+              (4): SelfAttentionBlock(
+                (nets): ModuleDict(
+                  (attention): CausalSelfAttention(
+                    (nets): ModuleDict(
+                      (qkv): Linear(in_features=512, out_features=1536, bias=False)
+                      (attn_dropout): Dropout(p=0.1, inplace=False)
+                      (output_dropout): Dropout(p=0.1, inplace=False)
+                      (output): Linear(in_features=512, out_features=512, bias=True)
+                    )
+                  )
+                  (mlp): Sequential(
+                    (0): Linear(in_features=512, out_features=2048, bias=True)
+                    (1): GELU(approximate='none')
+                    (2): Linear(in_features=2048, out_features=512, bias=True)
+                    (3): Dropout(p=0.1, inplace=False)
+                  )
+                  (ln1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+                  (ln2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+                )
+              )
+              (5): SelfAttentionBlock(
+                (nets): ModuleDict(
+                  (attention): CausalSelfAttention(
+                    (nets): ModuleDict(
+                      (qkv): Linear(in_features=512, out_features=1536, bias=False)
+                      (attn_dropout): Dropout(p=0.1, inplace=False)
+                      (output_dropout): Dropout(p=0.1, inplace=False)
+                      (output): Linear(in_features=512, out_features=512, bias=True)
+                    )
+                  )
+                  (mlp): Sequential(
+                    (0): Linear(in_features=512, out_features=2048, bias=True)
+                    (1): GELU(approximate='none')
+                    (2): Linear(in_features=2048, out_features=512, bias=True)
+                    (3): Dropout(p=0.1, inplace=False)
+                  )
+                  (ln1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+                  (ln2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+                )
+              )
+            )
+            (output_ln): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+  
+        decoder=ObservationDecoder(
+            Key(
+                name=mean
+                shape=(8, 7)
+                modality=low_dim
+                net=(Linear(in_features=512, out_features=56, bias=True))
+            )
+            Key(
+                name=scale
+                shape=(8, 7)
+                modality=low_dim
+                net=(Linear(in_features=512, out_features=56, bias=True))
+            )
+            Key(
+                name=logits
+                shape=(8,)
+                modality=low_dim
+                net=(Linear(in_features=512, out_features=8, bias=True))
+            )
+        )
+    )
+  )
+)
+[INFO] Starting trial 0
+Traceback (most recent call last):
+  File "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/scripts/imitation_learning/robomimic/play.py", line 188, in <module>
+    main()
+  File "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/scripts/imitation_learning/robomimic/play.py", line 175, in main
+    terminated, traj = rollout(policy, env, success_term, args_cli.horizon, device)
+  File "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/scripts/imitation_learning/robomimic/play.py", line 113, in rollout
+    actions = policy(obs)
+  File "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/robomimic/algo/algo.py", line 525, in __call__
+    ac = self.policy.get_action(obs_dict=ob, goal_dict=goal)
+  File "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/robomimic/algo/bc.py", line 769, in get_action
+    return self.nets["policy"](obs_dict, actions=None, goal_dict=goal_dict)[:, -1, :]
+  File "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/robomimic/models/policy_nets.py", line 1326, in forward
+    out = self.forward_train(obs_dict=obs_dict, actions=actions, goal_dict=goal_dict)
+  File "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/robomimic/models/policy_nets.py", line 1278, in forward_train
+    outputs = MIMO_Transformer.forward(self, **forward_kwargs)
+  File "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/robomimic/models/obs_nets.py", line 1059, in forward
+    assert inputs[obs_group][k].ndim - 2 == len(self.input_obs_group_shapes[obs_group][k])
+AssertionError
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-09-07 18:26:32 [18,579ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Core' for removal
+2025-09-07 18:26:32 [18,580ms] [Warning] [omni.graph.core.plugin] Could not find category 'animation' for removal
+2025-09-07 18:26:33 [18,627ms] [Warning] [omni.fabric.plugin] gFabricState->gUsdStageToSimStageWithHistoryMap had 1 outstanding SimStageWithHistory(s) at shutdown
+2025-09-07 18:26:33 [18,628ms] [Warning] [carb.audio.context] 1 contexts were leaked
+2025-09-07 18:26:33 [18,714ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+saiga@sai-Ideapad:~/Documents/Cognitive_Robotics/simulation_packages/IsaacLab$ 
+
