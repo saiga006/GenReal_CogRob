@@ -1,0 +1,101 @@
+{
+    "algo_name": "bc",
+    "experiment": {
+        "name": "bc_rnn_image_franka_kitchen_lift_ultrafast",
+        "validate": true,
+        "logging": {
+            "terminal_output_to_txt": true,
+            "log_tb": true
+        },
+        "save": {
+            "enabled": true,
+            "every_n_epochs": 20,
+            "on_best_rollout_success_rate": true
+        },
+        "epoch_every_n_steps": 1500,
+        "rollout": {
+            "enabled": false
+        }
+    },
+    "train": {
+        "num_data_workers": 16,
+        "hdf5_cache_mode": "low_dim",
+        "hdf5_filter_key": "train",
+        "hdf5_validation_filter_key": "valid",
+        "seq_length": 1,
+        "dataset_keys": [
+            "actions",
+            "dones",
+            "datagen_info"
+        ],
+        "goal_mode": null,
+        "cuda": true,
+        "batch_size": 16,
+        "num_epochs": 150,
+        "seed": 101
+    },
+    "algo": {
+        "optim_params": {
+            "policy": {
+                "learning_rate": {
+                    "initial": 0.001,
+                    "decay_factor": 0.5,
+                    "epoch_schedule": [75, 125]
+                }
+            }
+        },
+        "loss": {
+            "l2_weight": 1.0
+        },
+        "gmm": {
+            "enabled": true,
+            "num_modes": 3,
+            "min_std": 0.0001,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "rnn": {
+            "enabled": true,
+            "horizon": 2,
+            "hidden_dim": 32,
+            "rnn_type": "LSTM",
+            "num_layers": 1
+        }
+    },
+    "observation": {
+        "modalities": {
+            "obs": {
+                "low_dim": [
+                    "eef_pos",
+                    "eef_quat", 
+                    "gripper_pos",
+                    "joint_pos",
+                    "object",
+                    "joint_vel",
+                    "actions"
+                ],
+                "rgb": [
+                    "wrist_cam"
+                ]
+            }
+        },
+        "encoder": {
+            "rgb": {
+                "core_class": "VisualCore",
+                "core_kwargs": {
+                    "feature_dimension": 512,
+                    "backbone_class": "R3MConv",
+                    "backbone_kwargs": {
+                        "pretrained": true,
+                        "input_coord_conv": false,
+                        "r3m_model_class": "resnet18",
+                        "freeze": false
+                    },
+                    "pool_class": null,
+                    "pool_kwargs": {}
+                },
+                "obs_randomizer_class": "CropRandomizer"
+            }
+        }
+    }
+}

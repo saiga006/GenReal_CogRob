@@ -1,0 +1,2267 @@
+ccess condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3076084 0.5469169 1.2387372]
+Hand world position: [2.3369706 0.644006  1.2234162]
+2025-09-04 22:17:00 [1,461,073ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:00 [1,461,073ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00760841  0.05308312 -0.01126277]
+Hand position in microwave frame: [-0.03697062 -0.04400599 -0.02658379]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3075478  0.54750776 1.2386613 ]
+Hand world position: [2.3370268 0.6445259 1.2230582]
+2025-09-04 22:17:00 [1,461,135ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:00 [1,461,135ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00754786  0.05249226 -0.01133871]
+Hand position in microwave frame: [-0.03702688 -0.04452586 -0.02694178]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3079917 0.5475804 1.2384421]
+Hand world position: [2.337521   0.64454013 1.222596  ]
+2025-09-04 22:17:00 [1,461,197ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:00 [1,461,198ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00799179  0.0524196  -0.01155794]
+Hand position in microwave frame: [-0.03752112 -0.04454011 -0.02740395]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.308971  0.5471265 1.2385671]
+Hand world position: [2.3386679 0.6440399 1.222755 ]
+2025-09-04 22:17:00 [1,461,264ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:00 [1,461,264ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00897098  0.05287355 -0.01143289]
+Hand position in microwave frame: [-0.03866792 -0.04403991 -0.02724504]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3098228  0.54795915 1.2385759 ]
+Hand world position: [2.3393013  0.64494395 1.2228179 ]
+2025-09-04 22:17:00 [1,461,330ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:00 [1,461,330ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00982285  0.05204087 -0.01142406]
+Hand position in microwave frame: [-0.0393014  -0.04494393 -0.0271821 ]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3112562 0.5481837 1.239329 ]
+Hand world position: [2.3405004  0.64523417 1.2235172 ]
+2025-09-04 22:17:00 [1,461,393ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:00 [1,461,393ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.01125622  0.05181634 -0.01067102]
+Hand position in microwave frame: [-0.0405004  -0.04523414 -0.02648282]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.310746   0.54956067 1.2385701 ]
+Hand world position: [2.3404384 0.6464724 1.2235149]
+2025-09-04 22:17:00 [1,461,455ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:00 [1,461,455ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.010746    0.05043936 -0.01142991]
+Hand position in microwave frame: [-0.04043841 -0.04647237 -0.02648509]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3101878  0.55024236 1.2350008 ]
+Hand world position: [2.3412502 0.6469257 1.223864 ]
+2025-09-04 22:17:00 [1,461,519ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:00 [1,461,519ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.01018786  0.04975766 -0.01499915]
+Hand position in microwave frame: [-0.04125023 -0.04692566 -0.02613604]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3096533  0.55031025 1.2283801 ]
+Hand world position: [2.3428116  0.64626753 1.2246283 ]
+2025-09-04 22:17:00 [1,461,583ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:00 [1,461,583ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00965333  0.04968977 -0.02161992]
+Hand position in microwave frame: [-0.04281163 -0.04626751 -0.02537167]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3091142 0.5500285 1.2182927]
+Hand world position: [2.3429716 0.6471057 1.2238166]
+2025-09-04 22:17:01 [1,461,651ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,461,651ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00911427  0.04997152 -0.03170729]
+Hand position in microwave frame: [-0.04297161 -0.04710567 -0.02618337]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.308575  0.5497468 1.2042818]
+Hand world position: [2.3432906 0.647667  1.2234664]
+2025-09-04 22:17:01 [1,461,716ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,461,716ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00857496  0.05025321 -0.04571819]
+Hand position in microwave frame: [-0.04329062 -0.04766697 -0.0265336 ]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.308036  0.5494652 1.1863475]
+Hand world position: [2.3429937 0.6491109 1.2227169]
+2025-09-04 22:17:01 [1,461,785ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,461,785ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00803614  0.05053484 -0.06365252]
+Hand position in microwave frame: [-0.04299378 -0.04911089 -0.02728307]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3074973 0.5491835 1.1644895]
+Hand world position: [2.3439765  0.64939266 1.2227545 ]
+2025-09-04 22:17:01 [1,461,846ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,461,846ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00749731  0.05081654 -0.08551049]
+Hand position in microwave frame: [-0.04397655 -0.04939264 -0.02724552]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3033047 0.5535373 1.1655388]
+Hand world position: [2.3448474 0.6495251 1.2227107]
+2025-09-04 22:17:01 [1,461,909ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,461,909ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00330472  0.04646271 -0.08446121]
+Hand position in microwave frame: [-0.04484749 -0.04952508 -0.02728927]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.2996264  0.55819964 1.1628144 ]
+Hand world position: [2.3456042 0.6495757 1.222752 ]
+2025-09-04 22:17:01 [1,461,972ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,461,972ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [ 0.0003736   0.04180038 -0.08718562]
+Hand position in microwave frame: [-0.04560423 -0.04957569 -0.02724802]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.2980669 0.5628396 1.1629654]
+Hand world position: [2.3467314 0.6487697 1.2225788]
+2025-09-04 22:17:01 [1,462,037ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,462,037ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [ 0.0019331   0.0371604  -0.08703458]
+Hand position in microwave frame: [-0.04673147 -0.04876965 -0.02742124]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.298283   0.56554866 1.1645849 ]
+Hand world position: [2.3462996 0.6487402 1.2214864]
+2025-09-04 22:17:01 [1,462,104ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,462,105ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [ 0.00171685  0.03445137 -0.08541512]
+Hand position in microwave frame: [-0.0462997  -0.04874015 -0.02851355]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.2989657 0.5672616 1.1651458]
+Hand world position: [2.3465023 0.6488758 1.2208713]
+2025-09-04 22:17:01 [1,462,167ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,462,167ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [ 0.00103426  0.03273845 -0.08485425]
+Hand position in microwave frame: [-0.04650235 -0.04887575 -0.02912867]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.300151  0.5678045 1.165359 ]
+Hand world position: [2.3463814  0.64935565 1.2209643 ]
+2025-09-04 22:17:01 [1,462,229ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,462,229ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00015116  0.03219551 -0.08464098]
+Hand position in microwave frame: [-0.04638147 -0.04935563 -0.02903569]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3014534  0.56721693 1.1649712 ]
+Hand world position: [2.3465698 0.6501882 1.2211624]
+2025-09-04 22:17:01 [1,462,292ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,462,292ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0014534   0.03278309 -0.08502877]
+Hand position in microwave frame: [-0.04656982 -0.05018818 -0.02883756]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3027592  0.56541795 1.1641984 ]
+Hand world position: [2.3472786  0.65011215 1.222124  ]
+2025-09-04 22:17:01 [1,462,355ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,462,355ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00275922  0.03458208 -0.0858016 ]
+Hand position in microwave frame: [-0.04727864 -0.05011213 -0.02787602]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.303542   0.56242573 1.1629922 ]
+Hand world position: [2.3475266  0.65031075 1.2222633 ]
+2025-09-04 22:17:01 [1,462,416ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,462,416ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00354195  0.03757429 -0.08700776]
+Hand position in microwave frame: [-0.0475266  -0.05031073 -0.02773666]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.302653 0.558937 1.162571]
+Hand world position: [2.346537  0.6516166 1.2213942]
+2025-09-04 22:17:01 [1,462,478ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,462,478ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00265312  0.04106301 -0.08742905]
+Hand position in microwave frame: [-0.04653716 -0.05161655 -0.02860582]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3006463 0.557178  1.1635296]
+Hand world position: [2.3469152 0.6514286 1.2218659]
+2025-09-04 22:17:01 [1,462,545ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,462,545ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00064635  0.042822   -0.08647037]
+Hand position in microwave frame: [-0.04691529 -0.05142856 -0.02813411]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.2989583 0.556774  1.1640265]
+Hand world position: [2.3466527 0.6520455 1.2224143]
+2025-09-04 22:17:01 [1,462,606ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:01 [1,462,606ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [ 0.00104165  0.043226   -0.0859735 ]
+Hand position in microwave frame: [-0.04665279 -0.05204546 -0.02758574]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.2980318 0.5574677 1.1640501]
+Hand world position: [2.3461692 0.6529753 1.2229427]
+2025-09-04 22:17:02 [1,462,669ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,462,669ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [ 0.00196815  0.04253232 -0.0859499 ]
+Hand position in microwave frame: [-0.04616928 -0.0529753  -0.02705729]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.2978666  0.55911976 1.1633523 ]
+Hand world position: [2.3462272  0.65338695 1.2232522 ]
+2025-09-04 22:17:02 [1,462,753ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,462,753ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [ 0.00213337  0.04088026 -0.08664775]
+Hand position in microwave frame: [-0.04622722 -0.05338693 -0.02674782]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.2989976 0.5614414 1.1625404]
+Hand world position: [2.3462727 0.6537102 1.2230946]
+2025-09-04 22:17:02 [1,462,817ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,462,817ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [ 0.00100231  0.0385586  -0.08745956]
+Hand position in microwave frame: [-0.04627275 -0.05371016 -0.02690542]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3013225 0.5628398 1.1622922]
+Hand world position: [2.3463306  0.65408033 1.2223676 ]
+2025-09-04 22:17:02 [1,462,879ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,462,879ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00132251  0.03716022 -0.08770776]
+Hand position in microwave frame: [-0.04633069 -0.05408031 -0.02763236]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3029618 0.5623613 1.1627713]
+Hand world position: [2.3464682  0.65453273 1.2210718 ]
+2025-09-04 22:17:02 [1,462,940ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,462,940ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00296187  0.03763872 -0.08722866]
+Hand position in microwave frame: [-0.04646826 -0.05453271 -0.02892816]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3034031  0.56113917 1.1626731 ]
+Hand world position: [2.3467262 0.6550847 1.2192211]
+2025-09-04 22:17:02 [1,463,003ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,463,004ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00340319  0.03886086 -0.08732688]
+Hand position in microwave frame: [-0.04672623 -0.05508471 -0.03077888]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3023713 0.5597945 1.1623015]
+Hand world position: [2.347572   0.65533584 1.2173698 ]
+2025-09-04 22:17:02 [1,463,066ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,463,066ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00237131  0.04020554 -0.08769846]
+Hand position in microwave frame: [-0.04757214 -0.05533582 -0.03263021]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3003232  0.55964375 1.1620287 ]
+Hand world position: [2.3483655 0.6557579 1.2155007]
+2025-09-04 22:17:02 [1,463,126ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,463,127ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0003233   0.04035628 -0.08797133]
+Hand position in microwave frame: [-0.04836559 -0.05575788 -0.03449929]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.2993119 0.5609465 1.1622338]
+Hand world position: [2.3492327  0.65666145 1.213404  ]
+2025-09-04 22:17:02 [1,463,191ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,463,191ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [ 0.00068808  0.0390535  -0.08776617]
+Hand position in microwave frame: [-0.04923272 -0.05666143 -0.03659594]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.2998655  0.56236345 1.1622694 ]
+Hand world position: [2.3491077  0.65888166 1.2103146 ]
+2025-09-04 22:17:02 [1,463,254ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,463,254ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [ 0.00013447  0.03763658 -0.08773065]
+Hand position in microwave frame: [-0.04910779 -0.05888164 -0.03968537]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3011928  0.56242865 1.1622651 ]
+Hand world position: [2.350106  0.6599784 1.2078185]
+2025-09-04 22:17:02 [1,463,317ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,463,318ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00119281  0.03757137 -0.08773494]
+Hand position in microwave frame: [-0.05010605 -0.05997837 -0.04218149]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.302041   0.56110924 1.1618094 ]
+Hand world position: [2.35127    0.66070276 1.2054658 ]
+2025-09-04 22:17:02 [1,463,383ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,463,384ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0020411   0.03889078 -0.08819056]
+Hand position in microwave frame: [-0.05127001 -0.06070274 -0.04453421]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3015966 0.5603491 1.1617869]
+Hand world position: [2.3516593  0.66119707 1.2032943 ]
+2025-09-04 22:17:02 [1,463,450ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,463,450ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00159669  0.03965092 -0.08821309]
+Hand position in microwave frame: [-0.05165935 -0.06119704 -0.04670572]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3008065 0.5609902 1.1613684]
+Hand world position: [2.3524818 0.6610759 1.2009743]
+2025-09-04 22:17:02 [1,463,513ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,463,513ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00080657  0.03900981 -0.08863163]
+Hand position in microwave frame: [-0.05248189 -0.06107587 -0.04902565]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.301048  0.5608854 1.1612912]
+Hand world position: [2.3530235  0.66127163 1.198348  ]
+2025-09-04 22:17:02 [1,463,578ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,463,578ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104809  0.03911459 -0.08870876]
+Hand position in microwave frame: [-0.05302358 -0.06127161 -0.05165195]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088537 1.1612906 ]
+Hand world position: [2.3535182 0.661472  1.1963987]
+2025-09-04 22:17:02 [1,463,640ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:02 [1,463,640ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911465 -0.08870935]
+Hand position in microwave frame: [-0.0535183  -0.061472   -0.05360126]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3008537 0.5611289 1.1613944]
+Hand world position: [2.3532028  0.66226953 1.1954739 ]
+2025-09-04 22:17:03 [1,463,707ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,463,707ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00085378  0.03887111 -0.08860564]
+Hand position in microwave frame: [-0.05320287 -0.06226951 -0.05452609]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.301123  0.5609794 1.1613508]
+Hand world position: [2.354016   0.66233927 1.1973157 ]
+2025-09-04 22:17:03 [1,463,768ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,463,768ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00112295  0.0390206  -0.08864915]
+Hand position in microwave frame: [-0.05401611 -0.06233925 -0.05268431]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010433 0.5608854 1.1612908]
+Hand world position: [2.3500454  0.66835964 1.1957197 ]
+2025-09-04 22:17:03 [1,463,834ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,463,834ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104332  0.03911459 -0.08870924]
+Hand position in microwave frame: [-0.05004549 -0.06835961 -0.05428028]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3487751  0.67630816 1.1941416 ]
+2025-09-04 22:17:03 [1,463,899ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,463,899ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.0487752  -0.07630813 -0.05585837]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3526428  0.67985785 1.1945521 ]
+2025-09-04 22:17:03 [1,463,966ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,463,966ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.05264282 -0.07985783 -0.05544794]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437  0.56088567 1.1612908 ]
+Hand world position: [2.3559403  0.68148714 1.1945554 ]
+2025-09-04 22:17:03 [1,464,030ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,464,030ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911436 -0.08870924]
+Hand position in microwave frame: [-0.05594039 -0.08148712 -0.0554446 ]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437 0.5608856 1.1612908]
+Hand world position: [2.3577693  0.68279433 1.1936471 ]
+2025-09-04 22:17:03 [1,464,091ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,464,091ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911442 -0.08870924]
+Hand position in microwave frame: [-0.0577693  -0.08279431 -0.05635285]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010433 0.5608855 1.1612908]
+Hand world position: [2.3592896 0.6829284 1.1926712]
+2025-09-04 22:17:03 [1,464,151ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,464,151ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104332  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.05928969 -0.08292836 -0.05732882]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.360431   0.68252957 1.1918235 ]
+2025-09-04 22:17:03 [1,464,218ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,464,218ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.060431   -0.08252954 -0.05817652]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437 0.5608856 1.1612908]
+Hand world position: [2.3622031 0.6816773 1.1912625]
+2025-09-04 22:17:03 [1,464,283ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,464,283ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911442 -0.08870924]
+Hand position in microwave frame: [-0.06220317 -0.08167726 -0.05873752]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.301044  0.5608858 1.1612906]
+Hand world position: [2.361934  0.6819812 1.1896038]
+2025-09-04 22:17:03 [1,464,348ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,464,348ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104403  0.03911424 -0.08870935]
+Hand position in microwave frame: [-0.06193399 -0.08198118 -0.06039619]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3621628 0.6815974 1.188705 ]
+2025-09-04 22:17:03 [1,464,412ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,464,412ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.06216288 -0.08159739 -0.06129503]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010433  0.56088525 1.1612908 ]
+Hand world position: [2.3621094 0.6817203 1.1883324]
+2025-09-04 22:17:03 [1,464,474ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,464,474ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104332  0.03911477 -0.08870924]
+Hand position in microwave frame: [-0.06210947 -0.08172029 -0.06166756]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3622217  0.68172824 1.1880628 ]
+2025-09-04 22:17:03 [1,464,537ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,464,537ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.06222177 -0.08172822 -0.06193721]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437 0.5608856 1.1612908]
+Hand world position: [2.3612278  0.68237436 1.1870583 ]
+2025-09-04 22:17:03 [1,464,597ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:03 [1,464,597ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911442 -0.08870924]
+Hand position in microwave frame: [-0.0612278  -0.08237433 -0.06294167]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.301044  0.5608858 1.1612906]
+Hand world position: [2.3606184 0.6819982 1.1860265]
+2025-09-04 22:17:04 [1,464,659ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,464,659ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104403  0.03911424 -0.08870935]
+Hand position in microwave frame: [-0.0606184  -0.08199817 -0.06397355]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3601618  0.68153584 1.1850088 ]
+2025-09-04 22:17:04 [1,464,721ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,464,721ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.06016183 -0.08153582 -0.06499124]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3595915  0.68141603 1.1846957 ]
+2025-09-04 22:17:04 [1,464,788ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,464,788ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.05959153 -0.08141601 -0.06530428]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.359032  0.6816195 1.1846049]
+2025-09-04 22:17:04 [1,464,849ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,464,849ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.05903196 -0.0816195  -0.06539512]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3584917 0.6819888 1.1849008]
+2025-09-04 22:17:04 [1,464,910ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,464,910ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.05849171 -0.08198875 -0.06509924]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608853 1.1612908]
+Hand world position: [2.3573594 0.6831574 1.1852137]
+2025-09-04 22:17:04 [1,464,969ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,464,969ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911471 -0.08870924]
+Hand position in microwave frame: [-0.05735946 -0.08315736 -0.06478631]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3580592 0.6825679 1.1861173]
+2025-09-04 22:17:04 [1,465,033ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,465,033ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.05805922 -0.08256787 -0.06388271]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3579745  0.68193364 1.1864499 ]
+2025-09-04 22:17:04 [1,465,096ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,465,096ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.05797458 -0.08193362 -0.06355011]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3578918 0.6817894 1.1860977]
+2025-09-04 22:17:04 [1,465,158ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,465,158ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.05789185 -0.08178937 -0.06390226]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3578744  0.68103665 1.1880435 ]
+2025-09-04 22:17:04 [1,465,218ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,465,218ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.05787444 -0.08103663 -0.06195652]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010433 0.5608859 1.1612906]
+Hand world position: [2.355652  0.6813273 1.1908764]
+2025-09-04 22:17:04 [1,465,280ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,465,280ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104332  0.03911412 -0.08870935]
+Hand position in microwave frame: [-0.05565214 -0.08132726 -0.05912364]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608856 1.1612908]
+Hand world position: [2.354229   0.68129486 1.1927943 ]
+2025-09-04 22:17:04 [1,465,342ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,465,342ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911442 -0.08870924]
+Hand position in microwave frame: [-0.05422902 -0.08129483 -0.05720568]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3531194  0.68020684 1.1945132 ]
+2025-09-04 22:17:04 [1,465,407ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,465,407ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.05311942 -0.08020681 -0.0554868 ]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3521328 0.6788322 1.195885 ]
+2025-09-04 22:17:04 [1,465,474ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,465,474ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.05213284 -0.07883215 -0.05411506]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3514843 0.6770111 1.1971174]
+2025-09-04 22:17:04 [1,465,536ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,465,536ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.05148435 -0.07701105 -0.05288255]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3493474 0.6763874 1.1968751]
+2025-09-04 22:17:04 [1,465,598ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:04 [1,465,598ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.0493474  -0.07638741 -0.0531249 ]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437 0.5608855 1.1612908]
+Hand world position: [2.3476176 0.6749677 1.1971813]
+2025-09-04 22:17:05 [1,465,665ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,465,666ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.04761767 -0.07496768 -0.05281866]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.346193  0.6732855 1.1975901]
+2025-09-04 22:17:05 [1,465,734ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,465,734ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.04619312 -0.07328546 -0.05240989]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088537 1.1612908 ]
+Hand world position: [2.3450956 0.6716691 1.1971905]
+2025-09-04 22:17:05 [1,465,799ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,465,799ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911465 -0.08870924]
+Hand position in microwave frame: [-0.04509568 -0.0716691  -0.05280948]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608856 1.1612908]
+Hand world position: [2.3431144 0.6720422 1.1981263]
+2025-09-04 22:17:05 [1,465,862ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,465,862ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911442 -0.08870924]
+Hand position in microwave frame: [-0.04311442 -0.07204217 -0.05187368]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437 0.5608856 1.1612908]
+Hand world position: [2.342347  0.6724558 1.2029394]
+2025-09-04 22:17:05 [1,465,928ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,465,928ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911442 -0.08870924]
+Hand position in microwave frame: [-0.04234695 -0.07245576 -0.04706061]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.301044  0.5608858 1.1612906]
+Hand world position: [2.3424096 0.6726677 1.2104313]
+2025-09-04 22:17:05 [1,465,993ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,465,994ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104403  0.03911424 -0.08870935]
+Hand position in microwave frame: [-0.04240966 -0.07266766 -0.03956866]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3426907  0.67316777 1.217669  ]
+2025-09-04 22:17:05 [1,466,060ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,466,060ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.04269075 -0.07316774 -0.03233099]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3440025  0.67276263 1.2229067 ]
+2025-09-04 22:17:05 [1,466,124ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,466,124ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.04400253 -0.07276261 -0.02709329]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3446863  0.67314583 1.2255208 ]
+2025-09-04 22:17:05 [1,466,187ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,466,187ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.04468632 -0.07314581 -0.02447915]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3453567 0.6729707 1.2268472]
+2025-09-04 22:17:05 [1,466,250ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,466,250ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.04535675 -0.07297069 -0.02315283]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3469083 0.6717396 1.2299621]
+2025-09-04 22:17:05 [1,466,316ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,466,316ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.04690838 -0.07173955 -0.02003789]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.301044   0.56088555 1.1612908 ]
+Hand world position: [2.3459795  0.67270344 1.2347629 ]
+2025-09-04 22:17:05 [1,466,379ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,466,379ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104403  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.0459795  -0.07270342 -0.01523709]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3450289 0.6735909 1.2421545]
+2025-09-04 22:17:05 [1,466,443ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,466,443ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.04502892 -0.07359087 -0.00784552]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3439019 0.67384   1.249215 ]
+2025-09-04 22:17:05 [1,466,506ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,466,506ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.04390192 -0.07383996 -0.00078499]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3427026 0.6739392 1.2534   ]
+2025-09-04 22:17:05 [1,466,573ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:05 [1,466,574ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.04270267 -0.0739392   0.00339997]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.342708  0.6730428 1.2563379]
+2025-09-04 22:17:06 [1,466,641ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,466,641ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.04270816 -0.07304275  0.00633788]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3414927  0.67230844 1.2582307 ]
+2025-09-04 22:17:06 [1,466,711ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,466,711ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.0414927  -0.07230842  0.00823069]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3409395  0.67108566 1.260171  ]
+2025-09-04 22:17:06 [1,466,771ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,466,772ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.04093957 -0.07108563  0.01017106]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3404403  0.67041546 1.2615598 ]
+2025-09-04 22:17:06 [1,466,833ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,466,833ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.04044032 -0.07041544  0.01155984]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608854 1.1612908]
+Hand world position: [2.3359363  0.67617065 1.2592298 ]
+2025-09-04 22:17:06 [1,466,895ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,466,895ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911459 -0.08870924]
+Hand position in microwave frame: [-0.03593636 -0.07617062  0.00922978]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3341107 0.6837748 1.2575628]
+2025-09-04 22:17:06 [1,466,958ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,466,958ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.03411078 -0.08377481  0.00756276]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.333896  0.6918194 1.2572966]
+2025-09-04 22:17:06 [1,467,021ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,467,022ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.03389597 -0.09181941  0.00729656]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3346584  0.70116204 1.2569921 ]
+2025-09-04 22:17:06 [1,467,087ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,467,088ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.03465843 -0.10116202  0.0069921 ]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.301044  0.5608853 1.1612908]
+Hand world position: [2.335859  0.7106535 1.25664  ]
+2025-09-04 22:17:06 [1,467,151ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,467,151ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104403  0.03911471 -0.08870924]
+Hand position in microwave frame: [-0.03585911 -0.11065346  0.00663996]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3379622 0.7198906 1.2566046]
+2025-09-04 22:17:06 [1,467,210ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,467,211ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.0379622  -0.11989057  0.00660455]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3380322 0.7308719 1.2557367]
+2025-09-04 22:17:06 [1,467,271ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,467,271ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.03803229 -0.13087189  0.00573671]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437  0.56088567 1.1612908 ]
+Hand world position: [2.3392072 0.7411346 1.2560762]
+2025-09-04 22:17:06 [1,467,337ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,467,337ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911436 -0.08870924]
+Hand position in microwave frame: [-0.03920722 -0.14113456  0.00607622]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.301044  0.5608858 1.1612906]
+Hand world position: [2.340655  0.7516858 1.2563825]
+2025-09-04 22:17:06 [1,467,401ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,467,401ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104403  0.03911424 -0.08870935]
+Hand position in microwave frame: [-0.04065514 -0.15168577  0.00638247]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3423512 0.7621267 1.2564203]
+2025-09-04 22:17:06 [1,467,463ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,467,463ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.04235125 -0.16212666  0.00642025]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3449867 0.7722194 1.2563908]
+2025-09-04 22:17:06 [1,467,526ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,467,526ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.04498672 -0.1722194   0.00639081]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.346937  0.7829322 1.2561673]
+2025-09-04 22:17:06 [1,467,589ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:06 [1,467,589ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.04693699 -0.1829322   0.00616729]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3493977 0.7936225 1.2557398]
+2025-09-04 22:17:07 [1,467,651ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,467,652ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.04939771 -0.19362247  0.00573981]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? False
+Success condition met? False
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437 0.5608856 1.1612908]
+Hand world position: [2.3525414 0.8035434 1.2550396]
+2025-09-04 22:17:07 [1,467,713ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,467,713ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911442 -0.08870924]
+Hand position in microwave frame: [-0.05254149 -0.20354337  0.00503957]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.301044  0.5608853 1.1612908]
+Hand world position: [2.354859  0.814257  1.2535666]
+2025-09-04 22:17:07 [1,467,775ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,467,775ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104403  0.03911471 -0.08870924]
+Hand position in microwave frame: [-0.05485916 -0.214257    0.00356662]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437  0.56088537 1.1612908 ]
+Hand world position: [2.3568168 0.8249527 1.2523335]
+2025-09-04 22:17:07 [1,467,839ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,467,839ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911465 -0.08870924]
+Hand position in microwave frame: [-0.05681682 -0.2249527   0.00233352]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3599772  0.83509344 1.2515357 ]
+2025-09-04 22:17:07 [1,467,903ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,467,903ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.05997729 -0.23509341  0.00153565]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3626738  0.84560895 1.2511343 ]
+2025-09-04 22:17:07 [1,467,966ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,467,967ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.06267381 -0.24560893  0.00113428]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010433  0.56088537 1.1612908 ]
+Hand world position: [2.3664582 0.8556122 1.2512431]
+2025-09-04 22:17:07 [1,468,030ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,468,030ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104332  0.03911465 -0.08870924]
+Hand position in microwave frame: [-0.06645823 -0.2556122   0.00124311]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608854 1.1612908]
+Hand world position: [2.370976   0.86479205 1.2518405 ]
+2025-09-04 22:17:07 [1,468,095ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,468,095ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911459 -0.08870924]
+Hand position in microwave frame: [-0.07097602 -0.26479203  0.00184047]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437 0.5608856 1.1612908]
+Hand world position: [2.3751566  0.87349427 1.2520896 ]
+2025-09-04 22:17:07 [1,468,160ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,468,160ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911442 -0.08870924]
+Hand position in microwave frame: [-0.07515669 -0.27349424  0.00208962]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608853 1.1612908]
+Hand world position: [2.3764796 0.8833756 1.2513177]
+2025-09-04 22:17:07 [1,468,222ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,468,222ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911471 -0.08870924]
+Hand position in microwave frame: [-0.07647967 -0.28337556  0.00131774]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3779123  0.89371604 1.251258  ]
+2025-09-04 22:17:07 [1,468,283ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,468,283ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.07791233 -0.293716    0.00125802]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612906 ]
+Hand world position: [2.379134  0.9045298 1.2514474]
+2025-09-04 22:17:07 [1,468,345ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,468,345ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870935]
+Hand position in microwave frame: [-0.07913399 -0.3045298   0.00144744]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3820755  0.91422874 1.2524441 ]
+2025-09-04 22:17:07 [1,468,412ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,468,412ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.0820756  -0.3142287   0.00244415]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.301044  0.5608853 1.1612908]
+Hand world position: [2.3847005  0.92405117 1.2522435 ]
+2025-09-04 22:17:07 [1,468,474ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,468,474ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104403  0.03911471 -0.08870924]
+Hand position in microwave frame: [-0.08470058 -0.32405114  0.00224352]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437  0.56088537 1.1612908 ]
+Hand world position: [2.3887172 0.9320543 1.2518487]
+2025-09-04 22:17:07 [1,468,536ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,468,536ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911465 -0.08870924]
+Hand position in microwave frame: [-0.08871722 -0.33205426  0.0018487 ]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437 0.5608856 1.1612908]
+Hand world position: [2.3930304 0.9363359 1.2533346]
+2025-09-04 22:17:07 [1,468,600ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:07 [1,468,601ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911442 -0.08870924]
+Hand position in microwave frame: [-0.09303045 -0.3363359   0.00333464]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608853 1.1612908]
+Hand world position: [2.394334  0.9397504 1.2534188]
+2025-09-04 22:17:08 [1,468,662ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:08 [1,468,662ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911471 -0.08870924]
+Hand position in microwave frame: [-0.09433413 -0.33975035  0.0034188 ]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010433  0.56088537 1.1612906 ]
+Hand world position: [2.395124  0.9419653 1.2528341]
+2025-09-04 22:17:08 [1,468,729ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:08 [1,468,730ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104332  0.03911465 -0.08870935]
+Hand position in microwave frame: [-0.09512401 -0.34196526  0.00283408]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435  0.56088555 1.1612908 ]
+Hand world position: [2.3959846 0.9435674 1.2521567]
+2025-09-04 22:17:08 [1,468,793ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:08 [1,468,793ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911448 -0.08870924]
+Hand position in microwave frame: [-0.0959847  -0.34356737  0.00215673]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437 0.5608856 1.1612908]
+Hand world position: [2.3965805  0.94484067 1.252184  ]
+2025-09-04 22:17:08 [1,468,856ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:08 [1,468,856ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911442 -0.08870924]
+Hand position in microwave frame: [-0.09658051 -0.34484065  0.00218403]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010437 0.5608853 1.1612908]
+Hand world position: [2.39761    0.94516385 1.252955  ]
+2025-09-04 22:17:08 [1,468,915ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:08 [1,468,915ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.0010438   0.03911471 -0.08870924]
+Hand position in microwave frame: [-0.09761    -0.34516382  0.00295496]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+
+======= CHECKING SUCCESS CONDITION =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.4, 0.4, 0.3)
+Microwave world position: [2.3  0.6  1.25]
+Object world position: [2.3010435 0.5608855 1.1612908]
+Hand world position: [2.3998313  0.94451183 1.2535456 ]
+2025-09-04 22:17:08 [1,468,977ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+2025-09-04 22:17:08 [1,468,977ms] [Warning] [isaaclab.utils.math] The function 'quat_rotate' will be deprecated in favor of the faster method 'quat_apply'. Please use 'quat_apply' instead....
+Object position in microwave frame: [-0.00104356  0.03911453 -0.08870924]
+Hand position in microwave frame: [-0.09983134 -0.3445118   0.00354564]
+Bounding box min: [-0.2  -0.2  -0.15]
+Bounding box max: [0.2  0.2  0.15]
+Is object in microwave? True
+Is hand out of microwave? True
+Success condition met? True
+=========================================
+
+Light intensity randomized to 1156.1 for environment 0
+
+************************************************** 
+10/15 (66.7%) successful demos generated by mimic
+************************************************** 
+Reached 10 successes/attempts. Exiting.
+2025-09-04 22:17:11 [1,471,726ms] [Warning] [carb] Plugin interface for a client: omni.hydratexture.plugin was already released.
+2025-09-04 22:17:11 [1,471,844ms] [Warning] [omni.kit.menu.utils.app_menu] add_menu_items: menu [<MenuItemDescription name:'New'>, <MenuItemDescription name:'Open'>, <MenuItemDescription name:'Re-open with New Edit Layer'>, <MenuItemDescription name:'Save'>, <MenuItemDescription name:'Save With Options'>, <MenuItemDescription name:'Save As...'>, <MenuItemDescription name:'Save Flattened As...'>, <MenuItemDescription name:'Add Reference'>, <MenuItemDescription name:'Add Payload'>, <MenuItemDescription name:'Exit'>] cannot change delegate
+saiga@sai-Ideapad:~/Documents/Cognitive_Robotics/simulation_packages/IsaacLab$ 
+
+
+
+./isaaclab.sh -p scripts/imitation_learning/isaaclab_mimic/generate_dataset.py --enable_cameras --num_envs 1 --generation_num_trials 10 --input_file ./datasets/annotated_dataset_modified2.hdf5 --output_file ./datasets/generated_dataset_small.hdf5
+
