@@ -53,6 +53,28 @@ Primary files & commands
   --input_file ./datasets/annotated_dataset_modified2.hdf5 \
   --output_file ./datasets/generated_dataset_large.hdf5
 ```
+#### 300 IsaacMimic generated dataset visualised using replay demo script
+---------------------------------------------------------------
+Below is a screenshot showing the 300-trial generated dataset replayed using the replay demo script (5 parallel envs). The command used to run the replay demo is shown as a reference.
+
+![Replayed 300-trial generated dataset](images/replay_generated_300.png)
+
+Replay command used:
+
+```
+./isaaclab.sh -p scripts/tools/replay_demos.py \
+  --task Isaac-Lift-Kitchen-Franka-IK-Rel-v0 \
+  --dataset_file ./datasets/generated_dataset_sample_300.hdf5 --enable_cameras --num_envs 5
+```
+
+[Replay video](https://app.box.com/s/g1lk3vbglkkpinum6cyjneeaoupmaii0)
+
+Note: when expanding 10 manually annotated teleoperated demonstrations into 300 trials using `isaacmimic gen`, the generator creates both successful and failed trials. The generated dataset includes both kinds of trials; a trial is considered successful based on the success term function `object_in_microwave_and_hand_out()`.
+
+Below is a visualization showing the dataset expansion process (success & failure trials):
+
+![IsaacMimic dataset generation overview](images/isaac_mimic_gen_dataset_creation.png)
+
 
 4. Data split use the script from robomimic repo (train/validation, 1:10 ratio):
 
@@ -127,7 +149,7 @@ Primary files & commands
   - imitation_learning/isaaclab_mimic/ — mimic annotation + generation scripts
     - annotate_demos.py, generate_dataset.py, consolidated_demo.py — utilities for annotation and dataset generation
   - trained_bc_models/ — trained BC artifacts and zipped bundles; contains configs, logs, models and videos
-  - log_dir/ — logs produced during dataset generation and training pipelines
+  - log_dir/ — logs produced during isaac mimic gen annotation and dataset generation pipelines.
 
 ## Video Output of the BC (state & visuomotor) rollouts:
 [Please find the model results here](https://app.box.com/s/dp3khsxa8kkebke9anjs2aj4w1eoqn5v)
