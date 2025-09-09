@@ -167,7 +167,6 @@ Checkpoint saved at epoch 600. Memory usage stable at 3023 MB.
 - Training loss remained around -22 for many epochs, while validation loss stayed in the thousands, with no significant improvement across all 5 configs (state and visuomotor policies).
 - State-based policy: Franka arm moved near the fridge and attempted to grasp the can, but missed every time. Adding a camera and training a visuomotor policy was expected to help, but results were sometimes worse than state-based.
 - Visuomotor policy: Performance was similar across configs, regardless of RNN size. Pretrained R3M visual features led to less erratic movement, but slow arm motion and failed grasp due to lack of depth input. Training visual policy from scratch performed worse than with R3M weights.
-- Larger RNNs and higher GMM counts produced more natural movement, but did not improve task completion. Pretrained R3M weights provided more stable visuomotor policies (especially in fast config), but none of the policies completed the task in 20 rollouts.
 
 **Evaluation Command Example:**
 ```bash
@@ -187,6 +186,25 @@ Full evaluation for all 5 configs (state & visuomotor):
 ```
 
 See the linked video for more details and rollout results.
+
+---
+
+### Comparison of the 5 Behavior Cloning (BC) Configs
+
+| Config Name                | Input Modality   | RNN Hidden Dim / Layers | GMM Modes | Visual Encoder         | Pretrained Weights | Key Advantage / Limitation |
+|---------------------------|------------------|------------------------|-----------|-----------------------|--------------------|----------------------------|
+| bc_rnn_low_dim_franka_kitchen_lift_fast      | State (low_dim)   | 512 / 2                | 5         | None                  | N/A                | Fast training, simple, but lacks visual context |
+| bc_rnn_low_dim_franka_kitchen_lift           | State (low_dim)   | 1000 / 3               | 8         | None                  | N/A                | Larger RNN, more modes, but still no visual input |
+| bc_rnn_image_franka_kitchen_lift_ultrafast   | Visuomotor (RGB)  | 32 / 1                 | 3         | R3MConv (resnet18)    | Yes                | Ultrafast, small RNN, uses pretrained visual features |
+| bc_rnn_image_franka_kitchen_lift_fast        | Visuomotor (RGB)  | 128 / 1                | 5         | R3MConv (resnet18)    | Yes                | Fast, moderate RNN, pretrained visual features |
+| bc_rnn_image_franka_kitchen_lift             | Visuomotor (RGB)  | 1000 / 3               | 8         | ResNet18Conv          | No                 | Large RNN, visual features trained from scratch |
+
+**Summary:**
+- State-based configs (low_dim) are faster to train and simpler, but lack visual context, which limits grasping performance.
+- Visuomotor configs (RGB) use wrist camera input; those with pretrained R3MConv visual features (ultrafast, fast) showed more stable and less erratic movement, but were slow and still failed to grasp due to lack of depth.
+- The largest visuomotor config (normal) trained visual features from scratch, but did not outperform the pretrained configs and was more erratic.
+- Increasing RNN size and GMM modes led to more natural movement, but did not improve task completion.
+- Overall, using pretrained R3M weights (ultrafast, fast) provided the most stable visuomotor policies, but none of the configs achieved successful task completion in rollouts.
 
 ## Behavior Cloning: Key Configurations & Parameters
 
