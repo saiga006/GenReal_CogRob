@@ -205,6 +205,7 @@ See the linked video for more details and rollout results.
 - The largest visuomotor config (normal) trained visual features from scratch, but did not outperform the pretrained configs and was more erratic.
 - Increasing RNN size and GMM modes led to more natural movement, but did not improve task completion.
 - Overall, using pretrained R3M weights (ultrafast, fast) provided the most stable visuomotor policies, but none of the configs achieved successful task completion in rollouts.
+- This suggests that for successful task completion with current trained results, we need to do RL PPO training with these BC policy configured as initial weights.
 
 ## Behavior Cloning: Key Configurations & Parameters
 
