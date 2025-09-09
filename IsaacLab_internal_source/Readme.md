@@ -6,11 +6,11 @@ Overview
 - Task: a Franka Emika manipulator picks a tomato soup can (container) from inside a fridge and places it inside the microwave cavity.
 - We reused the IsaacLab sample Franka Lift Cube task and adapted to our kitchen task by modifying the internal source code of IsaacLab.
 - To reuse the code, please clone [IsaacLab 2.1.1 release](https://github.com/isaac-sim/IsaacLab/releases/tag/v2.1.1) and use IsaacSim 4.5 version and replace existing source code with the files and folders given under IsaacLab_internal_source.
-- The other folders outside the IsaacLab_internal_source are meant to create the similar kitchen scene with kinova gen3 7DOF arm as an external project in IsaacLab, primarily meant for RL PPO implementation(not implemented currently).
+- The other folders outside the IsaacLab_internal_source are meant to create the similar kitchen scene with kinova gen3 7DOF arm as an external project in IsaacLab, primarily created for RL PPO implementation(which are not implemented currently).
 
 Highlights
 ----------
-- A custom kitchen scene (shelf, fridge, microwave, tomato soup can) and Franka spawn is provided.
+- A custom kitchen scene (shelf, fridge, microwave, tomato soup can) with Franka Panda Emika Arm is provided.
 - Teleoperated demonstrations were recorded, annotated (Isaac Mimic tooling), and expanded with isaacmimic gen to produce ~300 annotated demonstrations (from 10 teleoperated trials, parallelized generation).
 - Behavior cloning training was performed using robomimic with multiple configurations (state-based and visuomotor image-based policies). Several 'fast' and 'ultrafast' variants were used to trade off training time vs accuracy.
 
@@ -134,8 +134,8 @@ Below is a visualization showing the dataset expansion process (success & failur
       - observations.py — custom observation functions (object position, EE frame, gripper pos)
       - rewards.py, terminations.py — reward and termination functions
     - lift/config/franka/ — Franka-specific envs and kitchen scene
-      - kitchen_scene.py — kitchen scene (table, shelf, fridge, microwave, tomato soup can) with Franka spawn
-      - kitchen_joint_pos_env_cfg.py — joint-position kitchen env for Franka with camera config
+      - kitchen_scene.py — kitchen scene (table, shelf, fridge, microwave, tomato soup can) with Franka arm
+      - kitchen_joint_pos_env_cfg.py — joint-position kitchen env for Franka with camera config - contains simulation logic for all parts of the project
       - kitchen_ik_rel_env_cfg.py — relative IK env for Franka (teleop/eval)
       - kitchen_teleop_env_cfg.py — teleoperation env + tweaks for demo collection
       - agents/ — agent config files for training (robomimic / rsl / sb3 / skrl)
@@ -144,12 +144,12 @@ Below is a visualization showing the dataset expansion process (success & failur
   - isaaclab_mimic/ — mimic environment for dataset generation
     - envs/ — mimic environment implementations
       - franka_kitchen_lift_visuomotor_mimic_env_cfg.py — visuomotor mimic env config with subtask breakdown
-      - franka_kitchen_lift_visuomotor_mimic_env.py — environment wrapper for IK-relative control
+      - franka_kitchen_lift_visuomotor_mimic_env.py — environment wrapper for annotation and data generation for kitchen task using isaac mimicgen
       - __init__.py — Gym registration for mimic environments
   - imitation_learning/isaaclab_mimic/ — mimic annotation + generation scripts
     - annotate_demos.py, generate_dataset.py, consolidated_demo.py — utilities for annotation and dataset generation
-  - trained_bc_models/ — trained BC artifacts and zipped bundles; contains configs, logs, models and videos
-  - log_dir/ — logs produced during isaac mimic gen annotation and dataset generation pipelines.
+  - trained_bc_models/ — trained BC artifacts and zipped bundles; contains configs & logs. Models attached separately to github releases.
+  - log_dir/ — logs generated during isaac mimic gen annotation and dataset generation pipelines.
 
 ## Video Output of the BC (state & visuomotor) rollouts:
 [Please find the model results here](https://app.box.com/s/dp3khsxa8kkebke9anjs2aj4w1eoqn5v)
