@@ -14,6 +14,16 @@ Highlights
 - Teleoperated demonstrations were recorded, annotated (Isaac Mimic tooling), and expanded with isaacmimic gen to produce ~300 annotated demonstrations (from 10 teleoperated trials, parallelized generation).
 - Behavior cloning training was performed using robomimic with multiple configurations (state-based and visuomotor image-based policies). Several 'fast' and 'ultrafast' variants were used to trade off training time vs accuracy.
 
+## Branch Strategy
+
+- **main** (default) - Main/production branch with stable code containing state and visuomotor based implementation for franka kitchen task
+- **dev** (stale) - Not used  
+- **il_bc_visuomotor** - Imitation Learning with Behavior Cloning state and visuomotor policy impl, contains code for mimicgen and robomimic isaaclab env & configs
+- **kitchen_scene** - Basic Kitchen environment scene implementation with kinova arm, contains code specific to teleoperation of kinova robot in isaaclab using Absolute and Relative IK.
+- **rl_ppo_franka** - Reinforcement Learning with PPO algorithm impl for Franka robot with kitchen task (not tested)
+- **robocasa** - RoboCasa simulation environment integration with Kinova arm with kitchen scene and some basic teleoperation script
+
+
 Primary files & commands
 ------------------------
 
