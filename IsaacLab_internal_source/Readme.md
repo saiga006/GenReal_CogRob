@@ -154,6 +154,40 @@ Below is a visualization showing the dataset expansion process (success & failur
 ## Video Output of the BC (state & visuomotor) rollouts:
 [Please find the model results here](https://app.box.com/s/dp3khsxa8kkebke9anjs2aj4w1eoqn5v)
 
+### Behavior Cloning Training & Evaluation Summary
+
+**Training Stats (Example):**
+
+Epoch 599 Memory Usage: 3023 MB
+Train Epoch 600: Loss ≈ -22, Log Likelihood ≈ 22, Policy Grad Norms ≈ 7465
+Validation Epoch 600: Loss ≈ 413,689, Log Likelihood ≈ -413,689
+Checkpoint saved at epoch 600. Memory usage stable at 3023 MB.
+
+**Observations:**
+- Training loss remained around -22 for many epochs, while validation loss stayed in the thousands, with no significant improvement across all 5 configs (state and visuomotor policies).
+- State-based policy: Franka arm moved near the fridge and attempted to grasp the can, but missed every time. Adding a camera and training a visuomotor policy was expected to help, but results were sometimes worse than state-based.
+- Visuomotor policy: Performance was similar across configs, regardless of RNN size. Pretrained R3M visual features led to less erratic movement, but slow arm motion and failed grasp due to lack of depth input. Training visual policy from scratch performed worse than with R3M weights.
+- Larger RNNs and higher GMM counts produced more natural movement, but did not improve task completion. Pretrained R3M weights provided more stable visuomotor policies (especially in fast config), but none of the policies completed the task in 20 rollouts.
+
+**Evaluation Command Example:**
+```bash
+./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py \
+  --task Isaac-Lift-Kitchen-Franka-IK-Rel-v0 --num_rollouts 20 \
+  --checkpoint /path/to/models/model_epoch_best_validation.pth \
+  --horizon 2500 --enable_cameras
+```
+
+Full evaluation for all 5 configs (state & visuomotor):
+```bash
+./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py   --task Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-UltraFast-v0 --num_rollouts 20 --checkpoint /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-UltraFast-v0/bc_rnn_image_franka_kitchen_lift_ultrafast/20250908045749/models/model_epoch_140.pth --enable_cameras --horizon 2400 --headless && \
+./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py   --task Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-v0 --num_rollouts 20 --checkpoint /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-v0/bc_rnn_image_franka_kitchen_lift/20250908100825/models/model_epoch_435_best_validation_245846.2421875.pth --enable_cameras --horizon 2400 --headless && \
+./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py   --task Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-Fast-v0 --num_rollouts 20 --checkpoint /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-Fast-v0/bc_rnn_image_franka_kitchen_lift_fast/20250907053339/models/model_epoch_78_best_validation_198896.4625.pth --enable_cameras --horizon 2400 --headless && \
+./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py   --task Isaac-Lift-Kitchen-Franka-IK-Rel-v0 --num_rollouts 20 --checkpoint /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-v0/bc_rnn_low_dim_franka_kitchen_lift/20250907215215/models/model_epoch_858_best_validation_602055.42890625.pth --enable_cameras --horizon 2400 --headless && \
+./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py   --task Isaac-Lift-Kitchen-Franka-IK-Rel-Fast-v0 --num_rollouts 20 --checkpoint /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Fast-v0/bc_rnn_low_dim_franka_kitchen_lift_fast/20250907205615/models/model_epoch_75_best_validation_199577.3265625.pth --enable_cameras --horizon 2400 --headless
+```
+
+See the linked video for more details and rollout results.
+
 ## Behavior Cloning: Key Configurations & Parameters
 
 This section summarizes the most important configuration options for behavior cloning (BC) in IsaacLab/robomimic tasks:
