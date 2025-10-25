@@ -1,0 +1,3139 @@
+saiga@sai-Ideapad:~/Documents/Cognitive_Robotics/simulation_packages/IsaacLab$ ./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py   --task Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-UltraFast-v0 --num_rollouts 20 --checkpoint /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-UltraFast-v0/bc_rnn_image_franka_kitchen_lift_ultrafast/20250908045749/models/model_epoch_140.pth --enable_cameras --horizon 2400 --headless && ./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py   --task Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-v0 --num_rollouts 20 --checkpoint /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-v0/bc_rnn_image_franka_kitchen_lift/20250908100825/models/model_epoch_435_best_validation_245846.2421875.pth --enable_cameras --horizon 2400 --headless && ./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py   --task Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-Fast-v0 --num_rollouts 20 --checkpoint /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-Fast-v0/bc_rnn_image_franka_kitchen_lift_fast/20250907053339/models/model_epoch_78_best_validation_198896.4625.pth --enable_cameras --horizon 2400 --headless && ./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py   --task Isaac-Lift-Kitchen-Franka-IK-Rel-v0 --num_rollouts 20 --checkpoint /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-v0/bc_rnn_low_dim_franka_kitchen_lift/20250907215215/models/model_epoch_858_best_validation_602055.42890625.pth --enable_cameras --horizon 2400 --headless && ./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py   --task Isaac-Lift-Kitchen-Franka-IK-Rel-Fast-v0 --num_rollouts 20 --checkpoint /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Fast-v0/bc_rnn_low_dim_franka_kitchen_lift_fast/20250907205615/models/model_epoch_75_best_validation_199577.3265625.pth --enable_cameras --horizon 2400 --headless
+
+
+
+[INFO] Using python from: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/python.sh                                       
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/isaacsim/kit/data/Kit/Isaac-Sim/4.5/user.config.json'
+[Info] [carb] Logging to file: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/isaacsim/kit/logs/Kit/Isaac-Sim/4.5/kit_20250909_061614.log
+2025-09-09 04:16:14 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2025-09-09 04:16:14 [3ms] [Warning] [omni.ext.plugin] [ext: extensions] Extensions config 'extension.toml' doesn't exist '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/source/extensions' or '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/source/extensions/config'
+2025-09-09 04:16:14 [3ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/rendering_modes' or '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/rendering_modes/config'
+2025-09-09 04:16:14 [253ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2025-09-09 04:16:15 [702ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Arc(tm) Graphics (MTL)
+2025-09-09 04:16:15 [702ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Arc(tm) Graphics (MTL)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.124.06    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4050 Laptop.. | Yes: 0 |     | 6141    MB | 10de      | 0          |
+|     |                                  |        |     |            | 28e1      | 39f32146.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | Intel(R) Arc(tm) Graphics (MTL)  |        |     | 23775   MB | 8086      | 0          |
+|     |                                  |        |     |            | 7d55      | 8680557d.. |
+|     |                                  |        |     |            | 0         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-59-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) Ultra 9 185H
+| Bare Metal Cores: 16 | Bare Metal Logical Cores: 32
+| Available Cores:  22 
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31700 | Free Memory: 12064
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2025-09-09 04:16:16 [1,706ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2025-09-09 04:16:17 [2,917ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2025-09-09 04:16:17 [3,352ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2025-09-09 04:16:20 [5,651ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/ambientOcclusion/enabled'
+2025-09-09 04:16:20 [5,651ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/directLighting/sampledLighting/enabled'
+2025-09-09 04:16:20 [5,651ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/indirectDiffuse/enabled'
+2025-09-09 04:16:20 [5,651ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/raytracing/cached/enabled'
+2025-09-09 04:16:20 [5,651ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/reflections/enabled'
+2025-09-09 04:16:20 [5,651ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/sceneDb/ambientLightIntensity'
+2025-09-09 04:16:20 [5,651ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/translucency/enabled'
+2025-09-09 04:16:20 [5,651ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/viewTile/limit'
+2025-09-09 04:16:20 [5,740ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit buffer size 2908577024
+2025-09-09 04:16:20 [5,740ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit : valid true, within: false
+2025-09-09 04:16:20 [5,835ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/directLighting/sampledLighting/samplesPerPixel'
+2025-09-09 04:16:20 [5,835ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/pathtracing/maxSamplesPerLaunch'
+2025-09-09 04:16:20 [5,835ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults-transient/meshlights/forceDisable'
+2025-09-09 04:16:20 [5,875ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/post/dlss/execMode'
+ROBOMIMIC WARNING(
+    No private macro file found!
+    It is recommended to use a private macro file
+    To setup, run: python /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/robomimic/scripts/setup_macros.py
+)
+[INFO]: Parsing configuration from: isaaclab_tasks.manager_based.manipulation.lift.config.franka.kitchen_ik_rel_env_cfg:FrankaKitchenLiftEnvCfg
+2025-09-09 04:16:23 [8,587ms] [Warning] [isaaclab.envs.manager_based_env] Seed not set for the environment. The environment creation may not be deterministic.
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+2025-09-09 04:16:25 [10,620ms] [Warning] [isaaclab.sim.spawners.from_files.from_files] A prim already exists at prim path: '/World/envs/env_0/TomatoSoupCan'.
+[INFO]: Time taken for scene creation : 2.048815 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 5.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+2025-09-09 04:16:25 [10,945ms] [Warning] [omni.physx.tensors.plugin] Duplicate joint name 'RevoluteJoint' in articulation metatype
+2025-09-09 04:16:25 [10,945ms] [Warning] [omni.physx.tensors.plugin] Duplicate DOF name 'RevoluteJoint' in articulation metatype
+2025-09-09 04:16:25 [10,945ms] [Warning] [omni.physx.tensors.plugin] Duplicate joint name 'RevoluteJoint' in articulation metatype
+2025-09-09 04:16:25 [10,945ms] [Warning] [omni.physx.tensors.plugin] Duplicate DOF name 'RevoluteJoint' in articulation metatype
+2025-09-09 04:16:25 [10,951ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'effort_limit'. This parameter will be removed in the future. To set the effort limit, please use 'effort_limit_sim' instead.
+2025-09-09 04:16:25 [10,951ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'velocity_limit'. Previously, although this value was specified, it was not getting used by implicit actuators. Since this parameter affects the simulation behavior, we continue to not use it. This parameter will be removed in the future. To set the velocity limit, please use 'velocity_limit_sim' instead.
+2025-09-09 04:16:25 [10,957ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'effort_limit'. This parameter will be removed in the future. To set the effort limit, please use 'effort_limit_sim' instead.
+2025-09-09 04:16:25 [10,957ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'velocity_limit'. Previously, although this value was specified, it was not getting used by implicit actuators. Since this parameter affects the simulation behavior, we continue to not use it. This parameter will be removed in the future. To set the velocity limit, please use 'velocity_limit_sim' instead.
+2025-09-09 04:16:27 [12,842ms] [Warning] [omni.hydra.scene_delegate.plugin] Calling getBypassRenderSkelMeshProcessing for prim /World/envs/env_0/Robot/panda_rightfinger/visuals.proto_panda_rightfinger_id0 that has not been populated
+[INFO]: Time taken for simulation start : 2.330283 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------+
+|           Active Command Terms           |
++-------+-------------+--------------------+
+| Index | Name        |        Type        |
++-------+-------------+--------------------+
+|   0   | object_pose | UniformPoseCommand |
++-------+-------------+--------------------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++--------------------------------------+
+| Active Event Terms in Mode: 'reset'  |
++---------+----------------------------+
+|  Index  | Name                       |
++---------+----------------------------+
+|    0    | reset_all                  |
+|    1    | reset_object_position      |
+|    2    | randomize_light            |
++---------+----------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 7)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         6 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++---------------------------------------------+
+| Active Observation Terms in Group: 'policy' |
++---------+-----------------+-----------------+
+|  Index  | Name            |      Shape      |
++---------+-----------------+-----------------+
+|    0    | joint_pos       |       (9,)      |
+|    1    | joint_vel       |       (9,)      |
+|    2    | object          |       (3,)      |
+|    3    | actions         |       (7,)      |
+|    4    | wrist_cam       |   (88, 88, 3)   |
+|    5    | eef_pos         |       (3,)      |
+|    6    | eef_quat        |       (4,)      |
+|    7    | gripper_pos     |       (2,)      |
++---------+-----------------+-----------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++------------------------------------+
+|      Active Termination Terms      |
++-------+-----------------+----------+
+| Index | Name            | Time Out |
++-------+-----------------+----------+
+|   0   | object_dropping |  False   |
++-------+-----------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 6 active terms.
++-----------------------------------------------------+
+|                 Active Reward Terms                 |
++-------+-----------------------------------+---------+
+| Index | Name                              |  Weight |
++-------+-----------------------------------+---------+
+|   0   | reaching_object                   |     1.0 |
+|   1   | lifting_object                    |    15.0 |
+|   2   | object_goal_tracking              |    16.0 |
+|   3   | object_goal_tracking_fine_grained |     5.0 |
+|   4   | action_rate                       | -0.0001 |
+|   5   | joint_vel                         | -0.0001 |
++-------+-----------------------------------+---------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 2 active terms.
++--------------------------+
+| Active Curriculum Terms  |
++---------+----------------+
+|  Index  | Name           |
++---------+----------------+
+|    0    | action_rate    |
+|    1    | joint_vel      |
++---------+----------------+
+
+[INFO]: Completed setting up the environment...
+Setting seed: 101
+============= Loaded Config =============
+{
+    "algo_name": "bc",
+    "experiment": {
+        "name": "bc_rnn_image_franka_kitchen_lift_ultrafast",
+        "validate": true,
+        "logging": {
+            "terminal_output_to_txt": true,
+            "log_tb": true,
+            "log_wandb": false,
+            "wandb_proj_name": "debug"
+        },
+        "save": {
+            "enabled": true,
+            "every_n_seconds": null,
+            "every_n_epochs": 20,
+            "epochs": [],
+            "on_best_validation": false,
+            "on_best_rollout_return": false,
+            "on_best_rollout_success_rate": true
+        },
+        "epoch_every_n_steps": 1500,
+        "validation_epoch_every_n_steps": 10,
+        "env": null,
+        "additional_envs": null,
+        "render": false,
+        "render_video": true,
+        "keep_all_videos": false,
+        "video_skip": 5,
+        "rollout": {
+            "enabled": false,
+            "n": 50,
+            "horizon": 400,
+            "rate": 50,
+            "warmstart": 0,
+            "terminate_on_success": true
+        }
+    },
+    "train": {
+        "data": "./datasets/generated_dataset_sample_300.hdf5",
+        "output_dir": "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-UltraFast-v0",
+        "num_data_workers": 16,
+        "hdf5_cache_mode": "low_dim",
+        "hdf5_use_swmr": true,
+        "hdf5_load_next_obs": false,
+        "hdf5_normalize_obs": false,
+        "hdf5_filter_key": "train",
+        "hdf5_validation_filter_key": "valid",
+        "seq_length": 1,
+        "pad_seq_length": true,
+        "frame_stack": 1,
+        "pad_frame_stack": true,
+        "dataset_keys": [
+            "actions",
+            "dones",
+            "datagen_info"
+        ],
+        "goal_mode": null,
+        "cuda": true,
+        "batch_size": 16,
+        "num_epochs": 150,
+        "seed": 101
+    },
+    "algo": {
+        "optim_params": {
+            "policy": {
+                "optimizer_type": "adam",
+                "learning_rate": {
+                    "initial": 0.001,
+                    "decay_factor": 0.5,
+                    "epoch_schedule": [
+                        75,
+                        125
+                    ],
+                    "scheduler_type": "multistep"
+                },
+                "regularization": {
+                    "L2": 0.0
+                }
+            }
+        },
+        "loss": {
+            "l2_weight": 1.0,
+            "l1_weight": 0.0,
+            "cos_weight": 0.0
+        },
+        "actor_layer_dims": [
+            1024,
+            1024
+        ],
+        "gaussian": {
+            "enabled": false,
+            "fixed_std": false,
+            "init_std": 0.1,
+            "min_std": 0.01,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "gmm": {
+            "enabled": true,
+            "num_modes": 3,
+            "min_std": 0.0001,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "vae": {
+            "enabled": false,
+            "latent_dim": 14,
+            "latent_clip": null,
+            "kl_weight": 1.0,
+            "decoder": {
+                "is_conditioned": true,
+                "reconstruction_sum_across_elements": false
+            },
+            "prior": {
+                "learn": false,
+                "is_conditioned": false,
+                "use_gmm": false,
+                "gmm_num_modes": 10,
+                "gmm_learn_weights": false,
+                "use_categorical": false,
+                "categorical_dim": 10,
+                "categorical_gumbel_softmax_hard": false,
+                "categorical_init_temp": 1.0,
+                "categorical_temp_anneal_step": 0.001,
+                "categorical_min_temp": 0.3
+            },
+            "encoder_layer_dims": [
+                300,
+                400
+            ],
+            "decoder_layer_dims": [
+                300,
+                400
+            ],
+            "prior_layer_dims": [
+                300,
+                400
+            ]
+        },
+        "rnn": {
+            "enabled": true,
+            "horizon": 2,
+            "hidden_dim": 32,
+            "rnn_type": "LSTM",
+            "num_layers": 1,
+            "open_loop": false,
+            "kwargs": {
+                "bidirectional": false
+            }
+        },
+        "transformer": {
+            "enabled": false,
+            "context_length": 10,
+            "embed_dim": 512,
+            "num_layers": 6,
+            "num_heads": 8,
+            "emb_dropout": 0.1,
+            "attn_dropout": 0.1,
+            "block_output_dropout": 0.1,
+            "sinusoidal_embedding": false,
+            "activation": "gelu",
+            "supervise_all_steps": false,
+            "nn_parameter_for_timesteps": true
+        }
+    },
+    "observation": {
+        "modalities": {
+            "obs": {
+                "low_dim": [
+                    "eef_pos",
+                    "eef_quat",
+                    "gripper_pos",
+                    "joint_pos",
+                    "object",
+                    "joint_vel",
+                    "actions"
+                ],
+                "rgb": [
+                    "wrist_cam"
+                ],
+                "depth": [],
+                "scan": []
+            },
+            "goal": {
+                "low_dim": [],
+                "rgb": [],
+                "depth": [],
+                "scan": []
+            }
+        },
+        "encoder": {
+            "low_dim": {
+                "core_class": null,
+                "core_kwargs": {},
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "rgb": {
+                "core_class": "VisualCore",
+                "core_kwargs": {
+                    "feature_dimension": 512,
+                    "backbone_class": "R3MConv",
+                    "backbone_kwargs": {
+                        "pretrained": true,
+                        "input_coord_conv": false,
+                        "r3m_model_class": "resnet18",
+                        "freeze": false
+                    },
+                    "pool_class": null
+                },
+                "obs_randomizer_class": "CropRandomizer",
+                "obs_randomizer_kwargs": {}
+            },
+            "depth": {
+                "core_class": "VisualCore",
+                "core_kwargs": {},
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "scan": {
+                "core_class": "ScanCore",
+                "core_kwargs": {},
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            }
+        }
+    },
+    "meta": {
+        "hp_base_config_file": null,
+        "hp_keys": [],
+        "hp_values": []
+    }
+}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['eef_pos', 'joint_vel', 'gripper_pos', 'joint_pos', 'eef_quat', 'object', 'actions']
+using obs modality: rgb with keys: ['wrist_cam']
+using obs modality: depth with keys: []
+using obs modality: scan with keys: []
+/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/torch/nn/_reduction.py:51: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+============= Loaded Policy =============
+ObservationKeyToModalityDict: mean not found, adding mean to mapping with assumed low_dim modality!
+ObservationKeyToModalityDict: scale not found, adding scale to mapping with assumed low_dim modality!
+ObservationKeyToModalityDict: logits not found, adding logits to mapping with assumed low_dim modality!
+BC_RNN_GMM (
+  ModuleDict(
+    (policy): RNNGMMActorNetwork(
+        action_dim=7, std_activation=softplus, low_noise_eval=True, num_nodes=3, min_std=0.0001
+  
+        encoder=ObservationGroupEncoder(
+            group=obs
+            ObservationEncoder(
+                Key(
+                    name=actions
+                    shape=[7]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=eef_pos
+                    shape=[3]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=eef_quat
+                    shape=[4]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=gripper_pos
+                    shape=[2]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=joint_pos
+                    shape=[9]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=joint_vel
+                    shape=[9]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=object
+                    shape=[3]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=wrist_cam
+                    shape=[3, 88, 88]
+                    modality=rgb
+                    randomizer=CropRandomizer(input_shape=[3, 88, 88], crop_size=[76, 76], num_crops=1)
+                    net=VisualCore(
+                      input_shape=[3, 76, 76]
+                      output_shape=[512]
+                      backbone_net=R3MConv(input_channel=3, input_coord_conv=False, pretrained=True, freeze=False)
+                      pool_net=None
+                    )
+                    sharing_from=None
+                )
+                output_shape=[549]
+            )
+        )
+  
+        rnn=RNN_Base(
+          (per_step_net): Sequential(
+            (0): MLP(
+                input_dim=32
+                output_dim=1024
+                layer_dims=[1024]
+                layer_func=Linear
+                dropout=None
+                act=ReLU
+                output_act=ReLU
+            )
+            (1): ObservationDecoder(
+                Key(
+                    name=mean
+                    shape=(3, 7)
+                    modality=low_dim
+                    net=(Linear(in_features=1024, out_features=21, bias=True))
+                )
+                Key(
+                    name=scale
+                    shape=(3, 7)
+                    modality=low_dim
+                    net=(Linear(in_features=1024, out_features=21, bias=True))
+                )
+                Key(
+                    name=logits
+                    shape=(3,)
+                    modality=low_dim
+                    net=(Linear(in_features=1024, out_features=3, bias=True))
+                )
+            )
+          )
+          (nets): LSTM(549, 32, batch_first=True)
+        )
+    )
+  )
+)
+[INFO] Starting trial 0
+[INFO] Trial 0: False
+
+[INFO] Starting trial 1
+[INFO] Trial 1: False
+
+[INFO] Starting trial 2
+[INFO] Trial 2: False
+
+[INFO] Starting trial 3
+[INFO] Trial 3: False
+
+[INFO] Starting trial 4
+[INFO] Trial 4: False
+
+[INFO] Starting trial 5
+[INFO] Trial 5: False
+
+[INFO] Starting trial 6
+[INFO] Trial 6: False
+
+[INFO] Starting trial 7
+[INFO] Trial 7: False
+
+[INFO] Starting trial 8
+[INFO] Trial 8: False
+
+[INFO] Starting trial 9
+[INFO] Trial 9: False
+
+[INFO] Starting trial 10
+[INFO] Trial 10: False
+
+[INFO] Starting trial 11
+[INFO] Trial 11: False
+
+[INFO] Starting trial 12
+[INFO] Trial 12: False
+
+[INFO] Starting trial 13
+[INFO] Trial 13: False
+
+[INFO] Starting trial 14
+[INFO] Trial 14: False
+
+[INFO] Starting trial 15
+[INFO] Trial 15: False
+
+[INFO] Starting trial 16
+[INFO] Trial 16: False
+
+[INFO] Starting trial 17
+[INFO] Trial 17: False
+
+[INFO] Starting trial 18
+[INFO] Trial 18: False
+
+[INFO] Starting trial 19
+[INFO] Trial 19: False
+
+
+Successful trials: 0, out of 20 trials
+Success rate: 0.0
+Trial Results: [False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False]
+
+[INFO] Using python from: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/python.sh                                       
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/isaacsim/kit/data/Kit/Isaac-Sim/4.5/user.config.json'
+[Info] [carb] Logging to file: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/isaacsim/kit/logs/Kit/Isaac-Sim/4.5/kit_20250909_064024.log
+2025-09-09 04:40:24 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2025-09-09 04:40:24 [2ms] [Warning] [omni.ext.plugin] [ext: extensions] Extensions config 'extension.toml' doesn't exist '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/source/extensions' or '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/source/extensions/config'
+2025-09-09 04:40:24 [3ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/rendering_modes' or '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/rendering_modes/config'
+2025-09-09 04:40:24 [263ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2025-09-09 04:40:25 [547ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Arc(tm) Graphics (MTL)
+2025-09-09 04:40:25 [547ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Arc(tm) Graphics (MTL)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.124.06    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4050 Laptop.. | Yes: 0 |     | 6141    MB | 10de      | 0          |
+|     |                                  |        |     |            | 28e1      | 39f32146.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | Intel(R) Arc(tm) Graphics (MTL)  |        |     | 23775   MB | 8086      | 0          |
+|     |                                  |        |     |            | 7d55      | 8680557d.. |
+|     |                                  |        |     |            | 0         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-59-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) Ultra 9 185H
+| Bare Metal Cores: 16 | Bare Metal Logical Cores: 32
+| Available Cores:  22 
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31700 | Free Memory: 12670
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2025-09-09 04:40:26 [1,580ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2025-09-09 04:40:27 [2,852ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2025-09-09 04:40:27 [3,293ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2025-09-09 04:40:29 [4,916ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/ambientOcclusion/enabled'
+2025-09-09 04:40:29 [4,917ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/directLighting/sampledLighting/enabled'
+2025-09-09 04:40:29 [4,917ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/indirectDiffuse/enabled'
+2025-09-09 04:40:29 [4,917ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/raytracing/cached/enabled'
+2025-09-09 04:40:29 [4,917ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/reflections/enabled'
+2025-09-09 04:40:29 [4,917ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/sceneDb/ambientLightIntensity'
+2025-09-09 04:40:29 [4,917ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/translucency/enabled'
+2025-09-09 04:40:29 [4,917ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/viewTile/limit'
+2025-09-09 04:40:29 [5,014ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit buffer size 2908577024
+2025-09-09 04:40:29 [5,014ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit : valid true, within: false
+2025-09-09 04:40:29 [5,110ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/directLighting/sampledLighting/samplesPerPixel'
+2025-09-09 04:40:29 [5,111ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/pathtracing/maxSamplesPerLaunch'
+2025-09-09 04:40:29 [5,111ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults-transient/meshlights/forceDisable'
+2025-09-09 04:40:29 [5,151ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/post/dlss/execMode'
+ROBOMIMIC WARNING(
+    No private macro file found!
+    It is recommended to use a private macro file
+    To setup, run: python /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/robomimic/scripts/setup_macros.py
+)
+[INFO]: Parsing configuration from: isaaclab_tasks.manager_based.manipulation.lift.config.franka.kitchen_ik_rel_env_cfg:FrankaKitchenLiftEnvCfg
+2025-09-09 04:40:32 [7,503ms] [Warning] [isaaclab.envs.manager_based_env] Seed not set for the environment. The environment creation may not be deterministic.
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+2025-09-09 04:40:34 [9,589ms] [Warning] [isaaclab.sim.spawners.from_files.from_files] A prim already exists at prim path: '/World/envs/env_0/TomatoSoupCan'.
+[INFO]: Time taken for scene creation : 2.095772 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 5.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+2025-09-09 04:40:34 [9,973ms] [Warning] [omni.physx.tensors.plugin] Duplicate joint name 'RevoluteJoint' in articulation metatype
+2025-09-09 04:40:34 [9,973ms] [Warning] [omni.physx.tensors.plugin] Duplicate DOF name 'RevoluteJoint' in articulation metatype
+2025-09-09 04:40:34 [9,973ms] [Warning] [omni.physx.tensors.plugin] Duplicate joint name 'RevoluteJoint' in articulation metatype
+2025-09-09 04:40:34 [9,973ms] [Warning] [omni.physx.tensors.plugin] Duplicate DOF name 'RevoluteJoint' in articulation metatype
+2025-09-09 04:40:34 [9,978ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'effort_limit'. This parameter will be removed in the future. To set the effort limit, please use 'effort_limit_sim' instead.
+2025-09-09 04:40:34 [9,978ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'velocity_limit'. Previously, although this value was specified, it was not getting used by implicit actuators. Since this parameter affects the simulation behavior, we continue to not use it. This parameter will be removed in the future. To set the velocity limit, please use 'velocity_limit_sim' instead.
+2025-09-09 04:40:34 [9,984ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'effort_limit'. This parameter will be removed in the future. To set the effort limit, please use 'effort_limit_sim' instead.
+2025-09-09 04:40:34 [9,984ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'velocity_limit'. Previously, although this value was specified, it was not getting used by implicit actuators. Since this parameter affects the simulation behavior, we continue to not use it. This parameter will be removed in the future. To set the velocity limit, please use 'velocity_limit_sim' instead.
+2025-09-09 04:40:37 [12,452ms] [Warning] [omni.hydra.scene_delegate.plugin] Calling getBypassRenderSkelMeshProcessing for prim /World/envs/env_0/Robot/panda_leftfinger/visuals.proto_panda_leftfinger_id0 that has not been populated
+[INFO]: Time taken for simulation start : 2.963724 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------+
+|           Active Command Terms           |
++-------+-------------+--------------------+
+| Index | Name        |        Type        |
++-------+-------------+--------------------+
+|   0   | object_pose | UniformPoseCommand |
++-------+-------------+--------------------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++--------------------------------------+
+| Active Event Terms in Mode: 'reset'  |
++---------+----------------------------+
+|  Index  | Name                       |
++---------+----------------------------+
+|    0    | reset_all                  |
+|    1    | reset_object_position      |
+|    2    | randomize_light            |
++---------+----------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 7)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         6 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++---------------------------------------------+
+| Active Observation Terms in Group: 'policy' |
++---------+-----------------+-----------------+
+|  Index  | Name            |      Shape      |
++---------+-----------------+-----------------+
+|    0    | joint_pos       |       (9,)      |
+|    1    | joint_vel       |       (9,)      |
+|    2    | object          |       (3,)      |
+|    3    | actions         |       (7,)      |
+|    4    | wrist_cam       |   (88, 88, 3)   |
+|    5    | eef_pos         |       (3,)      |
+|    6    | eef_quat        |       (4,)      |
+|    7    | gripper_pos     |       (2,)      |
++---------+-----------------+-----------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++------------------------------------+
+|      Active Termination Terms      |
++-------+-----------------+----------+
+| Index | Name            | Time Out |
++-------+-----------------+----------+
+|   0   | object_dropping |  False   |
++-------+-----------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 6 active terms.
++-----------------------------------------------------+
+|                 Active Reward Terms                 |
++-------+-----------------------------------+---------+
+| Index | Name                              |  Weight |
++-------+-----------------------------------+---------+
+|   0   | reaching_object                   |     1.0 |
+|   1   | lifting_object                    |    15.0 |
+|   2   | object_goal_tracking              |    16.0 |
+|   3   | object_goal_tracking_fine_grained |     5.0 |
+|   4   | action_rate                       | -0.0001 |
+|   5   | joint_vel                         | -0.0001 |
++-------+-----------------------------------+---------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 2 active terms.
++--------------------------+
+| Active Curriculum Terms  |
++---------+----------------+
+|  Index  | Name           |
++---------+----------------+
+|    0    | action_rate    |
+|    1    | joint_vel      |
++---------+----------------+
+
+[INFO]: Completed setting up the environment...
+Setting seed: 101
+============= Loaded Config =============
+{
+    "algo_name": "bc",
+    "experiment": {
+        "name": "bc_rnn_image_franka_kitchen_lift",
+        "validate": true,
+        "logging": {
+            "terminal_output_to_txt": true,
+            "log_tb": true,
+            "log_wandb": false,
+            "wandb_proj_name": "debug"
+        },
+        "save": {
+            "enabled": true,
+            "every_n_seconds": null,
+            "every_n_epochs": 100,
+            "epochs": [],
+            "on_best_validation": true,
+            "on_best_rollout_return": false,
+            "on_best_rollout_success_rate": true
+        },
+        "epoch_every_n_steps": 500,
+        "validation_epoch_every_n_steps": 10,
+        "env": null,
+        "additional_envs": null,
+        "render": false,
+        "render_video": false,
+        "keep_all_videos": false,
+        "video_skip": 5,
+        "rollout": {
+            "enabled": false,
+            "n": 50,
+            "horizon": 400,
+            "rate": 50,
+            "warmstart": 0,
+            "terminate_on_success": true
+        }
+    },
+    "train": {
+        "data": "./datasets/generated_dataset_sample_300.hdf5",
+        "output_dir": "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-v0",
+        "num_data_workers": 16,
+        "hdf5_cache_mode": "low_dim",
+        "hdf5_use_swmr": true,
+        "hdf5_load_next_obs": false,
+        "hdf5_normalize_obs": false,
+        "hdf5_filter_key": "train",
+        "hdf5_validation_filter_key": "valid",
+        "seq_length": 10,
+        "pad_seq_length": true,
+        "frame_stack": 1,
+        "pad_frame_stack": true,
+        "dataset_keys": [
+            "actions",
+            "dones",
+            "datagen_info"
+        ],
+        "goal_mode": null,
+        "cuda": true,
+        "batch_size": 32,
+        "num_epochs": 600,
+        "seed": 101
+    },
+    "algo": {
+        "optim_params": {
+            "policy": {
+                "optimizer_type": "adam",
+                "learning_rate": {
+                    "initial": 0.0001,
+                    "decay_factor": 0.1,
+                    "epoch_schedule": [
+                        200,
+                        400
+                    ],
+                    "scheduler_type": "multistep"
+                },
+                "regularization": {
+                    "L2": 0.01
+                }
+            }
+        },
+        "loss": {
+            "l2_weight": 1.0,
+            "l1_weight": 0.0,
+            "cos_weight": 0.0
+        },
+        "actor_layer_dims": [],
+        "gaussian": {
+            "enabled": false,
+            "fixed_std": false,
+            "init_std": 0.1,
+            "min_std": 0.01,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "gmm": {
+            "enabled": true,
+            "num_modes": 8,
+            "min_std": 0.0001,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "vae": {
+            "enabled": false,
+            "latent_dim": 14,
+            "latent_clip": null,
+            "kl_weight": 1.0,
+            "decoder": {
+                "is_conditioned": true,
+                "reconstruction_sum_across_elements": false
+            },
+            "prior": {
+                "learn": false,
+                "is_conditioned": false,
+                "use_gmm": false,
+                "gmm_num_modes": 10,
+                "gmm_learn_weights": false,
+                "use_categorical": false,
+                "categorical_dim": 10,
+                "categorical_gumbel_softmax_hard": false,
+                "categorical_init_temp": 1.0,
+                "categorical_temp_anneal_step": 0.001,
+                "categorical_min_temp": 0.3
+            },
+            "encoder_layer_dims": [
+                400
+            ],
+            "decoder_layer_dims": [
+                400
+            ],
+            "prior_layer_dims": []
+        },
+        "rnn": {
+            "enabled": true,
+            "horizon": 10,
+            "hidden_dim": 1000,
+            "rnn_type": "LSTM",
+            "num_layers": 3,
+            "open_loop": false,
+            "kwargs": {
+                "bidirectional": false
+            }
+        },
+        "transformer": {
+            "enabled": false,
+            "context_length": 10,
+            "embed_dim": 512,
+            "num_layers": 6,
+            "num_heads": 8,
+            "emb_dropout": 0.1,
+            "attn_dropout": 0.1,
+            "block_output_dropout": 0.1,
+            "sinusoidal_embedding": false,
+            "activation": "gelu",
+            "supervise_all_steps": false,
+            "nn_parameter_for_timesteps": true
+        }
+    },
+    "observation": {
+        "modalities": {
+            "obs": {
+                "low_dim": [
+                    "eef_pos",
+                    "eef_quat",
+                    "gripper_pos",
+                    "joint_pos",
+                    "object",
+                    "joint_vel",
+                    "actions"
+                ],
+                "rgb": [
+                    "wrist_cam"
+                ],
+                "depth": [],
+                "scan": []
+            },
+            "goal": {
+                "low_dim": [],
+                "rgb": [],
+                "depth": [],
+                "scan": []
+            }
+        },
+        "encoder": {
+            "low_dim": {
+                "core_class": null,
+                "core_kwargs": {},
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "rgb": {
+                "core_class": "VisualCore",
+                "core_kwargs": {
+                    "feature_dimension": 64,
+                    "flatten": true,
+                    "backbone_class": "ResNet18Conv",
+                    "backbone_kwargs": {
+                        "pretrained": false,
+                        "input_coord_conv": false
+                    },
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 32,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    }
+                },
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "depth": {
+                "core_class": "VisualCore",
+                "core_kwargs": {
+                    "feature_dimension": 64,
+                    "flatten": true,
+                    "backbone_class": "ResNet18Conv",
+                    "backbone_kwargs": {
+                        "pretrained": false,
+                        "input_coord_conv": false
+                    },
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 32,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    }
+                },
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "scan": {
+                "core_class": "ScanCore",
+                "core_kwargs": {
+                    "feature_dimension": 64,
+                    "flatten": true,
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 32,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    },
+                    "conv_activation": "relu",
+                    "conv_kwargs": {
+                        "out_channels": [
+                            32,
+                            64,
+                            64
+                        ],
+                        "kernel_size": [
+                            8,
+                            4,
+                            2
+                        ],
+                        "stride": [
+                            4,
+                            2,
+                            1
+                        ]
+                    }
+                },
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            }
+        }
+    },
+    "meta": {
+        "hp_base_config_file": null,
+        "hp_keys": [],
+        "hp_values": []
+    }
+}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['joint_pos', 'eef_pos', 'eef_quat', 'gripper_pos', 'object', 'actions', 'joint_vel']
+using obs modality: rgb with keys: ['wrist_cam']
+using obs modality: depth with keys: []
+using obs modality: scan with keys: []
+/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+============= Loaded Policy =============
+ObservationKeyToModalityDict: mean not found, adding mean to mapping with assumed low_dim modality!
+ObservationKeyToModalityDict: scale not found, adding scale to mapping with assumed low_dim modality!
+ObservationKeyToModalityDict: logits not found, adding logits to mapping with assumed low_dim modality!
+BC_RNN_GMM (
+  ModuleDict(
+    (policy): RNNGMMActorNetwork(
+        action_dim=7, std_activation=softplus, low_noise_eval=True, num_nodes=8, min_std=0.0001
+  
+        encoder=ObservationGroupEncoder(
+            group=obs
+            ObservationEncoder(
+                Key(
+                    name=actions
+                    shape=[7]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=eef_pos
+                    shape=[3]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=eef_quat
+                    shape=[4]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=gripper_pos
+                    shape=[2]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=joint_pos
+                    shape=[9]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=joint_vel
+                    shape=[9]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=object
+                    shape=[3]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=wrist_cam
+                    shape=[3, 88, 88]
+                    modality=rgb
+                    randomizer=None
+                    net=VisualCore(
+                      input_shape=[3, 88, 88]
+                      output_shape=[64]
+                      backbone_net=ResNet18Conv(input_channel=3, input_coord_conv=False)
+                      pool_net=SpatialSoftmax(num_kp=32, temperature=1.0, noise=0.0)
+                    )
+                    sharing_from=None
+                )
+                output_shape=[101]
+            )
+        )
+  
+        rnn=RNN_Base(
+          (per_step_net): ObservationDecoder(
+              Key(
+                  name=mean
+                  shape=(8, 7)
+                  modality=low_dim
+                  net=(Linear(in_features=1000, out_features=56, bias=True))
+              )
+              Key(
+                  name=scale
+                  shape=(8, 7)
+                  modality=low_dim
+                  net=(Linear(in_features=1000, out_features=56, bias=True))
+              )
+              Key(
+                  name=logits
+                  shape=(8,)
+                  modality=low_dim
+                  net=(Linear(in_features=1000, out_features=8, bias=True))
+              )
+          )
+          (nets): LSTM(101, 1000, num_layers=3, batch_first=True)
+        )
+    )
+  )
+)
+[INFO] Starting trial 0
+[INFO] Trial 0: False
+
+[INFO] Starting trial 1
+[INFO] Trial 1: False
+
+[INFO] Starting trial 2
+[INFO] Trial 2: False
+
+[INFO] Starting trial 3
+[INFO] Trial 3: False
+
+[INFO] Starting trial 4
+[INFO] Trial 4: False
+
+[INFO] Starting trial 5
+[INFO] Trial 5: False
+
+[INFO] Starting trial 6
+[INFO] Trial 6: False
+
+[INFO] Starting trial 7
+[INFO] Trial 7: False
+
+[INFO] Starting trial 8
+[INFO] Trial 8: False
+
+[INFO] Starting trial 9
+[INFO] Trial 9: False
+
+[INFO] Starting trial 10
+[INFO] Trial 10: False
+
+[INFO] Starting trial 11
+[INFO] Trial 11: False
+
+[INFO] Starting trial 12
+[INFO] Trial 12: False
+
+[INFO] Starting trial 13
+[INFO] Trial 13: False
+
+[INFO] Starting trial 14
+[INFO] Trial 14: False
+
+[INFO] Starting trial 15
+[INFO] Trial 15: False
+
+[INFO] Starting trial 16
+[INFO] Trial 16: False
+
+[INFO] Starting trial 17
+[INFO] Trial 17: False
+
+[INFO] Starting trial 18
+[INFO] Trial 18: False
+
+[INFO] Starting trial 19
+[INFO] Trial 19: False
+
+
+Successful trials: 0, out of 20 trials
+Success rate: 0.0
+Trial Results: [False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False]
+
+[INFO] Using python from: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/python.sh                                       
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/isaacsim/kit/data/Kit/Isaac-Sim/4.5/user.config.json'
+[Info] [carb] Logging to file: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/isaacsim/kit/logs/Kit/Isaac-Sim/4.5/kit_20250909_070519.log
+2025-09-09 05:05:19 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2025-09-09 05:05:19 [3ms] [Warning] [omni.ext.plugin] [ext: extensions] Extensions config 'extension.toml' doesn't exist '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/source/extensions' or '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/source/extensions/config'
+2025-09-09 05:05:19 [3ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/rendering_modes' or '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/rendering_modes/config'
+2025-09-09 05:05:19 [267ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2025-09-09 05:05:19 [612ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Arc(tm) Graphics (MTL)
+2025-09-09 05:05:19 [612ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Arc(tm) Graphics (MTL)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.124.06    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4050 Laptop.. | Yes: 0 |     | 6141    MB | 10de      | 0          |
+|     |                                  |        |     |            | 28e1      | 39f32146.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | Intel(R) Arc(tm) Graphics (MTL)  |        |     | 23775   MB | 8086      | 0          |
+|     |                                  |        |     |            | 7d55      | 8680557d.. |
+|     |                                  |        |     |            | 0         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-59-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) Ultra 9 185H
+| Bare Metal Cores: 16 | Bare Metal Logical Cores: 32
+| Available Cores:  22 
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31700 | Free Memory: 12568
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2025-09-09 05:05:20 [1,666ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2025-09-09 05:05:21 [2,936ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2025-09-09 05:05:22 [3,383ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2025-09-09 05:05:24 [5,098ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/ambientOcclusion/enabled'
+2025-09-09 05:05:24 [5,098ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/directLighting/sampledLighting/enabled'
+2025-09-09 05:05:24 [5,099ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/indirectDiffuse/enabled'
+2025-09-09 05:05:24 [5,099ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/raytracing/cached/enabled'
+2025-09-09 05:05:24 [5,099ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/reflections/enabled'
+2025-09-09 05:05:24 [5,099ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/sceneDb/ambientLightIntensity'
+2025-09-09 05:05:24 [5,099ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/translucency/enabled'
+2025-09-09 05:05:24 [5,099ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/viewTile/limit'
+2025-09-09 05:05:24 [5,192ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit buffer size 2908577024
+2025-09-09 05:05:24 [5,192ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit : valid true, within: false
+2025-09-09 05:05:24 [5,293ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/directLighting/sampledLighting/samplesPerPixel'
+2025-09-09 05:05:24 [5,293ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/pathtracing/maxSamplesPerLaunch'
+2025-09-09 05:05:24 [5,293ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults-transient/meshlights/forceDisable'
+2025-09-09 05:05:24 [5,326ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/post/dlss/execMode'
+ROBOMIMIC WARNING(
+    No private macro file found!
+    It is recommended to use a private macro file
+    To setup, run: python /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/robomimic/scripts/setup_macros.py
+)
+[INFO]: Parsing configuration from: isaaclab_tasks.manager_based.manipulation.lift.config.franka.kitchen_ik_rel_env_cfg:FrankaKitchenLiftEnvCfg
+2025-09-09 05:05:27 [7,993ms] [Warning] [isaaclab.envs.manager_based_env] Seed not set for the environment. The environment creation may not be deterministic.
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+2025-09-09 05:05:29 [10,129ms] [Warning] [isaaclab.sim.spawners.from_files.from_files] A prim already exists at prim path: '/World/envs/env_0/TomatoSoupCan'.
+[INFO]: Time taken for scene creation : 2.155509 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 5.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+2025-09-09 05:05:29 [10,523ms] [Warning] [omni.physx.tensors.plugin] Duplicate joint name 'RevoluteJoint' in articulation metatype
+2025-09-09 05:05:29 [10,523ms] [Warning] [omni.physx.tensors.plugin] Duplicate DOF name 'RevoluteJoint' in articulation metatype
+2025-09-09 05:05:29 [10,523ms] [Warning] [omni.physx.tensors.plugin] Duplicate joint name 'RevoluteJoint' in articulation metatype
+2025-09-09 05:05:29 [10,523ms] [Warning] [omni.physx.tensors.plugin] Duplicate DOF name 'RevoluteJoint' in articulation metatype
+2025-09-09 05:05:29 [10,529ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'effort_limit'. This parameter will be removed in the future. To set the effort limit, please use 'effort_limit_sim' instead.
+2025-09-09 05:05:29 [10,529ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'velocity_limit'. Previously, although this value was specified, it was not getting used by implicit actuators. Since this parameter affects the simulation behavior, we continue to not use it. This parameter will be removed in the future. To set the velocity limit, please use 'velocity_limit_sim' instead.
+2025-09-09 05:05:29 [10,534ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'effort_limit'. This parameter will be removed in the future. To set the effort limit, please use 'effort_limit_sim' instead.
+2025-09-09 05:05:29 [10,535ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'velocity_limit'. Previously, although this value was specified, it was not getting used by implicit actuators. Since this parameter affects the simulation behavior, we continue to not use it. This parameter will be removed in the future. To set the velocity limit, please use 'velocity_limit_sim' instead.
+2025-09-09 05:05:31 [12,464ms] [Warning] [omni.hydra.scene_delegate.plugin] Calling getBypassRenderSkelMeshProcessing for prim /World/envs/env_0/Robot/panda_leftfinger/visuals.proto_panda_leftfinger_id0 that has not been populated
+[INFO]: Time taken for simulation start : 2.427571 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------+
+|           Active Command Terms           |
++-------+-------------+--------------------+
+| Index | Name        |        Type        |
++-------+-------------+--------------------+
+|   0   | object_pose | UniformPoseCommand |
++-------+-------------+--------------------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++--------------------------------------+
+| Active Event Terms in Mode: 'reset'  |
++---------+----------------------------+
+|  Index  | Name                       |
++---------+----------------------------+
+|    0    | reset_all                  |
+|    1    | reset_object_position      |
+|    2    | randomize_light            |
++---------+----------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 7)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         6 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++---------------------------------------------+
+| Active Observation Terms in Group: 'policy' |
++---------+-----------------+-----------------+
+|  Index  | Name            |      Shape      |
++---------+-----------------+-----------------+
+|    0    | joint_pos       |       (9,)      |
+|    1    | joint_vel       |       (9,)      |
+|    2    | object          |       (3,)      |
+|    3    | actions         |       (7,)      |
+|    4    | wrist_cam       |   (88, 88, 3)   |
+|    5    | eef_pos         |       (3,)      |
+|    6    | eef_quat        |       (4,)      |
+|    7    | gripper_pos     |       (2,)      |
++---------+-----------------+-----------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++------------------------------------+
+|      Active Termination Terms      |
++-------+-----------------+----------+
+| Index | Name            | Time Out |
++-------+-----------------+----------+
+|   0   | object_dropping |  False   |
++-------+-----------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 6 active terms.
++-----------------------------------------------------+
+|                 Active Reward Terms                 |
++-------+-----------------------------------+---------+
+| Index | Name                              |  Weight |
++-------+-----------------------------------+---------+
+|   0   | reaching_object                   |     1.0 |
+|   1   | lifting_object                    |    15.0 |
+|   2   | object_goal_tracking              |    16.0 |
+|   3   | object_goal_tracking_fine_grained |     5.0 |
+|   4   | action_rate                       | -0.0001 |
+|   5   | joint_vel                         | -0.0001 |
++-------+-----------------------------------+---------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 2 active terms.
++--------------------------+
+| Active Curriculum Terms  |
++---------+----------------+
+|  Index  | Name           |
++---------+----------------+
+|    0    | action_rate    |
+|    1    | joint_vel      |
++---------+----------------+
+
+[INFO]: Completed setting up the environment...
+Setting seed: 101
+============= Loaded Config =============
+{
+    "algo_name": "bc",
+    "experiment": {
+        "name": "bc_rnn_image_franka_kitchen_lift_fast",
+        "validate": true,
+        "logging": {
+            "terminal_output_to_txt": true,
+            "log_tb": true,
+            "log_wandb": false,
+            "wandb_proj_name": "debug"
+        },
+        "save": {
+            "enabled": true,
+            "every_n_seconds": null,
+            "every_n_epochs": 10,
+            "epochs": [],
+            "on_best_validation": true,
+            "on_best_rollout_return": false,
+            "on_best_rollout_success_rate": true
+        },
+        "epoch_every_n_steps": 1000,
+        "validation_epoch_every_n_steps": 10,
+        "env": null,
+        "additional_envs": null,
+        "render": false,
+        "render_video": false,
+        "keep_all_videos": false,
+        "video_skip": 5,
+        "rollout": {
+            "enabled": false,
+            "n": 50,
+            "horizon": 400,
+            "rate": 50,
+            "warmstart": 0,
+            "terminate_on_success": true
+        }
+    },
+    "train": {
+        "data": "./datasets/generated_dataset_sample_300.hdf5",
+        "output_dir": "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Visuomotor-Fast-v0",
+        "num_data_workers": 16,
+        "hdf5_cache_mode": "low_dim",
+        "hdf5_use_swmr": true,
+        "hdf5_load_next_obs": false,
+        "hdf5_normalize_obs": false,
+        "hdf5_filter_key": "train",
+        "hdf5_validation_filter_key": "valid",
+        "seq_length": 3,
+        "pad_seq_length": true,
+        "frame_stack": 1,
+        "pad_frame_stack": true,
+        "dataset_keys": [
+            "actions",
+            "dones",
+            "datagen_info"
+        ],
+        "goal_mode": null,
+        "cuda": true,
+        "batch_size": 16,
+        "num_epochs": 150,
+        "seed": 101
+    },
+    "algo": {
+        "optim_params": {
+            "policy": {
+                "optimizer_type": "adam",
+                "learning_rate": {
+                    "initial": 0.001,
+                    "decay_factor": 0.3,
+                    "epoch_schedule": [
+                        30,
+                        60,
+                        80
+                    ],
+                    "scheduler_type": "multistep"
+                },
+                "regularization": {
+                    "L2": 0.0001
+                }
+            }
+        },
+        "loss": {
+            "l2_weight": 1.0,
+            "l1_weight": 0.0,
+            "cos_weight": 0.0
+        },
+        "actor_layer_dims": [
+            1024,
+            512,
+            256
+        ],
+        "gaussian": {
+            "enabled": false,
+            "fixed_std": false,
+            "init_std": 0.1,
+            "min_std": 0.01,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "gmm": {
+            "enabled": true,
+            "num_modes": 5,
+            "min_std": 0.0001,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "vae": {
+            "enabled": false,
+            "latent_dim": 14,
+            "latent_clip": null,
+            "kl_weight": 1.0,
+            "decoder": {
+                "is_conditioned": true,
+                "reconstruction_sum_across_elements": false
+            },
+            "prior": {
+                "learn": false,
+                "is_conditioned": false,
+                "use_gmm": false,
+                "gmm_num_modes": 10,
+                "gmm_learn_weights": false,
+                "use_categorical": false,
+                "categorical_dim": 10,
+                "categorical_gumbel_softmax_hard": false,
+                "categorical_init_temp": 1.0,
+                "categorical_temp_anneal_step": 0.001,
+                "categorical_min_temp": 0.3
+            },
+            "encoder_layer_dims": [
+                400
+            ],
+            "decoder_layer_dims": [
+                400
+            ],
+            "prior_layer_dims": []
+        },
+        "rnn": {
+            "enabled": true,
+            "horizon": 3,
+            "hidden_dim": 128,
+            "rnn_type": "LSTM",
+            "num_layers": 1,
+            "open_loop": false,
+            "kwargs": {
+                "bidirectional": false
+            }
+        },
+        "transformer": {
+            "enabled": false,
+            "context_length": 10,
+            "embed_dim": 512,
+            "num_layers": 6,
+            "num_heads": 8,
+            "emb_dropout": 0.1,
+            "attn_dropout": 0.1,
+            "block_output_dropout": 0.1,
+            "sinusoidal_embedding": false,
+            "activation": "gelu",
+            "supervise_all_steps": false,
+            "nn_parameter_for_timesteps": true
+        }
+    },
+    "observation": {
+        "modalities": {
+            "obs": {
+                "low_dim": [
+                    "eef_pos",
+                    "eef_quat",
+                    "gripper_pos",
+                    "joint_pos",
+                    "object",
+                    "joint_vel",
+                    "actions"
+                ],
+                "rgb": [
+                    "wrist_cam"
+                ],
+                "depth": [],
+                "scan": []
+            },
+            "goal": {
+                "low_dim": [],
+                "rgb": [],
+                "depth": [],
+                "scan": []
+            }
+        },
+        "encoder": {
+            "low_dim": {
+                "core_class": null,
+                "core_kwargs": {},
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "rgb": {
+                "core_class": "VisualCore",
+                "core_kwargs": {
+                    "feature_dimension": 512,
+                    "backbone_class": "R3MConv",
+                    "backbone_kwargs": {
+                        "pretrained": true,
+                        "input_coord_conv": false,
+                        "r3m_model_class": "resnet18",
+                        "freeze": false
+                    },
+                    "pool_class": null
+                },
+                "obs_randomizer_class": "CropRandomizer",
+                "obs_randomizer_kwargs": {
+                    "crop_height": 80,
+                    "crop_width": 80,
+                    "num_crops": 1,
+                    "pos_enc": false
+                }
+            },
+            "depth": {
+                "core_class": "VisualCore",
+                "core_kwargs": {
+                    "feature_dimension": 32,
+                    "flatten": true,
+                    "backbone_class": "ResNet18Conv",
+                    "backbone_kwargs": {
+                        "pretrained": false,
+                        "input_coord_conv": false
+                    },
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 16,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    }
+                },
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "scan": {
+                "core_class": "ScanCore",
+                "core_kwargs": {
+                    "feature_dimension": 32,
+                    "flatten": true,
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 16,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    },
+                    "conv_activation": "relu",
+                    "conv_kwargs": {
+                        "out_channels": [
+                            32,
+                            64,
+                            64
+                        ],
+                        "kernel_size": [
+                            8,
+                            4,
+                            2
+                        ],
+                        "stride": [
+                            4,
+                            2,
+                            1
+                        ]
+                    }
+                },
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            }
+        }
+    },
+    "meta": {
+        "hp_base_config_file": null,
+        "hp_keys": [],
+        "hp_values": []
+    }
+}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['joint_pos', 'object', 'actions', 'gripper_pos', 'eef_pos', 'joint_vel', 'eef_quat']
+using obs modality: rgb with keys: ['wrist_cam']
+using obs modality: depth with keys: []
+using obs modality: scan with keys: []
+/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/torch/nn/_reduction.py:51: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+============= Loaded Policy =============
+ObservationKeyToModalityDict: mean not found, adding mean to mapping with assumed low_dim modality!
+ObservationKeyToModalityDict: scale not found, adding scale to mapping with assumed low_dim modality!
+ObservationKeyToModalityDict: logits not found, adding logits to mapping with assumed low_dim modality!
+BC_RNN_GMM (
+  ModuleDict(
+    (policy): RNNGMMActorNetwork(
+        action_dim=7, std_activation=softplus, low_noise_eval=True, num_nodes=5, min_std=0.0001
+  
+        encoder=ObservationGroupEncoder(
+            group=obs
+            ObservationEncoder(
+                Key(
+                    name=actions
+                    shape=[7]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=eef_pos
+                    shape=[3]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=eef_quat
+                    shape=[4]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=gripper_pos
+                    shape=[2]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=joint_pos
+                    shape=[9]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=joint_vel
+                    shape=[9]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=object
+                    shape=[3]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=wrist_cam
+                    shape=[3, 88, 88]
+                    modality=rgb
+                    randomizer=CropRandomizer(input_shape=[3, 88, 88], crop_size=[80, 80], num_crops=1)
+                    net=VisualCore(
+                      input_shape=[3, 80, 80]
+                      output_shape=[512]
+                      backbone_net=R3MConv(input_channel=3, input_coord_conv=False, pretrained=True, freeze=False)
+                      pool_net=None
+                    )
+                    sharing_from=None
+                )
+                output_shape=[549]
+            )
+        )
+  
+        rnn=RNN_Base(
+          (per_step_net): Sequential(
+            (0): MLP(
+                input_dim=128
+                output_dim=256
+                layer_dims=[1024, 512]
+                layer_func=Linear
+                dropout=None
+                act=ReLU
+                output_act=ReLU
+            )
+            (1): ObservationDecoder(
+                Key(
+                    name=mean
+                    shape=(5, 7)
+                    modality=low_dim
+                    net=(Linear(in_features=256, out_features=35, bias=True))
+                )
+                Key(
+                    name=scale
+                    shape=(5, 7)
+                    modality=low_dim
+                    net=(Linear(in_features=256, out_features=35, bias=True))
+                )
+                Key(
+                    name=logits
+                    shape=(5,)
+                    modality=low_dim
+                    net=(Linear(in_features=256, out_features=5, bias=True))
+                )
+            )
+          )
+          (nets): LSTM(549, 128, batch_first=True)
+        )
+    )
+  )
+)
+[INFO] Starting trial 0
+[INFO] Trial 0: False
+
+[INFO] Starting trial 1
+[INFO] Trial 1: False
+
+[INFO] Starting trial 2
+[INFO] Trial 2: False
+
+[INFO] Starting trial 3
+[INFO] Trial 3: False
+
+[INFO] Starting trial 4
+[INFO] Trial 4: False
+
+[INFO] Starting trial 5
+[INFO] Trial 5: False
+
+[INFO] Starting trial 6
+[INFO] Trial 6: False
+
+[INFO] Starting trial 7
+[INFO] Trial 7: False
+
+[INFO] Starting trial 8
+[INFO] Trial 8: False
+
+[INFO] Starting trial 9
+[INFO] Trial 9: False
+
+[INFO] Starting trial 10
+[INFO] Trial 10: False
+
+[INFO] Starting trial 11
+[INFO] Trial 11: False
+
+[INFO] Starting trial 12
+[INFO] Trial 12: False
+
+[INFO] Starting trial 13
+[INFO] Trial 13: False
+
+[INFO] Starting trial 14
+[INFO] Trial 14: False
+
+[INFO] Starting trial 15
+[INFO] Trial 15: False
+
+[INFO] Starting trial 16
+[INFO] Trial 16: False
+
+[INFO] Starting trial 17
+[INFO] Trial 17: False
+
+[INFO] Starting trial 18
+[INFO] Trial 18: False
+
+[INFO] Starting trial 19
+[INFO] Trial 19: False
+
+
+Successful trials: 0, out of 20 trials
+Success rate: 0.0
+Trial Results: [False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False]
+
+[INFO] Using python from: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/python.sh                                       
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/isaacsim/kit/data/Kit/Isaac-Sim/4.5/user.config.json'
+[Info] [carb] Logging to file: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/isaacsim/kit/logs/Kit/Isaac-Sim/4.5/kit_20250909_072943.log
+2025-09-09 05:29:43 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2025-09-09 05:29:43 [2ms] [Warning] [omni.ext.plugin] [ext: extensions] Extensions config 'extension.toml' doesn't exist '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/source/extensions' or '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/source/extensions/config'
+2025-09-09 05:29:43 [2ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/rendering_modes' or '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/rendering_modes/config'
+2025-09-09 05:29:44 [268ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2025-09-09 05:29:44 [550ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Arc(tm) Graphics (MTL)
+2025-09-09 05:29:44 [550ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Arc(tm) Graphics (MTL)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.124.06    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4050 Laptop.. | Yes: 0 |     | 6141    MB | 10de      | 0          |
+|     |                                  |        |     |            | 28e1      | 39f32146.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | Intel(R) Arc(tm) Graphics (MTL)  |        |     | 23775   MB | 8086      | 0          |
+|     |                                  |        |     |            | 7d55      | 8680557d.. |
+|     |                                  |        |     |            | 0         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-59-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) Ultra 9 185H
+| Bare Metal Cores: 16 | Bare Metal Logical Cores: 32
+| Available Cores:  22 
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31700 | Free Memory: 12676
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2025-09-09 05:29:45 [1,687ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2025-09-09 05:29:46 [2,922ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2025-09-09 05:29:47 [3,358ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2025-09-09 05:29:48 [5,104ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/ambientOcclusion/enabled'
+2025-09-09 05:29:48 [5,104ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/directLighting/sampledLighting/enabled'
+2025-09-09 05:29:48 [5,104ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/indirectDiffuse/enabled'
+2025-09-09 05:29:48 [5,105ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/raytracing/cached/enabled'
+2025-09-09 05:29:48 [5,105ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/reflections/enabled'
+2025-09-09 05:29:48 [5,105ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/sceneDb/ambientLightIntensity'
+2025-09-09 05:29:48 [5,105ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/translucency/enabled'
+2025-09-09 05:29:48 [5,105ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/viewTile/limit'
+2025-09-09 05:29:48 [5,198ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit buffer size 2908577024
+2025-09-09 05:29:48 [5,198ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit : valid true, within: false
+2025-09-09 05:29:49 [5,295ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/directLighting/sampledLighting/samplesPerPixel'
+2025-09-09 05:29:49 [5,295ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/pathtracing/maxSamplesPerLaunch'
+2025-09-09 05:29:49 [5,295ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults-transient/meshlights/forceDisable'
+2025-09-09 05:29:49 [5,331ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/post/dlss/execMode'
+ROBOMIMIC WARNING(
+    No private macro file found!
+    It is recommended to use a private macro file
+    To setup, run: python /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/robomimic/scripts/setup_macros.py
+)
+[INFO]: Parsing configuration from: isaaclab_tasks.manager_based.manipulation.lift.config.franka.kitchen_ik_rel_env_cfg:FrankaKitchenLiftEnvCfg
+2025-09-09 05:29:51 [7,914ms] [Warning] [isaaclab.envs.manager_based_env] Seed not set for the environment. The environment creation may not be deterministic.
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+2025-09-09 05:29:53 [9,783ms] [Warning] [isaaclab.sim.spawners.from_files.from_files] A prim already exists at prim path: '/World/envs/env_0/TomatoSoupCan'.
+[INFO]: Time taken for scene creation : 1.860814 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 5.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+2025-09-09 05:29:53 [10,090ms] [Warning] [omni.physx.tensors.plugin] Duplicate joint name 'RevoluteJoint' in articulation metatype
+2025-09-09 05:29:53 [10,090ms] [Warning] [omni.physx.tensors.plugin] Duplicate DOF name 'RevoluteJoint' in articulation metatype
+2025-09-09 05:29:53 [10,090ms] [Warning] [omni.physx.tensors.plugin] Duplicate joint name 'RevoluteJoint' in articulation metatype
+2025-09-09 05:29:53 [10,090ms] [Warning] [omni.physx.tensors.plugin] Duplicate DOF name 'RevoluteJoint' in articulation metatype
+2025-09-09 05:29:53 [10,095ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'effort_limit'. This parameter will be removed in the future. To set the effort limit, please use 'effort_limit_sim' instead.
+2025-09-09 05:29:53 [10,095ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'velocity_limit'. Previously, although this value was specified, it was not getting used by implicit actuators. Since this parameter affects the simulation behavior, we continue to not use it. This parameter will be removed in the future. To set the velocity limit, please use 'velocity_limit_sim' instead.
+2025-09-09 05:29:53 [10,104ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'effort_limit'. This parameter will be removed in the future. To set the effort limit, please use 'effort_limit_sim' instead.
+2025-09-09 05:29:53 [10,104ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'velocity_limit'. Previously, although this value was specified, it was not getting used by implicit actuators. Since this parameter affects the simulation behavior, we continue to not use it. This parameter will be removed in the future. To set the velocity limit, please use 'velocity_limit_sim' instead.
+2025-09-09 05:29:56 [12,405ms] [Warning] [omni.hydra.scene_delegate.plugin] Calling getBypassRenderSkelMeshProcessing for prim /World/envs/env_0/Robot/panda_rightfinger/visuals.proto_panda_rightfinger_id0 that has not been populated
+[INFO]: Time taken for simulation start : 2.728452 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------+
+|           Active Command Terms           |
++-------+-------------+--------------------+
+| Index | Name        |        Type        |
++-------+-------------+--------------------+
+|   0   | object_pose | UniformPoseCommand |
++-------+-------------+--------------------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++--------------------------------------+
+| Active Event Terms in Mode: 'reset'  |
++---------+----------------------------+
+|  Index  | Name                       |
++---------+----------------------------+
+|    0    | reset_all                  |
+|    1    | reset_object_position      |
+|    2    | randomize_light            |
++---------+----------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 7)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         6 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++---------------------------------------------+
+| Active Observation Terms in Group: 'policy' |
++---------+-----------------+-----------------+
+|  Index  | Name            |      Shape      |
++---------+-----------------+-----------------+
+|    0    | joint_pos       |       (9,)      |
+|    1    | joint_vel       |       (9,)      |
+|    2    | object          |       (3,)      |
+|    3    | actions         |       (7,)      |
+|    4    | wrist_cam       |   (88, 88, 3)   |
+|    5    | eef_pos         |       (3,)      |
+|    6    | eef_quat        |       (4,)      |
+|    7    | gripper_pos     |       (2,)      |
++---------+-----------------+-----------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++------------------------------------+
+|      Active Termination Terms      |
++-------+-----------------+----------+
+| Index | Name            | Time Out |
++-------+-----------------+----------+
+|   0   | object_dropping |  False   |
++-------+-----------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 6 active terms.
++-----------------------------------------------------+
+|                 Active Reward Terms                 |
++-------+-----------------------------------+---------+
+| Index | Name                              |  Weight |
++-------+-----------------------------------+---------+
+|   0   | reaching_object                   |     1.0 |
+|   1   | lifting_object                    |    15.0 |
+|   2   | object_goal_tracking              |    16.0 |
+|   3   | object_goal_tracking_fine_grained |     5.0 |
+|   4   | action_rate                       | -0.0001 |
+|   5   | joint_vel                         | -0.0001 |
++-------+-----------------------------------+---------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 2 active terms.
++--------------------------+
+| Active Curriculum Terms  |
++---------+----------------+
+|  Index  | Name           |
++---------+----------------+
+|    0    | action_rate    |
+|    1    | joint_vel      |
++---------+----------------+
+
+[INFO]: Completed setting up the environment...
+Setting seed: 101
+============= Loaded Config =============
+{
+    "algo_name": "bc",
+    "experiment": {
+        "name": "bc_rnn_low_dim_franka_kitchen_lift",
+        "validate": true,
+        "logging": {
+            "terminal_output_to_txt": true,
+            "log_tb": true,
+            "log_wandb": false,
+            "wandb_proj_name": "debug"
+        },
+        "save": {
+            "enabled": true,
+            "every_n_seconds": null,
+            "every_n_epochs": 50,
+            "epochs": [],
+            "on_best_validation": true,
+            "on_best_rollout_return": false,
+            "on_best_rollout_success_rate": true
+        },
+        "epoch_every_n_steps": 500,
+        "validation_epoch_every_n_steps": 20,
+        "env": null,
+        "additional_envs": null,
+        "render": false,
+        "render_video": false,
+        "keep_all_videos": false,
+        "video_skip": 5,
+        "rollout": {
+            "enabled": false,
+            "n": 50,
+            "horizon": 400,
+            "rate": 50,
+            "warmstart": 0,
+            "terminate_on_success": true
+        }
+    },
+    "train": {
+        "data": "./datasets/generated_dataset_sample_300.hdf5",
+        "output_dir": "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-v0",
+        "num_data_workers": 18,
+        "hdf5_cache_mode": "all",
+        "hdf5_use_swmr": true,
+        "hdf5_load_next_obs": false,
+        "hdf5_normalize_obs": false,
+        "hdf5_filter_key": "train",
+        "hdf5_validation_filter_key": "valid",
+        "seq_length": 10,
+        "pad_seq_length": true,
+        "frame_stack": 1,
+        "pad_frame_stack": true,
+        "dataset_keys": [
+            "actions",
+            "dones",
+            "datagen_info"
+        ],
+        "goal_mode": null,
+        "cuda": true,
+        "batch_size": 32,
+        "num_epochs": 1200,
+        "seed": 101
+    },
+    "algo": {
+        "optim_params": {
+            "policy": {
+                "optimizer_type": "adam",
+                "learning_rate": {
+                    "initial": 0.0001,
+                    "decay_factor": 0.1,
+                    "epoch_schedule": [
+                        400,
+                        800
+                    ],
+                    "scheduler_type": "multistep"
+                },
+                "regularization": {
+                    "L2": 0.01
+                }
+            }
+        },
+        "loss": {
+            "l2_weight": 1.0,
+            "l1_weight": 0.0,
+            "cos_weight": 0.0
+        },
+        "actor_layer_dims": [
+            1024,
+            512,
+            256
+        ],
+        "gaussian": {
+            "enabled": false,
+            "fixed_std": false,
+            "init_std": 0.1,
+            "min_std": 0.01,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "gmm": {
+            "enabled": true,
+            "num_modes": 8,
+            "min_std": 0.0001,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "vae": {
+            "enabled": false,
+            "latent_dim": 14,
+            "latent_clip": null,
+            "kl_weight": 1.0,
+            "decoder": {
+                "is_conditioned": true,
+                "reconstruction_sum_across_elements": false
+            },
+            "prior": {
+                "learn": false,
+                "is_conditioned": false,
+                "use_gmm": false,
+                "gmm_num_modes": 10,
+                "gmm_learn_weights": false,
+                "use_categorical": false,
+                "categorical_dim": 10,
+                "categorical_gumbel_softmax_hard": false,
+                "categorical_init_temp": 1.0,
+                "categorical_temp_anneal_step": 0.001,
+                "categorical_min_temp": 0.3
+            },
+            "encoder_layer_dims": [
+                400
+            ],
+            "decoder_layer_dims": [
+                400
+            ],
+            "prior_layer_dims": []
+        },
+        "rnn": {
+            "enabled": true,
+            "horizon": 10,
+            "hidden_dim": 1000,
+            "rnn_type": "LSTM",
+            "num_layers": 3,
+            "open_loop": false,
+            "kwargs": {
+                "bidirectional": false
+            }
+        },
+        "transformer": {
+            "enabled": false,
+            "context_length": 10,
+            "embed_dim": 512,
+            "num_layers": 6,
+            "num_heads": 8,
+            "emb_dropout": 0.1,
+            "attn_dropout": 0.1,
+            "block_output_dropout": 0.1,
+            "sinusoidal_embedding": false,
+            "activation": "gelu",
+            "supervise_all_steps": false,
+            "nn_parameter_for_timesteps": true
+        }
+    },
+    "observation": {
+        "modalities": {
+            "obs": {
+                "low_dim": [
+                    "eef_pos",
+                    "eef_quat",
+                    "gripper_pos",
+                    "joint_pos",
+                    "object",
+                    "joint_vel",
+                    "actions"
+                ],
+                "rgb": [],
+                "depth": [],
+                "scan": []
+            },
+            "goal": {
+                "low_dim": [],
+                "rgb": [],
+                "depth": [],
+                "scan": []
+            }
+        },
+        "encoder": {
+            "low_dim": {
+                "core_class": null,
+                "core_kwargs": {},
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "rgb": {
+                "core_class": "VisualCore",
+                "core_kwargs": {
+                    "feature_dimension": 64,
+                    "flatten": true,
+                    "backbone_class": "ResNet18Conv",
+                    "backbone_kwargs": {
+                        "pretrained": false,
+                        "input_coord_conv": false
+                    },
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 32,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    }
+                },
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "depth": {
+                "core_class": "VisualCore",
+                "core_kwargs": {
+                    "feature_dimension": 64,
+                    "flatten": true,
+                    "backbone_class": "ResNet18Conv",
+                    "backbone_kwargs": {
+                        "pretrained": false,
+                        "input_coord_conv": false
+                    },
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 32,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    }
+                },
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "scan": {
+                "core_class": "ScanCore",
+                "core_kwargs": {
+                    "feature_dimension": 64,
+                    "flatten": true,
+                    "pool_class": "SpatialSoftmax",
+                    "pool_kwargs": {
+                        "num_kp": 32,
+                        "learnable_temperature": false,
+                        "temperature": 1.0,
+                        "noise_std": 0.0,
+                        "output_variance": false
+                    },
+                    "conv_activation": "relu",
+                    "conv_kwargs": {
+                        "out_channels": [
+                            32,
+                            64,
+                            64
+                        ],
+                        "kernel_size": [
+                            8,
+                            4,
+                            2
+                        ],
+                        "stride": [
+                            4,
+                            2,
+                            1
+                        ]
+                    }
+                },
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            }
+        }
+    },
+    "meta": {
+        "hp_base_config_file": null,
+        "hp_keys": [],
+        "hp_values": []
+    }
+}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['object', 'actions', 'joint_pos', 'eef_pos', 'joint_vel', 'eef_quat', 'gripper_pos']
+using obs modality: rgb with keys: []
+using obs modality: depth with keys: []
+using obs modality: scan with keys: []
+============= Loaded Policy =============
+ObservationKeyToModalityDict: mean not found, adding mean to mapping with assumed low_dim modality!
+ObservationKeyToModalityDict: scale not found, adding scale to mapping with assumed low_dim modality!
+ObservationKeyToModalityDict: logits not found, adding logits to mapping with assumed low_dim modality!
+BC_RNN_GMM (
+  ModuleDict(
+    (policy): RNNGMMActorNetwork(
+        action_dim=7, std_activation=softplus, low_noise_eval=True, num_nodes=8, min_std=0.0001
+  
+        encoder=ObservationGroupEncoder(
+            group=obs
+            ObservationEncoder(
+                Key(
+                    name=actions
+                    shape=[7]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=eef_pos
+                    shape=[3]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=eef_quat
+                    shape=[4]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=gripper_pos
+                    shape=[2]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=joint_pos
+                    shape=[9]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=joint_vel
+                    shape=[9]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=object
+                    shape=[3]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                output_shape=[37]
+            )
+        )
+  
+        rnn=RNN_Base(
+          (per_step_net): Sequential(
+            (0): MLP(
+                input_dim=1000
+                output_dim=256
+                layer_dims=[1024, 512]
+                layer_func=Linear
+                dropout=None
+                act=ReLU
+                output_act=ReLU
+            )
+            (1): ObservationDecoder(
+                Key(
+                    name=mean
+                    shape=(8, 7)
+                    modality=low_dim
+                    net=(Linear(in_features=256, out_features=56, bias=True))
+                )
+                Key(
+                    name=scale
+                    shape=(8, 7)
+                    modality=low_dim
+                    net=(Linear(in_features=256, out_features=56, bias=True))
+                )
+                Key(
+                    name=logits
+                    shape=(8,)
+                    modality=low_dim
+                    net=(Linear(in_features=256, out_features=8, bias=True))
+                )
+            )
+          )
+          (nets): LSTM(37, 1000, num_layers=3, batch_first=True)
+        )
+    )
+  )
+)
+[INFO] Starting trial 0
+[INFO] Trial 0: False
+
+[INFO] Starting trial 1
+[INFO] Trial 1: False
+
+[INFO] Starting trial 2
+[INFO] Trial 2: False
+
+[INFO] Starting trial 3
+[INFO] Trial 3: False
+
+[INFO] Starting trial 4
+[INFO] Trial 4: False
+
+[INFO] Starting trial 5
+[INFO] Trial 5: False
+
+[INFO] Starting trial 6
+[INFO] Trial 6: False
+
+[INFO] Starting trial 7
+[INFO] Trial 7: False
+
+[INFO] Starting trial 8
+[INFO] Trial 8: False
+
+[INFO] Starting trial 9
+[INFO] Trial 9: False
+
+[INFO] Starting trial 10
+[INFO] Trial 10: False
+
+[INFO] Starting trial 11
+[INFO] Trial 11: False
+
+[INFO] Starting trial 12
+[INFO] Trial 12: False
+
+[INFO] Starting trial 13
+[INFO] Trial 13: False
+
+[INFO] Starting trial 14
+[INFO] Trial 14: False
+
+[INFO] Starting trial 15
+[INFO] Trial 15: False
+
+[INFO] Starting trial 16
+[INFO] Trial 16: False
+
+[INFO] Starting trial 17
+[INFO] Trial 17: False
+
+[INFO] Starting trial 18
+[INFO] Trial 18: False
+
+[INFO] Starting trial 19
+[INFO] Trial 19: False
+
+
+Successful trials: 0, out of 20 trials
+Success rate: 0.0
+Trial Results: [False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False]
+
+[INFO] Using python from: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/python.sh                                       
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/isaacsim/kit/data/Kit/Isaac-Sim/4.5/user.config.json'
+[Info] [carb] Logging to file: /home/saiga/Documents/Cognitive_Robotics/simulation_packages/isaacsim/kit/logs/Kit/Isaac-Sim/4.5/kit_20250909_075139.log
+2025-09-09 05:51:39 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2025-09-09 05:51:39 [4ms] [Warning] [omni.ext.plugin] [ext: extensions] Extensions config 'extension.toml' doesn't exist '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/source/extensions' or '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/source/extensions/config'
+2025-09-09 05:51:39 [4ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/rendering_modes' or '/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/apps/rendering_modes/config'
+2025-09-09 05:51:40 [262ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2025-09-09 05:51:40 [541ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Arc(tm) Graphics (MTL)
+2025-09-09 05:51:40 [541ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Arc(tm) Graphics (MTL)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.124.06    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4050 Laptop.. | Yes: 0 |     | 6141    MB | 10de      | 0          |
+|     |                                  |        |     |            | 28e1      | 39f32146.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | Intel(R) Arc(tm) Graphics (MTL)  |        |     | 23775   MB | 8086      | 0          |
+|     |                                  |        |     |            | 7d55      | 8680557d.. |
+|     |                                  |        |     |            | 0         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-59-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) Ultra 9 185H
+| Bare Metal Cores: 16 | Bare Metal Logical Cores: 32
+| Available Cores:  22 
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31700 | Free Memory: 12753
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2025-09-09 05:51:41 [1,561ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2025-09-09 05:51:42 [2,873ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2025-09-09 05:51:43 [3,320ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2025-09-09 05:51:44 [5,007ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/ambientOcclusion/enabled'
+2025-09-09 05:51:44 [5,007ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/directLighting/sampledLighting/enabled'
+2025-09-09 05:51:44 [5,007ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/indirectDiffuse/enabled'
+2025-09-09 05:51:44 [5,007ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/raytracing/cached/enabled'
+2025-09-09 05:51:44 [5,007ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/reflections/enabled'
+2025-09-09 05:51:44 [5,007ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/sceneDb/ambientLightIntensity'
+2025-09-09 05:51:44 [5,007ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/translucency/enabled'
+2025-09-09 05:51:44 [5,007ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/viewTile/limit'
+2025-09-09 05:51:45 [5,100ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit buffer size 2908577024
+2025-09-09 05:51:45 [5,100ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit : valid true, within: false
+2025-09-09 05:51:45 [5,198ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/directLighting/sampledLighting/samplesPerPixel'
+2025-09-09 05:51:45 [5,198ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/pathtracing/maxSamplesPerLaunch'
+2025-09-09 05:51:45 [5,198ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults-transient/meshlights/forceDisable'
+2025-09-09 05:51:45 [5,316ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/post/dlss/execMode'
+ROBOMIMIC WARNING(
+    No private macro file found!
+    It is recommended to use a private macro file
+    To setup, run: python /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/_isaac_sim/kit/python/lib/python3.10/site-packages/robomimic/scripts/setup_macros.py
+)
+[INFO]: Parsing configuration from: isaaclab_tasks.manager_based.manipulation.lift.config.franka.kitchen_ik_rel_env_cfg:FrankaKitchenLiftEnvCfg
+2025-09-09 05:51:48 [8,436ms] [Warning] [isaaclab.envs.manager_based_env] Seed not set for the environment. The environment creation may not be deterministic.
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+2025-09-09 05:51:50 [10,540ms] [Warning] [isaaclab.sim.spawners.from_files.from_files] A prim already exists at prim path: '/World/envs/env_0/TomatoSoupCan'.
+[INFO]: Time taken for scene creation : 2.115689 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 5.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+2025-09-09 05:51:50 [10,848ms] [Warning] [omni.physx.tensors.plugin] Duplicate joint name 'RevoluteJoint' in articulation metatype
+2025-09-09 05:51:50 [10,848ms] [Warning] [omni.physx.tensors.plugin] Duplicate DOF name 'RevoluteJoint' in articulation metatype
+2025-09-09 05:51:50 [10,848ms] [Warning] [omni.physx.tensors.plugin] Duplicate joint name 'RevoluteJoint' in articulation metatype
+2025-09-09 05:51:50 [10,848ms] [Warning] [omni.physx.tensors.plugin] Duplicate DOF name 'RevoluteJoint' in articulation metatype
+2025-09-09 05:51:50 [10,853ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'effort_limit'. This parameter will be removed in the future. To set the effort limit, please use 'effort_limit_sim' instead.
+2025-09-09 05:51:50 [10,853ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'velocity_limit'. Previously, although this value was specified, it was not getting used by implicit actuators. Since this parameter affects the simulation behavior, we continue to not use it. This parameter will be removed in the future. To set the velocity limit, please use 'velocity_limit_sim' instead.
+2025-09-09 05:51:50 [10,860ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'effort_limit'. This parameter will be removed in the future. To set the effort limit, please use 'effort_limit_sim' instead.
+2025-09-09 05:51:50 [10,860ms] [Warning] [isaaclab.actuators.actuator_pd] The <ImplicitActuatorCfg> object has a value for 'velocity_limit'. Previously, although this value was specified, it was not getting used by implicit actuators. Since this parameter affects the simulation behavior, we continue to not use it. This parameter will be removed in the future. To set the velocity limit, please use 'velocity_limit_sim' instead.
+2025-09-09 05:51:52 [12,815ms] [Warning] [omni.hydra.scene_delegate.plugin] Calling getBypassRenderSkelMeshProcessing for prim /World/envs/env_0/Robot/panda_leftfinger/visuals.proto_panda_leftfinger_id0 that has not been populated
+[INFO]: Time taken for simulation start : 2.380285 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------+
+|           Active Command Terms           |
++-------+-------------+--------------------+
+| Index | Name        |        Type        |
++-------+-------------+--------------------+
+|   0   | object_pose | UniformPoseCommand |
++-------+-------------+--------------------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++--------------------------------------+
+| Active Event Terms in Mode: 'reset'  |
++---------+----------------------------+
+|  Index  | Name                       |
++---------+----------------------------+
+|    0    | reset_all                  |
+|    1    | reset_object_position      |
+|    2    | randomize_light            |
++---------+----------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 7)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         6 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++---------------------------------------------+
+| Active Observation Terms in Group: 'policy' |
++---------+-----------------+-----------------+
+|  Index  | Name            |      Shape      |
++---------+-----------------+-----------------+
+|    0    | joint_pos       |       (9,)      |
+|    1    | joint_vel       |       (9,)      |
+|    2    | object          |       (3,)      |
+|    3    | actions         |       (7,)      |
+|    4    | wrist_cam       |   (88, 88, 3)   |
+|    5    | eef_pos         |       (3,)      |
+|    6    | eef_quat        |       (4,)      |
+|    7    | gripper_pos     |       (2,)      |
++---------+-----------------+-----------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++------------------------------------+
+|      Active Termination Terms      |
++-------+-----------------+----------+
+| Index | Name            | Time Out |
++-------+-----------------+----------+
+|   0   | object_dropping |  False   |
++-------+-----------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 6 active terms.
++-----------------------------------------------------+
+|                 Active Reward Terms                 |
++-------+-----------------------------------+---------+
+| Index | Name                              |  Weight |
++-------+-----------------------------------+---------+
+|   0   | reaching_object                   |     1.0 |
+|   1   | lifting_object                    |    15.0 |
+|   2   | object_goal_tracking              |    16.0 |
+|   3   | object_goal_tracking_fine_grained |     5.0 |
+|   4   | action_rate                       | -0.0001 |
+|   5   | joint_vel                         | -0.0001 |
++-------+-----------------------------------+---------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 2 active terms.
++--------------------------+
+| Active Curriculum Terms  |
++---------+----------------+
+|  Index  | Name           |
++---------+----------------+
+|    0    | action_rate    |
+|    1    | joint_vel      |
++---------+----------------+
+
+[INFO]: Completed setting up the environment...
+Setting seed: 101
+============= Loaded Config =============
+{
+    "algo_name": "bc",
+    "experiment": {
+        "name": "bc_rnn_low_dim_franka_kitchen_lift_fast",
+        "validate": true,
+        "logging": {
+            "terminal_output_to_txt": true,
+            "log_tb": true,
+            "log_wandb": false,
+            "wandb_proj_name": "debug"
+        },
+        "save": {
+            "enabled": true,
+            "every_n_seconds": null,
+            "every_n_epochs": 10,
+            "epochs": [],
+            "on_best_validation": true,
+            "on_best_rollout_return": false,
+            "on_best_rollout_success_rate": true
+        },
+        "epoch_every_n_steps": 1000,
+        "validation_epoch_every_n_steps": 10,
+        "env": null,
+        "additional_envs": null,
+        "render": false,
+        "render_video": true,
+        "keep_all_videos": false,
+        "video_skip": 3,
+        "rollout": {
+            "enabled": false,
+            "n": 5,
+            "horizon": 2400,
+            "rate": 25,
+            "warmstart": 0,
+            "terminate_on_success": true
+        }
+    },
+    "train": {
+        "data": "./datasets/generated_dataset_sample_300.hdf5",
+        "output_dir": "/home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Fast-v0",
+        "num_data_workers": 16,
+        "hdf5_cache_mode": "low_dim",
+        "hdf5_use_swmr": true,
+        "hdf5_load_next_obs": false,
+        "hdf5_normalize_obs": false,
+        "hdf5_filter_key": "train",
+        "hdf5_validation_filter_key": "valid",
+        "seq_length": 5,
+        "pad_seq_length": true,
+        "frame_stack": 1,
+        "pad_frame_stack": true,
+        "dataset_keys": [
+            "actions",
+            "dones",
+            "datagen_info"
+        ],
+        "goal_mode": null,
+        "cuda": true,
+        "batch_size": 64,
+        "num_epochs": 100,
+        "seed": 101
+    },
+    "algo": {
+        "optim_params": {
+            "policy": {
+                "optimizer_type": "adam",
+                "learning_rate": {
+                    "initial": 0.001,
+                    "decay_factor": 0.3,
+                    "epoch_schedule": [
+                        30,
+                        60,
+                        80
+                    ],
+                    "scheduler_type": "multistep"
+                },
+                "regularization": {
+                    "L2": 0.0001
+                }
+            }
+        },
+        "loss": {
+            "l2_weight": 1.0,
+            "l1_weight": 0.0,
+            "cos_weight": 0.0
+        },
+        "actor_layer_dims": [
+            1024,
+            512,
+            256
+        ],
+        "gaussian": {
+            "enabled": false,
+            "fixed_std": false,
+            "init_std": 0.1,
+            "min_std": 0.01,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "gmm": {
+            "enabled": true,
+            "num_modes": 5,
+            "min_std": 0.0001,
+            "std_activation": "softplus",
+            "low_noise_eval": true
+        },
+        "vae": {
+            "enabled": false,
+            "latent_dim": 14,
+            "latent_clip": null,
+            "kl_weight": 1.0,
+            "decoder": {
+                "is_conditioned": true,
+                "reconstruction_sum_across_elements": false
+            },
+            "prior": {
+                "learn": false,
+                "is_conditioned": false,
+                "use_gmm": false,
+                "gmm_num_modes": 10,
+                "gmm_learn_weights": false,
+                "use_categorical": false,
+                "categorical_dim": 10,
+                "categorical_gumbel_softmax_hard": false,
+                "categorical_init_temp": 1.0,
+                "categorical_temp_anneal_step": 0.001,
+                "categorical_min_temp": 0.3
+            },
+            "encoder_layer_dims": [
+                300,
+                400
+            ],
+            "decoder_layer_dims": [
+                300,
+                400
+            ],
+            "prior_layer_dims": [
+                300,
+                400
+            ]
+        },
+        "rnn": {
+            "enabled": true,
+            "horizon": 5,
+            "hidden_dim": 512,
+            "rnn_type": "LSTM",
+            "num_layers": 2,
+            "open_loop": false,
+            "kwargs": {
+                "bidirectional": false
+            }
+        },
+        "transformer": {
+            "enabled": false,
+            "context_length": 10,
+            "embed_dim": 512,
+            "num_layers": 6,
+            "num_heads": 8,
+            "emb_dropout": 0.1,
+            "attn_dropout": 0.1,
+            "block_output_dropout": 0.1,
+            "sinusoidal_embedding": false,
+            "activation": "gelu",
+            "supervise_all_steps": false,
+            "nn_parameter_for_timesteps": true
+        }
+    },
+    "observation": {
+        "modalities": {
+            "obs": {
+                "low_dim": [
+                    "eef_pos",
+                    "eef_quat",
+                    "gripper_pos",
+                    "joint_pos",
+                    "object",
+                    "joint_vel",
+                    "actions"
+                ],
+                "rgb": [],
+                "depth": [],
+                "scan": []
+            },
+            "goal": {
+                "low_dim": [],
+                "rgb": [],
+                "depth": [],
+                "scan": []
+            }
+        },
+        "encoder": {
+            "low_dim": {
+                "core_class": null,
+                "core_kwargs": {},
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "rgb": {
+                "core_class": "VisualCore",
+                "core_kwargs": {},
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "depth": {
+                "core_class": "VisualCore",
+                "core_kwargs": {},
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            },
+            "scan": {
+                "core_class": "ScanCore",
+                "core_kwargs": {},
+                "obs_randomizer_class": null,
+                "obs_randomizer_kwargs": {}
+            }
+        }
+    },
+    "meta": {
+        "hp_base_config_file": null,
+        "hp_keys": [],
+        "hp_values": []
+    }
+}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['eef_pos', 'eef_quat', 'object', 'joint_vel', 'gripper_pos', 'actions', 'joint_pos']
+using obs modality: rgb with keys: []
+using obs modality: depth with keys: []
+using obs modality: scan with keys: []
+============= Loaded Policy =============
+ObservationKeyToModalityDict: mean not found, adding mean to mapping with assumed low_dim modality!
+ObservationKeyToModalityDict: scale not found, adding scale to mapping with assumed low_dim modality!
+ObservationKeyToModalityDict: logits not found, adding logits to mapping with assumed low_dim modality!
+BC_RNN_GMM (
+  ModuleDict(
+    (policy): RNNGMMActorNetwork(
+        action_dim=7, std_activation=softplus, low_noise_eval=True, num_nodes=5, min_std=0.0001
+  
+        encoder=ObservationGroupEncoder(
+            group=obs
+            ObservationEncoder(
+                Key(
+                    name=actions
+                    shape=[7]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=eef_pos
+                    shape=[3]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=eef_quat
+                    shape=[4]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=gripper_pos
+                    shape=[2]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=joint_pos
+                    shape=[9]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=joint_vel
+                    shape=[9]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                Key(
+                    name=object
+                    shape=[3]
+                    modality=low_dim
+                    randomizer=None
+                    net=None
+                    sharing_from=None
+                )
+                output_shape=[37]
+            )
+        )
+  
+        rnn=RNN_Base(
+          (per_step_net): Sequential(
+            (0): MLP(
+                input_dim=512
+                output_dim=256
+                layer_dims=[1024, 512]
+                layer_func=Linear
+                dropout=None
+                act=ReLU
+                output_act=ReLU
+            )
+            (1): ObservationDecoder(
+                Key(
+                    name=mean
+                    shape=(5, 7)
+                    modality=low_dim
+                    net=(Linear(in_features=256, out_features=35, bias=True))
+                )
+                Key(
+                    name=scale
+                    shape=(5, 7)
+                    modality=low_dim
+                    net=(Linear(in_features=256, out_features=35, bias=True))
+                )
+                Key(
+                    name=logits
+                    shape=(5,)
+                    modality=low_dim
+                    net=(Linear(in_features=256, out_features=5, bias=True))
+                )
+            )
+          )
+          (nets): LSTM(37, 512, num_layers=2, batch_first=True)
+        )
+    )
+  )
+)
+[INFO] Starting trial 0
+[INFO] Trial 0: False
+
+[INFO] Starting trial 1
+[INFO] Trial 1: False
+
+[INFO] Starting trial 2
+[INFO] Trial 2: False
+
+[INFO] Starting trial 3
+[INFO] Trial 3: False
+
+[INFO] Starting trial 4
+[INFO] Trial 4: False
+
+[INFO] Starting trial 5
+[INFO] Trial 5: False
+
+[INFO] Starting trial 6
+[INFO] Trial 6: False
+
+[INFO] Starting trial 7
+[INFO] Trial 7: False
+
+[INFO] Starting trial 8
+[INFO] Trial 8: False
+
+[INFO] Starting trial 9
+[INFO] Trial 9: False
+
+[INFO] Starting trial 10
+[INFO] Trial 10: False
+
+[INFO] Starting trial 11
+[INFO] Trial 11: False
+
+[INFO] Starting trial 12
+[INFO] Trial 12: False
+
+[INFO] Starting trial 13
+[INFO] Trial 13: False
+
+[INFO] Starting trial 14
+
+======= DEBUG LOG - Environment 0 =======
+Object: object, Microwave: microwave, Hand: panda_hand
+Microwave box dimensions: (0.27, 0.27, 0.18)
+Microwave position (env frame): [2.3  0.6  1.25]
+Object position (env frame): [2.3760383  0.57682884 1.1612908 ]
+Hand position (env frame): [2.3707595 0.7432948 1.1701037]
+Bounding box low (world): [[2.165      0.46500003 1.16      ]]
+Bounding box high (world): [[2.435 0.735 1.34 ]]
+Object in bounds - X: True, Y: True, Z: True
+Hand in bounds - X: True, Y: False, Z: True
+Gripper joint positions: tensor([[0.0400, 0.0400]], device='cuda:0')
+Gripper open status: True
+Is object fully in microwave (world frame)? True
+Is hand completely out of microwave? True
+Is object in gripper? False
+Success condition met? True
+=========================================
+[INFO] Trial 14: True
+
+[INFO] Starting trial 15
+[INFO] Trial 15: False
+
+[INFO] Starting trial 16
+[INFO] Trial 16: False
+
+[INFO] Starting trial 17
+[INFO] Trial 17: False
+
+[INFO] Starting trial 18
+[INFO] Trial 18: False
+
+[INFO] Starting trial 19
+[INFO] Trial 19: False
+
+
+Successful trials: 1, out of 20 trials
+Success rate: 0.05
+Trial Results: [False, False, False, False, False, False, False, False, False, False, False, False, False, False, True, False, False, False, False, False]
+
+saiga@sai-Ideapad:~/Documents/Cognitive_Robotics/simulation_packages/IsaacLab$ 
+saiga@sai-Ideapad:~/Documents/Cognitive_Robotics/simulation_packages/IsaacLab$ 
+
