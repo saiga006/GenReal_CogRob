@@ -149,7 +149,7 @@ Below is a visualization showing the dataset expansion process (success & failur
   - imitation_learning/isaaclab_mimic/ — mimic annotation + generation scripts
     - annotate_demos.py, generate_dataset.py, consolidated_demo.py — utilities for annotation and dataset generation
   - trained_bc_models/ — trained BC artifacts and zipped bundles; contains configs & logs. Models attached separately to github releases.
-  - log_dir/ — logs generated during isaac mimic gen annotation and dataset generation pipelines.
+  - log_dir/ — logs generated during isaac mimic gen annotation, dataset generation pipelines and rollout logs(validation with the trained BC IL models).
 
 ## Video Output of the BC (state & visuomotor) rollouts:
 [Please find the model results here](https://app.box.com/s/dp3khsxa8kkebke9anjs2aj4w1eoqn5v)
@@ -185,7 +185,8 @@ Full evaluation for all 5 configs (state & visuomotor):
 ./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py   --task Isaac-Lift-Kitchen-Franka-IK-Rel-Fast-v0 --num_rollouts 20 --checkpoint /home/saiga/Documents/Cognitive_Robotics/simulation_packages/IsaacLab/logs/robomimic/Isaac-Lift-Kitchen-Franka-IK-Rel-Fast-v0/bc_rnn_low_dim_franka_kitchen_lift_fast/20250907205615/models/model_epoch_75_best_validation_199577.3265625.pth --enable_cameras --horizon 2400 --headless
 ```
 
-See the linked video for more details and rollout results.
+**See the linked video for more details and rollout results.**
+Rollout results can found in following file for all above configs: `IsaacLab_internal_source/log_dir/bc_rollout_logs.txt`
 
 ---
 
